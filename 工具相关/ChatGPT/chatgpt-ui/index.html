@@ -933,6 +933,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    chatgpt-ui
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -942,6 +953,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      本地调试
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1307,6 +1346,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      本地调试
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1325,9 +1381,33 @@
 
 <h1 id="chatgpt-ui">chatgpt-ui</h1>
 <blockquote>
-<p>开源地址：https://github.com/WongSaang/chatgpt-ui
-</p>
+<p>开源地址：https://github.com/WongSaang/chatgpt-ui</p>
 </blockquote>
+<h2 id="_1">本地调试</h2>
+<p>新建 <code>.env</code></p>
+<pre><code class="language-shell"># 后端地址
+SERVER_DOMAIN='https://localhost:8081'
+# 页面标题
+NUXT_PUBLIC_APP_NAME=&quot;test&quot;
+</code></pre>
+<p>增加 <code>changeOrigin: true</code> 参数，否则会出现跨域等问题</p>
+<pre><code class="language-js">import { createProxyMiddleware } from 'http-proxy-middleware'
+export default defineEventHandler(async (event) =&gt; {
+    await new Promise((resolve, reject) =&gt; {
+        createProxyMiddleware({
+            target: process.env.SERVER_DOMAIN,
+            pathFilter: '/api',
+            changeOrigin: true
+        })(event.node.req, event.node.res, (err) =&gt; {
+            if (err)
+                reject(err)
+            else
+                resolve(true)
+        })
+    })
+})
+
+</code></pre>
 
 
 

@@ -889,8 +889,6 @@
       
         
       
-        
-      
     
     
     
@@ -933,27 +931,6 @@
   
   <span class="md-ellipsis">
     chatgpt-ui
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ChatGPT/nuxt3%E4%BD%BF%E7%94%A8vconsole/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Nuxt3使用vconsole
   </span>
   
 
@@ -1334,6 +1311,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Nuxt3使用vconsole
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1343,6 +1331,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1497,6 +1513,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1515,12 +1548,16 @@
 
 <!--
  * @Date: 2023-12-27 11:17:52
- * @LastEditTime: 2023-12-27 11:18:00
+ * @LastEditTime: 2023-12-27 14:06:06
  * @Author: wangyongjie
  * @Note:  
 -->
 
-<h1 id="nuxt3vconsole">nuxt3使用vconsole的正确姿势：</h1>
+<h1 id="nuxt3vconsole">nuxt3使用vconsole的正确姿势</h1>
+<blockquote>
+<p><a href="https://github.com/Tencent/vConsole/issues/631">vConsole github 议题</a></p>
+<p><code>Nuxt</code> 是一个服务端渲染的项目，<code>vconsole</code> 是一个前端的调试工具。由于服务端渲染的特性，<code>vconsole</code> 无法直接在服务端运行。</p>
+</blockquote>
 <pre><code class="language-js">app: {
     head: {
       script: [
@@ -1552,6 +1589,15 @@
 </code></pre>
 <p>使用eruda也是同样的引入方式</p>
 <p><a href="https://github.com/liriliri/eruda/issues/303">liriliri/eruda#303</a></p>
+<h2 id="_1">参考</h2>
+<ul>
+<li>
+<p><a href="https://github.com/Tencent/vConsole/issues/232">use vConsole in Nuxt.js #232</a></p>
+</li>
+<li>
+<p><a href="https://www.nuxtjs.cn/">nuxtjs</a></p>
+</li>
+</ul>
 
 
 

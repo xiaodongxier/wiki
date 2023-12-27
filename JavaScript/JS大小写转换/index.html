@@ -12,13 +12,13 @@
         <meta name="author" content="wangyongjie">
       
       
-        <link rel="canonical" href="https://xiaodongxier.com/JavaScript/JS%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E8%AF%BB%E5%8F%96/">
+        <link rel="canonical" href="https://xiaodongxier.com/JavaScript/JS%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2/">
       
       
-        <link rel="prev" href="../JS%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E5%B1%82%E7%BA%A7%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../JS%E7%AD%9B%E9%80%89%E6%8C%87%E5%AE%9A%E5%90%8E%E7%BC%80%E6%96%87%E4%BB%B6/">
+        <link rel="next" href="../JS%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E5%B1%82%E7%BA%A7%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>JS本地存储读取 - 知识管理</title>
+        <title>JS大小写转换 - 知识管理</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              JS本地存储读取
+              JS大小写转换
             
           </span>
         </div>
@@ -310,10 +310,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../JS%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -322,6 +331,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -352,19 +362,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../JS%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E8%AF%BB%E5%8F%96/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -373,7 +374,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1226,36 +1226,17 @@
   
 
 
-<h1 id="js">JS本地存储读取</h1>
-<blockquote>
-<p>在JavaScript中，可以使用本地存储技术，如localStorage或sessionStorage，来读取和写入对象。</p>
-</blockquote>
-<ol>
-<li>写入对象：</li>
-</ol>
-<pre><code class="language-javascript">// 定义一个对象
-var obj = { name: 'John', age: 25 };
-
-// 将对象转换为字符串
-var objStr = JSON.stringify(obj);
-
-// 使用localStorage写入对象
-localStorage.setItem('myObj', objStr);
+<h1 id="js">JS大小写转换</h1>
+<p>JavaScript中的字符串可以通过使用<code>toLowerCase()</code>方法将大写字母转换为小写字母。以下是一个示例：</p>
+<pre><code class="language-js">let str = &quot;HELLO WORLD&quot;;
+let lowerCaseStr = str.toLowerCase();
+console.log(lowerCaseStr); // 输出 &quot;hello world&quot;
 </code></pre>
-<ol>
-<li>读取对象：</li>
-</ol>
-<pre><code class="language-javascript">// 使用localStorage读取对象
-var objStr = localStorage.getItem('myObj');
-
-// 将字符串转换为对象
-var obj = JSON.parse(objStr);
-
-// 现在可以访问对象的属性
-console.log(obj.name); // 输出: John
-console.log(obj.age); // 输出: 25
+<p>JavaScript中的字符串可以通过使用<code>toUpperCase()</code>方法将小写字母转换为大写字母。以下是一个示例：</p>
+<pre><code class="language-js">let str = &quot;hello world&quot;;
+let upperCaseStr = str.toUpperCase();
+console.log(upperCaseStr); // 输出 &quot;HELLO WORLD&quot;
 </code></pre>
-<p>请注意，<code>localStorage</code> 和 <code>sessionStorage</code> 只能存储字符串类型的数据，因此需要使用 <code>JSON.stringify()</code> 将对象转换为字符串，使用 <code>JSON.parse()</code> 将字符串转换为对象。</p>
 
 
 

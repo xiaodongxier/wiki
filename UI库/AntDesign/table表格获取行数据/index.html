@@ -1987,27 +1987,27 @@
 
 
 <h1 id="_1">选择多行获取多行数据</h1>
-<pre><code class="language-vue">&lt;a-table
-  ref=&quot;table&quot;
-  row-key=&quot;fileId&quot;
-  :loading=&quot;loading&quot;
-  :columns=&quot;columns&quot;
-  :data-source=&quot;dataSource.records&quot;
-  :scroll=&quot;scroll&quot;
-  :row-selection=&quot;{ selectedRowKeys: selectedRowKeys, onChange: onSelectChange }&quot;
-  :pagination=&quot;pagination&quot;
-  @change=&quot;handleTableChange&quot;
-&gt;
-
-&lt;/a-table&gt;
-</code></pre>
-<pre><code class="language-js">onSelectChange(selectedRowKeys, selectedRows) {
-  // keys
-  console.log(&quot;selectedRowKeys changed: &quot;, selectedRowKeys);
-  // 上数据
-  console.log(&quot;selectedRows changed: &quot;, selectedRows);
-},
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;a-table
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  ref=&quot;table&quot;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  row-key=&quot;fileId&quot;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  :loading=&quot;loading&quot;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  :columns=&quot;columns&quot;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  :data-source=&quot;dataSource.records&quot;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  :scroll=&quot;scroll&quot;
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  :row-selection=&quot;{ selectedRowKeys: selectedRowKeys, onChange: onSelectChange }&quot;
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  :pagination=&quot;pagination&quot;
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  @change=&quot;handleTableChange&quot;
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>&gt;
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>&lt;/a-table&gt;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">onSelectChange</span><span class="p">(</span><span class="nx">selectedRowKeys</span><span class="p">,</span><span class="w"> </span><span class="nx">selectedRows</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="c1">// keys</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;selectedRowKeys changed: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">selectedRowKeys</span><span class="p">);</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="c1">// 上数据</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;selectedRows changed: &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">selectedRows</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">},</span>
+</code></pre></div>
 
 
 

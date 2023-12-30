@@ -2103,16 +2103,14 @@
 <ol>
 <li>临时修复 <code>PATH</code>：</li>
 </ol>
-<pre><code class="language-shell">export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:<span class="nv">$PATH</span>
+</code></pre></div>
 <p>执行这个命令后，尝试再次运行一些基础命令，比如 <code>ls</code> 或 <code>mkdir</code>，看是否能正常工作。</p>
 <ol>
 <li>如果临时修复有效，你需要在你的配置文件中永久设置这个 <code>PATH</code>。使用文本编辑器打开你的 <code>.zshrc</code> 文件：</li>
 </ol>
-<pre><code class="language-shell">nano ~/.zshrc
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nano<span class="w"> </span>~/.zshrc
+</code></pre></div>
 <p>然后在文件中添加或修改 <code>export PATH=...</code> 这一行，确保包含上述路径。</p>
 <ol>
 <li>
@@ -2122,16 +2120,14 @@
 <p>保存配置文件后，你可以通过以下命令使更改生效：</p>
 </li>
 </ol>
-<pre><code class="language-shell">source ~/.zshrc
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">source</span><span class="w"> </span>~/.zshrc
+</code></pre></div>
 <p>或者关闭并重新打开终端窗口。</p>
 <ol>
 <li>确认 <code>PATH</code> 已经被正确设置：</li>
 </ol>
-<pre><code class="language-shell">echo $PATH
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span>
+</code></pre></div>
 <p>看看输出是否包含了 <code>/usr/local/bin</code>、<code>/usr/bin</code>、<code>/bin</code>、<code>/usr/sbin</code> 和 <code>/sbin</code>。</p>
 <ol>
 <li>最后，再次尝试执行 <code>exec /bin/zsh</code>，看看是否还有错误发生。</li>
@@ -2141,26 +2137,26 @@
 <li>首先输入命令，让暂时可以使用</li>
 </ol>
 <p>输入下面命令回车, 就暂时可以在当前终端下使用命令了</p>
-<pre><code class="language-shell">export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin
+</code></pre></div>
 <p>或者</p>
-<pre><code class="language-shell">PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">PATH</span><span class="o">=</span>/bin:/usr/bin:/usr/local/bin:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
+</code></pre></div>
 <ol>
 <li>然后打开  <code>.bash_profile</code> 文件</li>
 </ol>
-<pre><code class="language-shell">open .bash_profile
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>open<span class="w"> </span>.bash_profile
+</code></pre></div>
 <ol>
 <li>加入path（清除全部，仅留下列代码。注：复制完整）</li>
 </ol>
-<pre><code class="language-shell">export PATH=&quot;/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:${JAVA_HOME}:${JAVA_HOME}/bin&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:</span><span class="si">${</span><span class="nv">JAVA_HOME</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">JAVA_HOME</span><span class="si">}</span><span class="s2">/bin&quot;</span>
+</code></pre></div>
 <ol>
 <li>重启profile</li>
 </ol>
-<pre><code class="language-shell">source ~/.bash_profile
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">source</span><span class="w"> </span>~/.bash_profile
+</code></pre></div>
 <ol>
 <li>退出terminal（终端）, 重新打开，尝试输入指令，是否成功</li>
 </ol>
@@ -2169,26 +2165,26 @@
 <li>vscode 左侧 git 提示未安装</li>
 </ol>
 <p>通过vscode设置找到 git.path 进行设置</p>
-<pre><code>&quot;git.path&quot;: &quot;/usr/bin/git&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>&quot;git.path&quot;: &quot;/usr/bin/git&quot;
+</code></pre></div>
 <h2 id="_2">其他知识点</h2>
 <ul>
 <li>新建文件命令</li>
 </ul>
-<pre><code>touch newfile.txt
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>touch newfile.txt
+</code></pre></div>
 <ul>
 <li>打开文件命令</li>
 </ul>
-<pre><code>open .bash_profile
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>open .bash_profile
+</code></pre></div>
 <ul>
 <li>用户文件夹路径查看</li>
 </ul>
-<pre><code>pwd
-# 我的程序返回了如下指令
-/Users/wangyongjie
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>pwd
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a># 我的程序返回了如下指令
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>/Users/wangyongjie
+</code></pre></div>
 
 
 

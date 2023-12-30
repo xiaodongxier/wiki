@@ -2660,27 +2660,27 @@
 
 <h1 id="mkdocs">MkDocs使用</h1>
 <h2 id="_1">创建新项目</h2>
-<pre><code class="language-shell">mkdocs new my-project                   # “my-project”为项目名称，可自定义
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdocs<span class="w"> </span>new<span class="w"> </span>my-project<span class="w">                   </span><span class="c1"># “my-project”为项目名称，可自定义</span>
+</code></pre></div>
 <p>此时在当前路径下会生成一个名为”my-project“的文件夹，打开该文件夹可发现，它包含如下文件：</p>
-<pre><code class="language-shell">my-project/mkdocs.yml                   # YAML 配置文件
-my-project/Docs/index.md            # 主页内容
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>my-project/mkdocs.yml<span class="w">                   </span><span class="c1"># YAML 配置文件</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>my-project/Docs/index.md<span class="w">            </span><span class="c1"># 主页内容</span>
+</code></pre></div>
 <h2 id="_2">主题</h2>
 <p>可以安装 <code>material</code> 主题，这个比较美观</p>
-<pre><code class="language-shell">pip install mkdocs mkdocs-material
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material
+</code></pre></div>
 <h2 id="yaml">配置 YAML 文件</h2>
 <h3 id="_3">项目信息</h3>
 <h4 id="site_name">site_name</h4>
 <p>这是必要的设置，并且应该是一个字符串，用作项目文档的主要标题。例如：</p>
-<pre><code>site_name: My Docs
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>site_name: My Docs
+</code></pre></div>
 <p>渲染主题时，此设置将作为<code>site_name</code>上下文变量传递。</p>
 <h4 id="site_url">site_url</h4>
 <p>设置网站的URL地址。例如：</p>
-<pre><code>site_url: https://xxxx.github.io
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>site_url: https://xxxx.github.io
+</code></pre></div>
 <p>默认值：<code>null</code></p>
 <h4 id="site_description">site_description</h4>
 <p>设置站点说明，这会将meta标签添加到生成的HTML标头中。</p>
@@ -2693,8 +2693,8 @@ my-project/Docs/index.md            # 主页内容
 <p>默认值：<code>'GitHub'</code>，<code>'Bitbucket'</code>或者<code>'GitLab'</code>如果<code>repo_url</code>匹配这些域，则为的主机名<code>repo_url</code>。</p>
 <h4 id="repo_url">repo_url</h4>
 <p>存储库地址，设置后在每个页面上提供指向您的存储库（GitHub，Bitbucket，GitLab等）的链接。例如:</p>
-<pre><code class="language-shell">repo_url: https://github.com/example/repository/
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>repo_url:<span class="w"> </span>https://github.com/example/repository/
+</code></pre></div>
 <p>默认值：<code>null</code></p>
 <h4 id="edit_uri">edit_uri</h4>
 <p>在线编辑路径，设置后，直接提供一个链接到源存储库中的页面。这使查找和编辑页面源变得更加容易。如果<code>repo_url</code>未设置，则忽略此选项。</p>
@@ -2710,21 +2710,21 @@ my-project/Docs/index.md            # 主页内容
 <p>默认值：<code>'docs'</code></p>
 <h4 id="copyright">copyright</h4>
 <p>设置要通过主题包含在文档中的版权信息。例如：</p>
-<pre><code class="language-shell">copyright: &quot;Copyright  &amp;copy;  2019  -  2020  xxxx&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>copyright:<span class="w"> </span><span class="s2">&quot;Copyright  &amp;copy;  2019  -  2020  xxxx&quot;</span>
+</code></pre></div>
 <p>默认值：<code>null</code></p>
 <h3 id="_4">页面风格</h3>
 <h4 id="material">启用 material 主题</h4>
-<pre><code>theme:
-  name: 'material'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>theme:
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  name: &#39;material&#39;
+</code></pre></div>
 <h4 id="_5">配色</h4>
 <p>在Google的Material Design <a href="http://www.materialui.co/colors">调色板上</a>，为每种主题色和强调色定义了默认色相，这使更改主题的整体外观非常容易。只需使用以下变量设置原色和强调色：</p>
-<pre><code>theme:
-  palette:
-    primary: 'indigo'
-    accent: 'indigo'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>theme:
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  palette:
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    primary: &#39;indigo&#39;
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    accent: &#39;indigo&#39;
+</code></pre></div>
 <p>颜色名称不区分大小写，但必须与“材料设计”调色板的名称匹配。有效值是：<code>red</code>，<code>pink</code>，<code>purple</code>，<code>deep purple</code>，<code>indigo</code>，<code>blue</code>，<code>light blue</code>，<code>cyan</code>，<code>teal</code>，<code>green</code>，<code>light green</code>，<code>lime</code>，<code>yellow</code>，<code>amber</code>，<code>orange</code>，<code>deep orange</code>，<code>brown</code>，<code>grey</code>，<code>blue grey</code>和 <code>white</code>。后四种颜色只能用作主题色。</p>
 <p><strong>主题色</strong></p>
 <p><img alt="" src="https://gitcdn.xiaodongxier.com/obsidian/202312300857354.webp" /></p>
@@ -2732,27 +2732,27 @@ my-project/Docs/index.md            # 主页内容
 <p><img alt="" src="https://gitcdn.xiaodongxier.com/obsidian/202312300857498.webp" /></p>
 <h4 id="logo">网页Logo</h4>
 <p>Logo 应为矩形，最小分辨率为128x128，留出一定的边缘空间，并在透明地面上由高对比度区域组成，因为它将放置在彩色标题栏。只需创建文件夹<code>docs/images</code>，添加Logo并将其嵌入：</p>
-<pre><code>theme:
-  logo: 'images/logo.svg'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>theme:
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  logo: &#39;images/logo.svg&#39;
+</code></pre></div>
 <p>默认值： <code>school</code></p>
 <p>此外，可以通过从<a href="https://material.io/icons/">Material Design图标字体中</a>设置任意连字（或Unicode代码点）来更改默认图标，例如:</p>
-<pre><code>theme:
-  logo:
-    icon: 'cloud'` 
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>theme:
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  logo:
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    icon: &#39;cloud&#39;` 
+</code></pre></div>
 <h4 id="_6">网站图标</h4>
 <p>可以通过将<code>favicon</code>变量设置为<code>.ico</code>或图像文件来更改默认图标。</p>
-<pre><code>theme:
-  favicon: 'assets/images/favicon.ico'` 
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>theme:
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  favicon: &#39;assets/images/favicon.ico&#39;` 
+</code></pre></div>
 <p>默认值：<code>assets/images/favicon.png</code></p>
 <h3 id="_7">文本风格</h3>
 <h4 id="_8">语言</h4>
 <p>通过以下方式指定语言：</p>
-<pre><code>theme:
-  language: 'en'` 
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>theme:
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>  language: &#39;en&#39;` 
+</code></pre></div>
 <p>material for mkdocs 支持国际化（i18n），并提供以下语言的所有模板变量和标签的翻译：</p>
 <table>
 <thead>
@@ -2837,64 +2837,64 @@ my-project/Docs/index.md            # 主页内容
 </table>
 <h4 id="_9">字体</h4>
 <p>默认情况下，主题包含<a href="https://fonts.google.com/specimen/Roboto">Roboto字体系列</a>，尤其是文本的常规 sans-serif 类型和<code>monospaced</code>代码的类型。两种字体均从<a href="https://fonts.google.com/">Google字体</a>加载，并且可以更改为其他字体，例如<a href="https://fonts.google.com/specimen/Ubuntu">Ubuntu字体家族</a>：</p>
-<pre><code>theme:
-  font:
-    text: 'Ubuntu'
-    code: 'Ubuntu  Mono'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>theme:
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>  font:
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    text: &#39;Ubuntu&#39;
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    code: &#39;Ubuntu  Mono&#39;
+</code></pre></div>
 <p>文本字体将以权重400和700加载，<code>monospaced</code>字体以常规权重加载。如果您想从其他目标加载字体，或者不想使用Google字体加载，只需将其设置<code>font</code>为<code>false</code>：</p>
-<pre><code>theme:
-  font: false
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>theme:
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  font: false
+</code></pre></div>
 <p>默认值：<code>Roboto</code>和<code>Roboto Mono</code></p>
 <h4 id="_10">文本方向</h4>
 <p>material 同时支持从左到右（<code>ltr</code>）和从右到左（<code>rtl</code>）文本方向。这使更多语言（例如阿拉伯语，希伯来语，叙利亚语和其他语言）可以与主题一起使用：</p>
-<pre><code>theme:
-  direction: 'rtl'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>theme:
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>  direction: &#39;rtl&#39;
+</code></pre></div>
 <p>默认值：与给定主题语言的最佳匹配，自动设置</p>
 <h4 id="_11">标签</h4>
 <p>默认情况下，整个导航在左侧使用可折叠部分呈现，因为水平导航在较小的屏幕上经常会出现问题。但是，对于大型文档项目，有时需要添加另一个导航层来分隔顶层部分。material 通过 tabs 功能实现了这一点，可以通过将相应功能标记设置为来启用<code>true</code>：</p>
-<pre><code>theme:
-  feature:
-    tabs: true
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>theme:
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>  feature:
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    tabs: true
+</code></pre></div>
 <p>默认值：<code>fasle</code></p>
 <p>注意</p>
 <p>启用标签页后，<em>顶层区域<em>将在标题正下方的附加层中呈现。左侧的导航将仅包含所选部分中包含的页面。此外，在项目的内部定义的</em>顶级页面</em><code>mkdocs.yml</code>将被分组在第一个选项卡下，该选项卡将接收第一页的标题。</p>
 <h4 id="_12">导航栏</h4>
 <p>用于确定站点的全局导航的格式和布局。最简单的导航配置如下所示：</p>
-<pre><code>nav:
-    - 'index.md'
-    - 'about.md' 
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>nav:
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    - &#39;index.md&#39;
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    - &#39;about.md&#39; 
+</code></pre></div>
 <p>注意</p>
 <p>导航配置中的所有路径都必须相对于<code>docs_dir</code> 配置选项。如果该选项设置为默认值，<code>docs</code>则上述配置的源文件将位于<code>docs/index.md</code>和 <code>docs/about.md</code>。</p>
 <p>上面的示例将导致在顶层创建两个导航项，并根据Markdown文件的内容（如果在文件中未定义标题的话）从文件名推断其标题。要覆盖<code>nav</code>设置中的标题，请在文件名之前添加一个标题：</p>
-<pre><code>nav:
-    - Home: 'index.md'
-    - About: 'about.md'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>nav:
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    - Home: &#39;index.md&#39;
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    - About: &#39;about.md&#39;
+</code></pre></div>
 <p>注意</p>
 <p>如果在导航中为页面定义了标题，则该标题将在该页面的整个站点中使用，并将覆盖页面本身内定义的任何标题。</p>
 <p>可以通过在部分标题下列出相关页面来创建导航子部分。例如：</p>
-<pre><code>nav:
-    - Home: 'index.md'
-    - User Guide:
-        - 'Writing  your  docs': 'writing-your-docs.md'
-        - 'Styling  your  docs': 'styling-your-docs.md'
-    - About:
-        - 'License': 'license.md'
-        - 'Release  Notes': 'release-notes.md'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>nav:
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    - Home: &#39;index.md&#39;
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    - User Guide:
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>        - &#39;Writing  your  docs&#39;: &#39;writing-your-docs.md&#39;
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>        - &#39;Styling  your  docs&#39;: &#39;styling-your-docs.md&#39;
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    - About:
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>        - &#39;License&#39;: &#39;license.md&#39;
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>        - &#39;Release  Notes&#39;: &#39;release-notes.md&#39;
+</code></pre></div>
 <p>通过上述配置，我们具有三个顶级项：“主页”，“用户指南”和“关于”。“首页”是指向该网站首页的链接。在“用户指南”部分下，列出了两个页面：“编写文档”和“样式化文档”。在“关于”部分下，又列出了两个页面：“许可证”和“发行说明”。</p>
 <h3 id="_13">扩展功能</h3>
 <h4 id="_14">网站搜索</h4>
 <p>网站搜索是使用<a href="https://lunrjs.com/">lunr.js</a>实现的，该默认情况下包括英语的单词，而其他语言的词干包含在<a href="https://github.com/MihaiValentin/lunr-languages">lunr-languages中</a>，这两种<a href="https://github.com/MihaiValentin/lunr-languages">语言</a>都与此主题集成在一起。素材为给定的主题语言选择匹配的（或最匹配的）词干。<code>mkdocs.yml</code>通过显式定义搜索语言，可以在项目的语言中激活多语言搜索：</p>
-<pre><code>extra:
-  search:
-    language: 'en,  de,  ru'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>extra:
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>  search:
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    language: &#39;en,  de,  ru&#39;
+</code></pre></div>
 <p>网站搜索目前支持以下语言：</p>
 <table>
 <thead>
@@ -2933,34 +2933,34 @@ my-project/Docs/index.md            # 主页内容
 </tbody>
 </table>
 <p>可以对词的分隔符进行自定义，这可以索引由<code>-</code>或分隔的单词部分<code>.</code>：</p>
-<pre><code>extra:
-  search:
-    tokenizer: '[\s\-\.]+'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>extra:
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>  search:
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>    tokenizer: &#39;[\s\-\.]+&#39;
+</code></pre></div>
 <p>注意</p>
 <p>目前，Lunr语言不支持中文或其他亚洲语言。但是，实践证明，可使用日语来搜索中文。</p>
 <h4 id="_15">社交关系</h4>
 <p>在文档的页脚中链接社交帐户。<code>type</code>必须表示类型，例如<code>github</code>，<code>twitter</code>或者<code>linkedin</code>，<code>link</code>必须包含要链接的网址，例如：</p>
-<pre><code>extra:
-  social:
-    - type: 'github'
-      link: 'https://github.com/xxxx'
-    - type: 'twitter'
-      link: 'https://twitter.com/xxxx'
-    - type: 'linkedin'
-      link: 'https://www.linkedin.com/in/xxxx'` 
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>extra:
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>  social:
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>    - type: &#39;github&#39;
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>      link: &#39;https://github.com/xxxx&#39;
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>    - type: &#39;twitter&#39;
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>      link: &#39;https://twitter.com/xxxx&#39;
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>    - type: &#39;linkedin&#39;
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>      link: &#39;https://www.linkedin.com/in/xxxx&#39;` 
+</code></pre></div>
 <h4 id="_16">谷歌分析</h4>
 <p>设置Google Analytics（分析）跟踪配置。MkDocs可轻松将网站跟踪与Google Analytics（分析）集成。除了基本跟踪之外，还可以跟踪所有传出链接的点击以及网站搜索的使用方式。可以在项目的中激活跟踪：</p>
-<pre><code>google_analytics:
-  - 'UA-XXXXXXXX-X'
-  - 'auto'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>google_analytics:
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>  - &#39;UA-XXXXXXXX-X&#39;
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>  - &#39;auto&#39;
+</code></pre></div>
 <h4 id="_17">评论插件</h4>
 <p>material 已与<a href="https://disqus.com/">Disqus</a> 集成在一起，因此，如果要在文档中添加注释部分，只需设置你在 Disqus 里的简称：</p>
-<pre><code>extra:
-  disqus: 'your-shortname'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>extra:
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>  disqus: &#39;your-shortname&#39;
+</code></pre></div>
 <p>注意</p>
 <p>除了索引页面之外，所有页面上都会插入注释部分。此外，将在目录底部生成一个新条目，该条目链接到注释部分。</p>
 <p>前提</p>
@@ -2969,26 +2969,26 @@ my-project/Docs/index.md            # 主页内容
 <h4 id="markdown">Markdown扩展</h4>
 <p>MkDocs页面必须使用<a href="https://daringfireball.net/projects/markdown/">Markdown</a>写作，Markdown是一种轻量级的标记语言，它导致易于阅读，易于编写的纯文本文档，并且可以以可预测的方式转换为有效的HTML文档。</p>
 <p>MkDocs使用<a href="https://python-markdown.github.io/">Python-Markdown</a>库将Markdown文档呈现为HTML。除了在所有Markdown实现中通用的 <a href="https://daringfireball.net/projects/markdown/syntax">基本Markdown语法</a>，MkDocs还支持通过 <a href="https://python-markdown.github.io/extensions/">Python-Markdown扩展</a> 语法。建议默认启用以下扩展：</p>
-<pre><code>markdown_extensions:
-    - admonition                                                # 注解块支持
-  - pymdownx.arithmatex                             # 数学公式的TeX语法支持
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.emoji:                                     # 表情支持
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  - pymdownx.inlinehilite
-  - pymdownx.magiclink
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tasklist:                              # 任务清单支持
-      custom_checkbox: true
-  - pymdownx.tilde
-  - meta                                                            # 元数据支持
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>markdown_extensions:
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    - admonition                                                # 注解块支持
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>  - pymdownx.arithmatex                             # 数学公式的TeX语法支持
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>  - pymdownx.betterem:
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>      smart_enable: all
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>  - pymdownx.caret
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>  - pymdownx.critic
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>  - pymdownx.details
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>  - pymdownx.emoji:                                     # 表情支持
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>  - pymdownx.inlinehilite
+<a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>  - pymdownx.magiclink
+<a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>  - pymdownx.mark
+<a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>  - pymdownx.smartsymbols
+<a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>  - pymdownx.superfences
+<a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a>  - pymdownx.tasklist:                              # 任务清单支持
+<a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a>      custom_checkbox: true
+<a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a>  - pymdownx.tilde
+<a id="__codelineno-25-19" name="__codelineno-25-19" href="#__codelineno-25-19"></a>  - meta                                                            # 元数据支持
+</code></pre></div>
 <ul>
 <li>使用 <strong>arithmatex</strong> 时，除了激活扩展之外，还需要在<code>mkdocs.yml</code>中包括MathJax JavaScript：</li>
 </ul>
@@ -2998,109 +2998,109 @@ my-project/Docs/index.md            # 主页内容
 <li>使用 <strong>meta</strong> ，为特定页面启用或禁用 Disqus：</li>
 </ul>
 <p>元数据在Markdown文档的开头以一系列键值对的形式编写，并由结束元数据上下文的空白行分隔。</p>
-<pre><code># 可以在每个文档启用Disqus：
-disqus: your-shortname
-
-# 可以通过将特定页面设置为空值来禁用Disqus：
-disqus:
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a># 可以在每个文档启用Disqus：
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>disqus: your-shortname
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a># 可以通过将特定页面设置为空值来禁用Disqus：
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>disqus:
+</code></pre></div>
 <h3 id="mkdocsyml">mkdocs.yml 配置示例</h3>
-<pre><code># Project information
-site_name: 基于 Material for MkDocs 搭建静态网页
-site_description: 
-site_author: derrors
-site_url: https://derrors.github.io/
-
-
-# Repository
-repo_name: 'Derrors/Derrors.github.io'
-repo_url: 'https://github.com/Derrors/Derrors.github.io/'
-
-# Copyright
-copyright: &quot;Copyright &amp;copy; 2019 - 2020 Qinghe Li&quot;
-
-
-theme:
-  name: material
-  palette:
-    primary: 'deep purple'
-    accent: 'deep purple'
-
-  feature:
-    tabs: true
-
-  #font:
-    #text: 'Ubuntu'
-    #code: 'Ubuntu Mono'
-
-  favicon: 'assets/images/favicon.ico'
-
-  language: 'zh'
-
-
-# Customization
-extra:
-  social:
-    - type: github
-      link: https://github.com/Derrors
-
-  search:
-    language: 'ja'
-
-  disqus: 'derrors'
-
-
-# Extensions
-markdown_extensions:
-  - admonition
-  - codehilite:
-      guess_lang: false
-      linenums: false
-  - toc:
-      permalink: true
-  - footnotes
-  - meta
-  - def_list
-  - pymdownx.arithmatex
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_png
-  - pymdownx.inlinehilite
-  - pymdownx.magiclink
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tasklist
-  - pymdownx.tilde
-
-extra_javascript:
-  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
-
-
-# Google Analytics
-google_analytics:
-  - &quot;UA-156919721-1&quot;
-  - &quot;auto&quot;
-
-edit_uri:
-
-plugins:
-  - search
-
-nav:
-  - 基于 Material for MkDocs 搭建静态网页: 
-      - 介绍: 介绍.md
-      - 安装 Mkdocs &amp;&amp; Material: 安装 Mkdocs &amp;&amp; Material.md
-      - 创建新项目: 创建新项目.md
-      - 配置 YAML 文件: 配置 YAML 文件.md
-      - 开发服务器并生成网页: 开发服务器并生成网页.md
-      - 将网页部署到 GitHub Pages: 将网页部署到 GitHub Pages.md
-      - Reference: Reference.md
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a># Project information
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>site_name: 基于 Material for MkDocs 搭建静态网页
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>site_description: 
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>site_author: derrors
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>site_url: https://derrors.github.io/
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a># Repository
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>repo_name: &#39;Derrors/Derrors.github.io&#39;
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>repo_url: &#39;https://github.com/Derrors/Derrors.github.io/&#39;
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>
+<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a># Copyright
+<a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a>copyright: &quot;Copyright &amp;copy; 2019 - 2020 Qinghe Li&quot;
+<a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a>
+<a id="__codelineno-27-15" name="__codelineno-27-15" href="#__codelineno-27-15"></a>
+<a id="__codelineno-27-16" name="__codelineno-27-16" href="#__codelineno-27-16"></a>theme:
+<a id="__codelineno-27-17" name="__codelineno-27-17" href="#__codelineno-27-17"></a>  name: material
+<a id="__codelineno-27-18" name="__codelineno-27-18" href="#__codelineno-27-18"></a>  palette:
+<a id="__codelineno-27-19" name="__codelineno-27-19" href="#__codelineno-27-19"></a>    primary: &#39;deep purple&#39;
+<a id="__codelineno-27-20" name="__codelineno-27-20" href="#__codelineno-27-20"></a>    accent: &#39;deep purple&#39;
+<a id="__codelineno-27-21" name="__codelineno-27-21" href="#__codelineno-27-21"></a>
+<a id="__codelineno-27-22" name="__codelineno-27-22" href="#__codelineno-27-22"></a>  feature:
+<a id="__codelineno-27-23" name="__codelineno-27-23" href="#__codelineno-27-23"></a>    tabs: true
+<a id="__codelineno-27-24" name="__codelineno-27-24" href="#__codelineno-27-24"></a>
+<a id="__codelineno-27-25" name="__codelineno-27-25" href="#__codelineno-27-25"></a>  #font:
+<a id="__codelineno-27-26" name="__codelineno-27-26" href="#__codelineno-27-26"></a>    #text: &#39;Ubuntu&#39;
+<a id="__codelineno-27-27" name="__codelineno-27-27" href="#__codelineno-27-27"></a>    #code: &#39;Ubuntu Mono&#39;
+<a id="__codelineno-27-28" name="__codelineno-27-28" href="#__codelineno-27-28"></a>
+<a id="__codelineno-27-29" name="__codelineno-27-29" href="#__codelineno-27-29"></a>  favicon: &#39;assets/images/favicon.ico&#39;
+<a id="__codelineno-27-30" name="__codelineno-27-30" href="#__codelineno-27-30"></a>
+<a id="__codelineno-27-31" name="__codelineno-27-31" href="#__codelineno-27-31"></a>  language: &#39;zh&#39;
+<a id="__codelineno-27-32" name="__codelineno-27-32" href="#__codelineno-27-32"></a>
+<a id="__codelineno-27-33" name="__codelineno-27-33" href="#__codelineno-27-33"></a>
+<a id="__codelineno-27-34" name="__codelineno-27-34" href="#__codelineno-27-34"></a># Customization
+<a id="__codelineno-27-35" name="__codelineno-27-35" href="#__codelineno-27-35"></a>extra:
+<a id="__codelineno-27-36" name="__codelineno-27-36" href="#__codelineno-27-36"></a>  social:
+<a id="__codelineno-27-37" name="__codelineno-27-37" href="#__codelineno-27-37"></a>    - type: github
+<a id="__codelineno-27-38" name="__codelineno-27-38" href="#__codelineno-27-38"></a>      link: https://github.com/Derrors
+<a id="__codelineno-27-39" name="__codelineno-27-39" href="#__codelineno-27-39"></a>
+<a id="__codelineno-27-40" name="__codelineno-27-40" href="#__codelineno-27-40"></a>  search:
+<a id="__codelineno-27-41" name="__codelineno-27-41" href="#__codelineno-27-41"></a>    language: &#39;ja&#39;
+<a id="__codelineno-27-42" name="__codelineno-27-42" href="#__codelineno-27-42"></a>
+<a id="__codelineno-27-43" name="__codelineno-27-43" href="#__codelineno-27-43"></a>  disqus: &#39;derrors&#39;
+<a id="__codelineno-27-44" name="__codelineno-27-44" href="#__codelineno-27-44"></a>
+<a id="__codelineno-27-45" name="__codelineno-27-45" href="#__codelineno-27-45"></a>
+<a id="__codelineno-27-46" name="__codelineno-27-46" href="#__codelineno-27-46"></a># Extensions
+<a id="__codelineno-27-47" name="__codelineno-27-47" href="#__codelineno-27-47"></a>markdown_extensions:
+<a id="__codelineno-27-48" name="__codelineno-27-48" href="#__codelineno-27-48"></a>  - admonition
+<a id="__codelineno-27-49" name="__codelineno-27-49" href="#__codelineno-27-49"></a>  - codehilite:
+<a id="__codelineno-27-50" name="__codelineno-27-50" href="#__codelineno-27-50"></a>      guess_lang: false
+<a id="__codelineno-27-51" name="__codelineno-27-51" href="#__codelineno-27-51"></a>      linenums: false
+<a id="__codelineno-27-52" name="__codelineno-27-52" href="#__codelineno-27-52"></a>  - toc:
+<a id="__codelineno-27-53" name="__codelineno-27-53" href="#__codelineno-27-53"></a>      permalink: true
+<a id="__codelineno-27-54" name="__codelineno-27-54" href="#__codelineno-27-54"></a>  - footnotes
+<a id="__codelineno-27-55" name="__codelineno-27-55" href="#__codelineno-27-55"></a>  - meta
+<a id="__codelineno-27-56" name="__codelineno-27-56" href="#__codelineno-27-56"></a>  - def_list
+<a id="__codelineno-27-57" name="__codelineno-27-57" href="#__codelineno-27-57"></a>  - pymdownx.arithmatex
+<a id="__codelineno-27-58" name="__codelineno-27-58" href="#__codelineno-27-58"></a>  - pymdownx.betterem:
+<a id="__codelineno-27-59" name="__codelineno-27-59" href="#__codelineno-27-59"></a>      smart_enable: all
+<a id="__codelineno-27-60" name="__codelineno-27-60" href="#__codelineno-27-60"></a>  - pymdownx.caret
+<a id="__codelineno-27-61" name="__codelineno-27-61" href="#__codelineno-27-61"></a>  - pymdownx.critic
+<a id="__codelineno-27-62" name="__codelineno-27-62" href="#__codelineno-27-62"></a>  - pymdownx.details
+<a id="__codelineno-27-63" name="__codelineno-27-63" href="#__codelineno-27-63"></a>  - pymdownx.emoji:
+<a id="__codelineno-27-64" name="__codelineno-27-64" href="#__codelineno-27-64"></a>      emoji_generator: !!python/name:pymdownx.emoji.to_png
+<a id="__codelineno-27-65" name="__codelineno-27-65" href="#__codelineno-27-65"></a>  - pymdownx.inlinehilite
+<a id="__codelineno-27-66" name="__codelineno-27-66" href="#__codelineno-27-66"></a>  - pymdownx.magiclink
+<a id="__codelineno-27-67" name="__codelineno-27-67" href="#__codelineno-27-67"></a>  - pymdownx.mark
+<a id="__codelineno-27-68" name="__codelineno-27-68" href="#__codelineno-27-68"></a>  - pymdownx.smartsymbols
+<a id="__codelineno-27-69" name="__codelineno-27-69" href="#__codelineno-27-69"></a>  - pymdownx.superfences
+<a id="__codelineno-27-70" name="__codelineno-27-70" href="#__codelineno-27-70"></a>  - pymdownx.tasklist
+<a id="__codelineno-27-71" name="__codelineno-27-71" href="#__codelineno-27-71"></a>  - pymdownx.tilde
+<a id="__codelineno-27-72" name="__codelineno-27-72" href="#__codelineno-27-72"></a>
+<a id="__codelineno-27-73" name="__codelineno-27-73" href="#__codelineno-27-73"></a>extra_javascript:
+<a id="__codelineno-27-74" name="__codelineno-27-74" href="#__codelineno-27-74"></a>  - &#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML&#39;
+<a id="__codelineno-27-75" name="__codelineno-27-75" href="#__codelineno-27-75"></a>
+<a id="__codelineno-27-76" name="__codelineno-27-76" href="#__codelineno-27-76"></a>
+<a id="__codelineno-27-77" name="__codelineno-27-77" href="#__codelineno-27-77"></a># Google Analytics
+<a id="__codelineno-27-78" name="__codelineno-27-78" href="#__codelineno-27-78"></a>google_analytics:
+<a id="__codelineno-27-79" name="__codelineno-27-79" href="#__codelineno-27-79"></a>  - &quot;UA-156919721-1&quot;
+<a id="__codelineno-27-80" name="__codelineno-27-80" href="#__codelineno-27-80"></a>  - &quot;auto&quot;
+<a id="__codelineno-27-81" name="__codelineno-27-81" href="#__codelineno-27-81"></a>
+<a id="__codelineno-27-82" name="__codelineno-27-82" href="#__codelineno-27-82"></a>edit_uri:
+<a id="__codelineno-27-83" name="__codelineno-27-83" href="#__codelineno-27-83"></a>
+<a id="__codelineno-27-84" name="__codelineno-27-84" href="#__codelineno-27-84"></a>plugins:
+<a id="__codelineno-27-85" name="__codelineno-27-85" href="#__codelineno-27-85"></a>  - search
+<a id="__codelineno-27-86" name="__codelineno-27-86" href="#__codelineno-27-86"></a>
+<a id="__codelineno-27-87" name="__codelineno-27-87" href="#__codelineno-27-87"></a>nav:
+<a id="__codelineno-27-88" name="__codelineno-27-88" href="#__codelineno-27-88"></a>  - 基于 Material for MkDocs 搭建静态网页: 
+<a id="__codelineno-27-89" name="__codelineno-27-89" href="#__codelineno-27-89"></a>      - 介绍: 介绍.md
+<a id="__codelineno-27-90" name="__codelineno-27-90" href="#__codelineno-27-90"></a>      - 安装 Mkdocs &amp;&amp; Material: 安装 Mkdocs &amp;&amp; Material.md
+<a id="__codelineno-27-91" name="__codelineno-27-91" href="#__codelineno-27-91"></a>      - 创建新项目: 创建新项目.md
+<a id="__codelineno-27-92" name="__codelineno-27-92" href="#__codelineno-27-92"></a>      - 配置 YAML 文件: 配置 YAML 文件.md
+<a id="__codelineno-27-93" name="__codelineno-27-93" href="#__codelineno-27-93"></a>      - 开发服务器并生成网页: 开发服务器并生成网页.md
+<a id="__codelineno-27-94" name="__codelineno-27-94" href="#__codelineno-27-94"></a>      - 将网页部署到 GitHub Pages: 将网页部署到 GitHub Pages.md
+<a id="__codelineno-27-95" name="__codelineno-27-95" href="#__codelineno-27-95"></a>      - Reference: Reference.md
+</code></pre></div>
 <h2 id="_18">参考</h2>
 <ul>
 <li>https://derrors.github.io/</li>

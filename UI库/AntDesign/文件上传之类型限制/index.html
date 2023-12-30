@@ -2066,22 +2066,22 @@
 <p><code>accept</code> 接受上传的文件类型, 详见 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#accept">input accept Attribute</a></p>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input/file#%E5%94%AF%E4%B8%80%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E%E7%AC%A6">唯一文件类型说明符</a></p>
 </blockquote>
-<pre><code class="language-html">&lt;template&gt;
-  &lt;div&gt;
-    &lt;upload
-      :accept=&quot;'.pdf'&quot;
-      :before-upload=&quot;beforeUpload&quot;
-      :file-list=&quot;fileList&quot;
-      :multiple=&quot;false&quot;
-      :show-upload-list=&quot;false&quot;
-    &gt;
-      &lt;button type=&quot;button&quot;&gt;
-        选择PDF文件
-      &lt;/button&gt;
-    &lt;/upload&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="p">&lt;</span><span class="nt">upload</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      <span class="na">:accept</span><span class="o">=</span><span class="s">&quot;&#39;.pdf&#39;&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      <span class="na">:before-upload</span><span class="o">=</span><span class="s">&quot;beforeUpload&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      <span class="na">:file-list</span><span class="o">=</span><span class="s">&quot;fileList&quot;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      <span class="na">:multiple</span><span class="o">=</span><span class="s">&quot;false&quot;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>      <span class="na">:show-upload-list</span><span class="o">=</span><span class="s">&quot;false&quot;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="p">&gt;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        选择PDF文件
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>      <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="p">&lt;/</span><span class="nt">upload</span><span class="p">&gt;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</code></pre></div>
 <h2 id="accept">accept 说明</h2>
 <p><code>accept</code>属性的值可以是合法的MIME类型或文件扩展名的字符串，用于指定允许上传的文件类型。以下是一些常见的合法文件类型值的示例：</p>
 <ol>
@@ -2115,8 +2115,8 @@
 <li>字符串 <code>image/*</code>，表示“任何图片文件”。</li>
 </ul>
 <p><code>accept</code> 属性的值是包含一个或多个（用逗号分隔）唯一文件类型说明符的字符串。例如，一个文件选择器需要能被表示成一张图片的内容，包括标准的图片格式和 PDF 文件，大概是这样的：</p>
-<pre><code>&lt;input type=&quot;file&quot; accept=&quot;image/*,.pdf&quot; /&gt; 
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;input type=&quot;file&quot; accept=&quot;image/*,.pdf&quot; /&gt; 
+</code></pre></div>
 
 
 

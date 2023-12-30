@@ -1983,33 +1983,33 @@
 
 
 <h1 id="pdf">PDF流数据预览</h1>
-<pre><code class="language-html">&lt;a-modal
-  v-model=&quot;visible&quot;
-  :title=&quot;pdfTitle&quot;
-  on-ok=&quot;handleOk&quot;
-  :footer=&quot;null&quot;
-  width=&quot;50%&quot;
-  centered
-  class=&quot;pdf-wraper&quot;
-  :body-style=&quot;{height:'80vh'}&quot;
-&gt;
-  &lt;div class=&quot;pdf-content&quot;&gt;
-    &lt;object :data=&quot;pdfUrl&quot; type=&quot;application/pdf&quot; width=&quot;100%&quot; height=&quot;100%&quot; /&gt;
-  &lt;/div&gt;
-&lt;/a-modal&gt;
-</code></pre>
-<pre><code class="language-js">getFile(params, { responseType: &quot;blob&quot; }).then((res) =&gt; {
-  const blob = new window.Blob([res], {
-    type: &quot;application/pdf;charset-UTF-8&quot;
-  });
-  // 参数：用于创建 URL 的 File 对象、Blob 对象或者 MediaSource 对象。​
-  // 返回值：一个DOMString包含了一个对象URL，该URL可用于指定源 object的内容。
-  const href = URL.createObjectURL(blob);
-  this.pdfUrl = href; 
-  // 新窗口打开
-  // window.open(href);
-});
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">a-modal</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;visible&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="na">:title</span><span class="o">=</span><span class="s">&quot;pdfTitle&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="na">on-ok</span><span class="o">=</span><span class="s">&quot;handleOk&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  <span class="na">:footer</span><span class="o">=</span><span class="s">&quot;null&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  <span class="na">width</span><span class="o">=</span><span class="s">&quot;50%&quot;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="na">centered</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  <span class="na">class</span><span class="o">=</span><span class="s">&quot;pdf-wraper&quot;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="na">:body-style</span><span class="o">=</span><span class="s">&quot;{height:&#39;80vh&#39;}&quot;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;pdf-content&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="p">&lt;</span><span class="nt">object</span> <span class="na">:data</span><span class="o">=</span><span class="s">&quot;pdfUrl&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/pdf&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;100%&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">&lt;/</span><span class="nt">a-modal</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">getFile</span><span class="p">(</span><span class="nx">params</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">responseType</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;blob&quot;</span><span class="w"> </span><span class="p">}).</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">blob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">Blob</span><span class="p">([</span><span class="nx">res</span><span class="p">],</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;application/pdf;charset-UTF-8&quot;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="p">});</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="c1">// 参数：用于创建 URL 的 File 对象、Blob 对象或者 MediaSource 对象。​</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="c1">// 返回值：一个DOMString包含了一个对象URL，该URL可用于指定源 object的内容。</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">href</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">blob</span><span class="p">);</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">pdfUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">href</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="c1">// 新窗口打开</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="c1">// window.open(href);</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">});</span>
+</code></pre></div>
 
 
 

@@ -2135,33 +2135,32 @@
 <li>
 <p><strong>安装Python</strong><br />
     MkDocs 是用Python编写的，因此需要Python环境。Mac通常自带Python，但是可能是Python 2.x版本。MkDocs 需要 Python 3.5 以上版本。您可以使用Homebrew来安装最新的Python 3，如果还没有安装Homebrew，可以在终端执行以下命令来安装它：</p>
-<p>```null
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"</p>
-<p>```</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;
+</code></pre></div>
 <p>安装好Homebrew后，使用以下命令安装Python 3：</p>
-<p><code>null
-brew install python</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>brew install python
+</code></pre></div>
 </li>
 <li>
 <p><strong>安装MkDocs</strong><br />
     使用Python的包管理器pip来安装MkDocs。在终端执行以下命令：</p>
-<p><code>python
-pip install mkdocs</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">pip</span> <span class="n">install</span> <span class="n">mkdocs</span>
+</code></pre></div>
 <p>如果您的系统中同时存在Python 2和Python 3，可能需要使用<code>pip3</code>来代替<code>pip</code>。</p>
 </li>
 <li>
 <p><strong>创建新项目</strong><br />
     创建一个新的MkDocs项目，执行以下命令：</p>
-<p><code>python
-mkdocs new my-project</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">mkdocs</span> <span class="n">new</span> <span class="n">my</span><span class="o">-</span><span class="n">project</span>
+</code></pre></div>
 <p>该命令会创建一个名为<code>my-project</code>的新文件夹，里面包含MkDocs的配置文件<code>mkdocs.yml</code>以及一个名为<code>docs</code>的文档目录。</p>
 </li>
 <li>
 <p><strong>运行MkDocs服务器</strong><br />
     切换到项目目录，并启动MkDocs内置的开发服务器：</p>
-<p><code>shell
-cd my-project
-mkdocs serve</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd</span><span class="w"> </span>my-project
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>mkdocs<span class="w"> </span>serve
+</code></pre></div>
 <p>这个命令会启动一个本地服务器，默认情况下您可以通过浏览器访问<code>http://127.0.0.1:8000</code>来查看您的文档。</p>
 </li>
 <li>
@@ -2171,16 +2170,16 @@ mkdocs serve</code></p>
 <li>
 <p><strong>构建静态网站</strong><br />
     当您准备好将您的文档发布到Web服务器或GitHub Pages时，使用以下命令构建静态网站：</p>
-<p><code>null
-mkdocs build</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mkdocs build
+</code></pre></div>
 <p>该命令会在<code>site</code>文件夹中生成静态内容，您可以将这些内容部署到任何支持静态文件托管的服务上。</p>
 </li>
 <li>
 <p><strong>部署到GitHub Pages</strong><br />
     如果您想要将网站部署到GitHub Pages，MkDocs提供了一个简单的命令来帮助您完成这一过程：</p>
-<p><code>shell
-mkdocs gh-deploy
-mkdocs gh-deploy</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mkdocs<span class="w"> </span>gh-deploy
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div>
 <p>这个命令会将构建好的网站推送到您的GitHub仓库的<code>gh-pages</code>分支，GitHub会自动将其发布到GitHub Pages。</p>
 </li>
 </ol>

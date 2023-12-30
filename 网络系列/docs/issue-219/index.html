@@ -1,0 +1,9538 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="王永杰的个人网站,王永杰的个人wiki,小东西儿的个人网站,xiaodongxier.com,wangyongjie.cn,前端知识管理,个人wiki,个人知识管理">
+      
+      
+        <meta name="author" content="wangyongjie">
+      
+      
+        <link rel="canonical" href="https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/docs/issue-219/">
+      
+      
+        <link rel="prev" href="../issue-218/">
+      
+      
+        <link rel="next" href="../issue-22/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>科技爱好者周刊（第 219 期）：如何防止帐号被黑 - 知识管理</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#219" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="知识管理" class="md-header__button md-logo" aria-label="知识管理" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            知识管理
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              科技爱好者周刊（第 219 期）：如何防止帐号被黑
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/xiaodongxier" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    xiaodongxier
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../nav/" class="md-tabs__link">
+        
+  
+    
+  
+  书签
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../JavaScript/" class="md-tabs__link">
+          
+  
+    
+  
+  JavaScript
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../UI%E5%BA%93/AntDesign/Antd%E4%B8%ADTable%E7%BB%84%E4%BB%B6%E8%A1%8C%E7%B1%BB%E5%90%8D%E6%B7%BB%E5%8A%A0/" class="md-tabs__link">
+          
+  
+    
+  
+  UI库
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Vue/PDF%E6%B5%81%E6%95%B0%E6%8D%AE%E9%A2%84%E8%A7%88/" class="md-tabs__link">
+          
+  
+    
+  
+  Vue
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/" class="md-tabs__link">
+          
+  
+    
+  
+  工具相关
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../free-music/" class="md-tabs__link">
+          
+  
+    
+  
+  网络系列
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E8%8D%89%E7%A8%BF%E7%AE%B1/markdown/" class="md-tabs__link">
+          
+  
+    
+  
+  草稿箱
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="知识管理" class="md-nav__button md-logo" aria-label="知识管理" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    知识管理
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/xiaodongxier" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    xiaodongxier
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nav/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    书签
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../JavaScript/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    JavaScript
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/JS%E5%88%A0%E9%99%A4%E5%AF%B9%E8%B1%A1%E4%B8%AD%E6%9F%90%E6%9D%A1%E6%95%B0%E6%8D%AE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS删除对象中某条数据
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/JS%E5%A4%9A%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS多文件类型判断
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/JS%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS大小写转换
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/JS%E5%AF%B9%E8%B1%A1%E5%90%88%E5%B9%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS对象合并
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/JS%E5%AF%BB%E6%89%BE%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%9F%90%E4%B8%AA%E6%95%B0%E6%8D%AE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS寻找数组对象的某个数据
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/JS%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E5%B1%82%E7%BA%A7%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS数组对象层级格式转换
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/JS%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E7%AD%9B%E9%80%89%E6%8C%87%E5%AE%9A%E5%90%8E%E7%BC%80%E6%96%87%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS筛选指定后缀文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/JS%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E8%AF%BB%E5%8F%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JS本地存储读取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BCJSON%E4%B8%8EJSON%E4%BA%92%E8%BD%AC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    字符串格JSON与JSON互转
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    UI库
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UI库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AntDesign
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            AntDesign
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../UI%E5%BA%93/AntDesign/Antd%E4%B8%ADTable%E7%BB%84%E4%BB%B6%E8%A1%8C%E7%B1%BB%E5%90%8D%E6%B7%BB%E5%8A%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Antd中Table组件行类名添加
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../UI%E5%BA%93/AntDesign/table%E8%A1%A8%E6%A0%BC%E5%88%86%E9%A1%B5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    table表格分页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../UI%E5%BA%93/AntDesign/table%E8%A1%A8%E6%A0%BC%E8%8E%B7%E5%8F%96%E8%A1%8C%E6%95%B0%E6%8D%AE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    选择多行获取多行数据
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../UI%E5%BA%93/AntDesign/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B9%8B%E7%B1%BB%E5%9E%8B%E9%99%90%E5%88%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    文件上传之类型限制
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Vue
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Vue
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Vue/PDF%E6%B5%81%E6%95%B0%E6%8D%AE%E9%A2%84%E8%A7%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PDF流数据预览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Vue/Vue%E5%AF%BC%E5%87%BAPDF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vue导出PDF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Vue/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E6%B5%81%E4%B8%8B%E8%BD%BD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    二进制文件流下载
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Vue/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%93%E5%8D%B0%E4%BF%9D%E5%AD%98pdf%E9%87%8D%E5%91%BD%E5%90%8D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    浏览器打印保存pdf重命名
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    工具相关
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            工具相关
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Apple
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Apple
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/Apple/Apple%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apple数据导出
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/Apple/Mac%E6%9C%AC%E5%9C%B0%E9%9A%8F%E6%9C%BA%E7%94%9F%E6%88%90%E6%96%87%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mac本地随机生成文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/Apple/Mac%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4%E4%B8%8D%E7%94%9F%E6%95%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mac终端命令不生效
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/Apple/%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91%E5%BC%B9%E7%AA%97%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    iPhone 连接电脑频繁出现弹窗问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ChatGPT
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            ChatGPT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/ChatGPT/chatgpt-ui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chatgpt-ui
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/Git/%E6%92%A4%E9%94%80commit%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    撤销commit操作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GitHub
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            GitHub
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/GitHub/GitHub%E7%9B%B8%E5%85%B3API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub相关API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/GitHub/Github%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github加速访问
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/GitHub/%E9%80%9A%E8%BF%87GitHub%E7%9A%84Actions%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    通过GitHub的Actions实现自动部署
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MkDocs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            MkDocs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/MkDocs/Mac%E5%AE%89%E8%A3%85MkDocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mac安装MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/MkDocs/MkDocs%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MkDocs使用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/MkDocs/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8MkDocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    为什么使用 MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    开发环境
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            开发环境
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    包管理工具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    流程图相关
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            流程图相关
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/%E6%B5%81%E7%A8%8B%E5%9B%BE%E7%9B%B8%E5%85%B3/LogicFlow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LogicFlow 流程图编辑框架
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    移动端
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            移动端
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/%E7%A7%BB%E5%8A%A8%E7%AB%AF/nuxt3%E4%BD%BF%E7%94%A8vconsole/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nuxt3使用vconsole
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/%E7%A7%BB%E5%8A%A8%E7%AB%AF/vConsole/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    vConsole - 移动端开发调试利器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    网络系列
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            网络系列
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../free-music/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    免费音乐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../free-photos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    免费图库
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../free-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    免费工具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 1 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 10 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-100/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 100 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-101/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 101 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-102/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 102 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-103/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 103 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-104/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 104 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-105/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 105 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-106/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 106 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-107/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 107 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-108/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 108 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-109/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 109 期）：播客的价值
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 11 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-110/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 110 期）：如果不能去美国上市
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-111/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 111 期）：智能电视的误区
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-112/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 112 期）：如何培养领导力
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-113/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 113 期）：暴力犯罪为什么越来越少？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-114/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 114 期）：U 盘化生存和 Uber-job
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-115/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 115 期）：保护你的 DNA，不要泄漏
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-116/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 116 期）：世界的未来是一个火药桶
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-117/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 117 期）：我不想让你记住我的脸
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-118/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 118 期）：高考志愿怎么填
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-119/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 119 期）：降雨量和保险博弈
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 12 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-120/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 120 期）：只有开放才能打败封锁
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-121/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 121 期）：为什么人类没有越来越闲？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-122/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 122 期）：谈谈互联网公司的高估值
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-123/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 123 期）：互联网公司与湘军的军制
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-124/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 124 期）：华为如何考核员工
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-125/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 125 期）：数字人民币要取代谁
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-126/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 126 期）：内卷化是什么？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-127/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 127 期）：未来人人开发软件，几乎没人编码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-128/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 128 期）：这个社会是否正在变成“赛博朋克”？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-129/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 129 期）：创业的凸函数和凹函数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享（第 13 期）：周刊为什么只谈技术？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-130/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 130 期）：低龄化的互联网
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-131/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 131 期）：你的头脑是二值逻辑，还是三值逻辑？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-132/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 132 期）：快能力和慢能力
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-133/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 133 期）：贵州变瑞士，有没有可能？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-134/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 134 期）：未来的游戏业比现在大100倍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-135/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 135 期）：什么行业适合创业？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-136/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 136 期）：利特伍德奇迹定律
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-137/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 137 期）：Slack 被收购，以及企业的技术选型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-138/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 138 期）：失业难以避免，重构人生规划
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-139/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 139 期）：生物学的可怕进展
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 14 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-140/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 140 期）：印度人的工资是多少？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-141/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 141 期）：封闭系统的胜利
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-142/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 142 期）：2020年才是21世纪元年
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-143/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 143 期）：世界尽头与冷酷仙境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-144/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 144 期）：提高收入的根本途径
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-145/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 145 期）：大家不出门，经济怎么办？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-146/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 146 期）：网课应该怎么上？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-147/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 147 期）：寻找你愿意忍受的痛苦
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-148/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 148 期）：微增长时代
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-149/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 149 期）：新能源汽车，谁会是赢家？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 15 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-150/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 150 期）：当音乐还是稀缺的时候
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-151/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 151 期）：NFT 是什么，听说能赚钱
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-152/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 152 期）：从北大到技校
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-153/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 153 期）：机器翻译是对译者的侮辱吗？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-154/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 154 期）：1982年的信息社会预言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-155/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 155 期）：数字货币是打破美元霸权的武器吗？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-156/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 156 期）：显卡缺货与异业竞争
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-157/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 157 期）：KK 给年轻人的建议
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-158/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 158 期）：内容渠道的贬值
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-159/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 159 期）：游戏开发者的年薪
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 16 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-160/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 160 期）：中年码农的困境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-161/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 161 期）：再见了，学术硕士
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-162/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 162 期）：生活就像《吃豆人》游戏
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-163/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 163 期）：你的城市有多少张病床？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-164/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 164 期）：培训班 vs 大学，求职成功率比较
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-165/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 165 期）：全端 App 的时代
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-166/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 166 期）：视频学习胜过读书吗？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-167/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 167 期）：广告拦截器太过分了
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-168/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 168 期）：游戏《底特律：变人》
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-169/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 169 期）：五菱汽车的产品设计
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 17 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-170/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 170 期）：软件订阅制的胜利
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-171/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 171 期）：云服务流量有多贵？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-172/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 172 期）：我们会死于气候灾难吗？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-173/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 173 期）：网络收音机的设计
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-174/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 174 期）：全能程序员 vs 特长程序员
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-175/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 175 期）：知识广度 vs 知识深度
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-176/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 176 期）：中国法院承认 GPL 吗？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-177/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 177 期）：iPad 的真正用途
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-178/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 178 期）：家庭太阳能发电的春天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-179/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 179 期）：AR 技术的打开方式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 18 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-180/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 180 期）：你想住在中国哪里？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-181/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 181 期）：移动支付应该怎么设计？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-182/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 182 期）：新人优惠的风险
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-183/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 183 期）：腾讯的员工退休福利
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-184/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 184 期）：政府的存储需求有多大？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-185/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 185 期）：美国宪法拍卖，一个区块链案例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-186/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 186 期）：低纬度，高海拔，气候优势
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-187/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 187 期）：元宇宙会成功吗
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-188/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 188 期）：音乐是反社交
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-189/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 189 期）：下一个内卷的行业
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-19/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 19 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-190/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 190 期）：产品化思维
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-191/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 191 期）：一个程序员的财务独立之路
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-192/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 192 期）：最大的机会来自新技术
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-193/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 193 期）：前端与后端，谁更难？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-194/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 194 期）：悲观者正确，乐观者成功
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-195/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 195 期）：你做过不在乎结果的项目吗？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-196/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 196 期）：掌机的未来
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-197/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 197 期）：如果这个世界有快乐机
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-198/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 198 期）：美国制造是否可能
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-199/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 199 期）：俄罗斯的 HTTPS 证书问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 2 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-20/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 20 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-200/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 200 期）：低期望，多尝试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 201 期）：中国需要成立半导体部
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 202 期）：三个有启发的学习方法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 203 期）：英国的名校签证，伯克利的计算机教育
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 204 期）：如何度过疫情、裁员、还有战争
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 205 期）：互联网风口过去了吗？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 206 期）：如何走出失望和怀疑
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-207/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 207 期）：汽车行业的顶峰可能过去了
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-208/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 208 期）：晋升制度的问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-209/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 209 期）：程序员是怎样的人
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-21/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 21 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-210/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 210 期）：为什么软件变得复杂
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-211/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 211 期）：虚拟商品可以拉动 GDP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-212/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 212 期）：人生不短
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-213/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 213 期）：知识孤岛，知识软件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-214/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 214 期）：你的地图是错的
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-215/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 215 期）：互联网最喜欢的行为模式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-216/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 216 期）：极简主义的胜利
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-217/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 217 期）：沙特的新未来城
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-218/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 218 期）：葡萄酒，樱花，全球变暖
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 219 期）：如何防止帐号被黑
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 219 期）：如何防止帐号被黑
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      封面图
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      本周话题：如何防止帐号被黑
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudwego" class="md-nav__link">
+    <span class="md-ellipsis">
+      微服务框架 CloudWeGo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      科技动态
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      文章
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      工具
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      活动
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      资源
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      图片
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      纽约托马斯街33号
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      言论
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      历史上的本周
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      鸣谢
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-22/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 22 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-220/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 220 期）：人工智能的机会在哪里
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-221/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 221 期）：全世界最繁荣的行业
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-222/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 222 期）：四十年编程感想
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-223/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 223 期）：程序员需要担心裁员吗？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-224/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 224 期）：Figma 为什么赢了 Sketch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-225/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 225 期）：NPC 演员也是一种职业
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-226/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 226 期）：谷歌出了什么问题？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-227/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 227 期）：脸书的公司入职教育
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-228/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 228 期）：人类和人生的意义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-229/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 229 期）：手机充电问题的解决
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 23 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-230/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 230 期）：电子产品的用电量
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-231/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 231 期）：互联网公司需要多少员工？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-232/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 232 期）：好用的平面设计软件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-233/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 233 期）：生活就像一个鱼缸
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-234/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 234 期）：AI 聊天有多强？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-235/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 235 期）：青年失业率与选择创业
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-236/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 236 期）：中国的阳光地带
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-237/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 237 期）：真实方位是如何暴露的？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-238/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 238 期）：停止寻找的最佳时间
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-239/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 239 期）：未来两种人会增加
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-24/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 24 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-240/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 240 期）：教育年限可以缩短吗？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-241/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 241 期）：中国的增长动力在内陆
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-242/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 242 期）：一次尴尬的服务器被黑
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-243/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 243 期）：与孔子 AI 聊天
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-244/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 244 期）：大数据已死
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-245/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 245 期）：摩天大楼是反人类的
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-246/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 246 期）：永不丢失的网络身份
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-247/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 247 期）：扎克伯格的裁员信
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-248/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 248 期）：不要夸大 ChatGPT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-249/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 249 期）：最成功的软件企业家
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-25/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 25 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-250/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 250 期）：新技术的最大风险
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-251/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 251 期）：国产单板机值得推荐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-252/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 252 期）：互联网创业变难了
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-253/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 253 期）：训练材料用完之日
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-254/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 254 期）：人生是一个长板问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-255/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 255 期）：对待 AI 的正确态度
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-256/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 256 期）：最酷的乐高作品
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-257/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 257 期）：黄仁勋的 Nvidia 故事
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-258/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 258 期）：卡马克的猫
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-259/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 259 期）：如何免费使用 ChatGPT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-26/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 26 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-260/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 260 期）：你的旅程不会停在 Day 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-261/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 261 期）：黑客马拉松的正确方式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-262/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 262 期）：告别密码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-263/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 263 期）：开源软件如何赚钱？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-264/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 264 期）：Elasticsearch 的启示
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-265/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 265 期）：WiFi 的后面是 LiFi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-266/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 266 期）：自己做双语 EPUB 电子书
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-267/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 267 期）：5G 的春天要来了
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-268/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 268 期）：生产力是形容机器，不是形容人
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-269/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 269 期）：为什么英雄不使用炸药
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-27/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 27 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-270/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 270 期）：“精益开发”的精益是什么？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-271/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 271 期）：非线性的世界，线性的你
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-272/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 272 期）：Unity 的安装费，游戏业的缩影
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-273/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 273 期）：任正非的三篇最新谈话
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-274/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 274 期）：加密通信的最后一块拼图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-275/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 275 期）：彼得·蒂尔的实验
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-276/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 276 期）：内容行业的衰落
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-277/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 277 期）：工作台副屏的最佳选择
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-278/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 278 期）：棘手的 AI 版权
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-279/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 279 期）：网络社区的悲剧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-28/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 28 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-280/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 280 期）：机器点餐与宅文化
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-281/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 281 期）：新基建的政策选择
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-282/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 282 期）：电动皮卡 Cybertruck 的 48V 供电
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-283/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 283 期）：[年终感想] 没有目的地，向前走
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-284/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 284 期）：YouTube 有多少个视频？
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 29 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 3 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-30/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 30 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-31/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 31 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-32/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 32 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-33/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 33 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-34/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 34 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-35/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 35 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-36/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 36 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-37/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 37 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-38/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 38 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-39/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 39 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 4 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-40/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 40 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-41/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 41 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-42/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 42 期（20190201）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-43/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 43 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-44/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 44 期（20190222）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-45/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 45 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-46/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 46 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-47/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 47 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-48/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 48 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-49/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 49 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 5 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-50/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 50 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-51/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 51 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-52/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 52 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-53/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 53 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-54/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 54 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-55/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 55 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-56/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 56 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-57/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 57 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-58/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 58 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-59/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 59 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 6 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-60/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 60 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-61/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第61期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-62/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 62 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-63/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 63 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-64/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 64 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-65/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 65 期）：周刊开设"谁在招人"的招聘服务
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-66/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 66 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-67/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 67 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-68/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 68 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-69/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 69 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 7 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-70/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 70 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-71/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊（第 71 期）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-72/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 72 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-73/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 73 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-74/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 74 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-75/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 75 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-76/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 76 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-77/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 77 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-78/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 78 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-79/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 79 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 8 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 80 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 81 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-82/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 82 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 83 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 84 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-85/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 85 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 86 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 87 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 88 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 89 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    每周分享第 9 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 90 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-91/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 91 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-92/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 92 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-93/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 93 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-94/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 94 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 95 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 96 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 97 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 98 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-99/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    科技爱好者周刊：第 99 期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_288" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1_288" id="__nav_7_1_288_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Subjects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_288_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1_288">
+            <span class="md-nav__icon md-icon"></span>
+            Subjects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subjects/css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subjects/database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据库资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subjects/dev/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    开发工具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subjects/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker 资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subjects/go/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Go 语言资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subjects/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux 资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subjects/math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subjects/web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web 工具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    草稿箱
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            草稿箱
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%8D%89%E7%A8%BF%E7%AE%B1/markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    markdown语法测试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%8D%89%E7%A8%BF%E7%AE%B1/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    测试主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%8D%89%E7%A8%BF%E7%AE%B1/%E5%8F%82%E8%80%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      封面图
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      本周话题：如何防止帐号被黑
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudwego" class="md-nav__link">
+    <span class="md-ellipsis">
+      微服务框架 CloudWeGo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      科技动态
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      文章
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      工具
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      活动
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      资源
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      图片
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      纽约托马斯街33号
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      言论
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      历史上的本周
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      鸣谢
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="219">科技爱好者周刊（第 219 期）：如何防止帐号被黑</h1>
+<p>这里记录每周值得分享的科技内容，周五发布。</p>
+<p>本杂志开源（GitHub: <a href="https://github.com/ruanyf/weekly">ruanyf/weekly</a>），欢迎提交 issue，投稿或推荐科技内容。</p>
+<p>周刊讨论区的帖子<a href="https://github.com/ruanyf/weekly/issues/2542">《谁在招人？》</a>，提供大量程序员就业信息，欢迎访问或发布工作/实习岗位。</p>
+<h2 id="_1">封面图</h2>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081706.webp" /></p>
+<p>“武汉超算中心”使用集装箱搭建，是国内最大的集装箱超算中心，8月15日正式接入“中国算力网”。（<a href="http://www.cnhubei.com/content/2022-08/16/content_14982905.html">via</a>）</p>
+<h2 id="_2">本周话题：如何防止帐号被黑</h2>
+<p>上周有一起安全事件。两家著名的美国互联网公司——<a href="https://www.twilio.com/blog/august-2022-social-engineering-attack">Twillo</a> 和 <a href="https://blog.cloudflare.com/2022-07-sms-phishing-attacks/">Cloudflare</a>——被攻击了，前者还被攻破了。</p>
+<p>这两家都不是普通公司，技术很强，都采用了“双因素认证”，但还是被有效攻击了。它们事后披露了一些细节，我觉得值得谈一下，聊聊怎么保护帐号安全。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081711.webp" /></p>
+<p>首先，有一点应该是共识：<strong>密码是不安全的，一定要启用双因素认证。</strong></p>
+<p>大部分的互联网密码都已经泄漏了。地下的黑产出售很全的数据库，一查邮箱或手机号，密码就出来了。你不妨认定，自己的密码已经泄漏了。如果为每个网站设置不一样的密码，情况可能会好一点，但也无法保证某个账号就是安全的。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081116.webp" /></p>
+<p>任何一个重要账号，都应该打开“双因素认证”（two factor authentication，简写 2FA），即除了密码，再多一种认证。即使如此，也必须非常小心，因为 <strong>“双因素认证”也可能被破解</strong>。</p>
+<p>一种常见的“双因素认证”就是密码 + 短信。每次登录时，除了密码，还会发一个短信验证码。它的风险在于短信是不加密的，而且国内有过不少案例，罪犯拿着伪造的身份证去挂失，办了一个相同号码的 SIM 卡，顺利收到验证码。</p>
+<p>另一种新兴的“双因素认证”是密码 + 人脸识别。它的风险在于，国内的很多方案采用身份证照片与人脸比对，这很不安全。已经有新闻报道，<a href="https://finance.sina.com.cn/stock/hyyj/2022-07-18/doc-imizmscv2234144.shtml">银行的人脸识别被破解</a>，储户的存款被转走。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081119.webp" /></p>
+<p>公认较安全的“双因素认证”是密码 + <a href="https://en.wikipedia.org/wiki/Time-based_one-time_password">TOTP 时间码</a>。你在手机安装一个专门 App（比如 Google Authenticator 或 Authy），输入网站提供的密钥，就会每30秒生成一个6位时间码。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081118.webp" /></p>
+<p>但是，上周的安全事件，恰恰就是 TOTP 时间码被攻破了。下面就来说说，这是怎么发生的。</p>
+<p>事情的起因是，Twilio 和 Cloudflare 的员工，在下班后或者休息日收到了一条手机短信。下面就是两家公司公布的短信截图。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081204.webp" /></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081205.webp" /></p>
+<p>大意是，公司日程有调整或者你的登录信息过期了，请点击链接，到后台查看。它给出了一个公司名称加“sso”或者“okta”这样的钓鱼域名，警惕性不高的员工就会点击。</p>
+<p>读者可能会问，攻击者如何得知员工的手机号码。这在美国不是难事，LinkedIn 网站上就往往可以查到。</p>
+<p>员工点击链接以后，就会进入钓鱼网站（下图），跟真正的登陆页一模一样。只要填入用户名和密码，它们就立刻泄漏，脚本自动把它们发送到服务器。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081206.webp" /></p>
+<p>但是，这两家公司都开通了“双因素认证”，光有密码还进不去后台，所以钓鱼网站会把你引导到 TOTP 时间码的页面。</p>
+<p>这时，只要你输入了时间码，它就自动发送给攻击者。由于时间码的有效期只有30秒，这次攻击最绝的地方在于，攻击者是实时攻击，只要一拿到时间码，就立刻在真正的登录页输入，从而进入后台。</p>
+<p>可以这样说，大部分公司的双因素认证，都会被这种方式攻破。但是，Cloudflare 这一次没有被攻破，原因是他们的后台没有采用时间码，而是采用了物理密钥（下图）。只有把物理密钥插入计算机，才能登陆后台。攻击者拿不到物理密钥，自然就无法攻破。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081207.webp" /></p>
+<p>所以，这个事件的教训就是，<strong>目前最安全的认证方法应该是密码 + 物理密钥</strong>。事实上，从很早以前，银行就给客户发物理密钥，进行大额转账。如果你有条件，可以考虑使用，很多大网站都已经支持物理密码，比如 GitHub（下图）。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081801.webp" /></p>
+<p>问题在于，物理密钥的价格较高，便宜的也要一两百元人民币，普通用户不可能购买。好在 Web Authentication 技术正在推广，它允许把手机当作物理密钥，或者网站可以调用本机的指纹识别（或人脸识别)进行认证。</p>
+<p>对于大多数人来说，目前阶段如果没有物理密钥，保护账户安全的最佳实践无非就是这么几点：坚持使用双因素认证，不同网站使用不同密码，不在可疑网址输入密码。</p>
+<h2 id="cloudwego">微服务框架 CloudWeGo</h2>
+<p>大家知道吗，字节系应用的后台框架是开源的。去年9月，字节开源了微服务框架 <a href="https://www.cloudwego.io/zh/">CloudWeGo</a>，包含了主要的一些自研工具，用来搭建企业级云原生微服务。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081701.webp" /></p>
+<p>这个框架现在支持了<a href="https://segmentfault.com/a/1190000042226107">10万+的字节内部微服务</a>，以及1000万的容器实例。而且，开源框架跟内部使用的是同一套代码，统一迭代，在 GitHub 得到了9000+颗星。</p>
+<p>开源一周年之际，CloudWeGo 团队将在<a href="https://www.bagevent.com/event/8261894?bag_track=001">字节跳动技术沙龙</a>，分享字节的后台架构（比如<a href="https://segmentfault.com/a/1190000042187351">飞书的架构</a>），以及如何快速搭建企业级微服务。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081608.webp" /></p>
+<p>时间是8月27日（下周六）下午2点，采用线上直播形式。感兴趣的同学，点击<a href="https://www.bagevent.com/event/8261894?bag_track=001">这里</a>或者扫描二维码，了解活动详情并报名。会务组还准备了海量福利，给大家抽奖。</p>
+<h2 id="_3">科技动态</h2>
+<p>1、<a href="https://spectrum.ieee.org/robotic-surgery">手术机器人</a></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202207/bg2022070602.webp" /></p>
+<p>美国机器人公司 Intuitive Surgical 推出的手术机器人，已经进入了美国所有顶级医院。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202207/bg2022070603.webp" /></p>
+<p>这种机器人有四条机器手臂，合作完成一台手术：有的手臂用来切开伤口和缝合，有的用来体内操作，还有一条专门用作摄像头。</p>
+<p>当它进行手术时，实习医生就坐在一旁当观众，看着它完成手术。</p>
+<p>2、<a href="https://www.163.com/dy/article/H62O5V64053469LG.html">手机保管盒</a></p>
+<p>很多人觉得，手机的出现使得大家越来越难集中注意力。于是，市场上就诞生了手机保管箱、手机定时盒、手机定时锁这样的产品。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081401.webp" /></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081402.webp" /></p>
+<p>它们被称为“自律神器”，手机放在里面，设好定时，就无法取出了，只有时间到了，才能取出。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081403.webp" /></p>
+<p>有人认为，这种产品只是心理安慰，如果做不到自律，它不会有太大帮助。但是，另一些用户认为，确实有助于克服手机上瘾。</p>
+<p>3、<a href="https://www.8world.com/world/bioengineered-cornea-can-restore-sight-to-the-blind-and-visually-impaired-1888616">人造角膜</a></p>
+<p>大约5%的盲人因为角膜疾病而丧失视力，只要角膜移植就可以恢复视力。但是，角膜只有遗体捐赠才能获得，从而使得很多盲人无法做角膜手术。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081601.webp" /></p>
+<p>最近，瑞典林雪平大学发表论文，他们从猪皮提取了胶原蛋白，制造了人造角膜，已经在印度和伊朗植入了20名盲人。</p>
+<p>24个月后评估，14个人恢复了视力，剩下6个人从严重视力障碍转变为中度或轻度视力障碍。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081602.webp" /></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081603.webp" /></p>
+<p>研究团队的下一个目标，是得到欧洲和美国的批准，在那里进行100人的临床试验。如果人造角膜最终成功，对很多失明者将是极大的好消息。</p>
+<p>4、<a href="https://www.time-weekly.com/post/294534">集中供冷</a></p>
+<p>北方有集中供暖，广州的珠江新城正在尝试集中供冷。每户人家不用装空调，小区的供冷中心统一提供冷气。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081709.webp" /></p>
+<p>这样不仅节省能源，而且还可以降低供冷费用。它采用冰蓄冷，夜间用电低谷期进行蓄电制冰，相当于储能；白天的用电高峰期，再把夜间制成的冰块转化为冷冻水输送进管道，向用户输送冷量。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081710.webp" /></p>
+<p>但是，它要占用一块面积不小的土地，在大都市会有高昂的土地费用，导致供冷价格实际上并不低，这是推广的最大难点。</p>
+<p>5、<a href="https://www.energy-storage.news/worlds-first-large-scale-sand-battery-goes-online-in-finland/">沙子电池</a></p>
+<p>芬兰建造了世界第一个商业化的沙基热能储存系统，俗称“沙子电池”，使用加热的沙子储存能量。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202207/bg2022070704.webp" /></p>
+<p>它是一个 4 × 7 米的钢筒，里面放了数百吨沙子，平时不用的时候，可以加热到 500-600 摄氏度的温度，并保持不变。</p>
+<p>等到当地开始供热，这些沙子就用来提供热量。据说这个筒储存的能量，相当于8000度电的加热效果。它的最大优点就是便宜，成本低廉，而且容易制造。</p>
+<h2 id="_4">文章</h2>
+<p>1、<a href="https://oversea.huanqiu.com/article/4909nNA0m09">无人驾驶安全员的一天</a>（中文）</p>
+<p>去年，百度获得许可，在首钢园开始运营无人驾驶出租车。每辆车配备一个安全员，坐在驾驶位或副驾驶位，监督车辆行驶。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081605.webp" /></p>
+<p>本文是对一位安全员的采访，他整天坐在车上，看着车自动开是什么感受。有一段很有趣，他说坐惯了无人驾驶以后，回到自己车上，就很难适应了。这篇是节选的中文翻译，内容很少，可以参考<a href="https://www.technologyreview.com/2022/07/27/1056472/life-of-chinese-robotaxi-driver/">英文原版</a>。</p>
+<p>2、<a href="https://mp.weixin.qq.com/s/Zc47jf3OCYjjdgJ2qpu1rg">中国的木拱桥</a>（中文）</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081707.webp" /></p>
+<p>中国古代除了石拱桥，还有木拱桥，也就是用木头做的拱桥。前不久烧毁的福建万安桥，就是一座木拱桥。</p>
+<p>3、<a href="https://mp.weixin.qq.com/s/xeNhTRQIY_EQheJyRVTr6Q">灵隐寺“智慧寺院管理系统”</a>（中文）</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081816.webp" /></p>
+<p>杭州灵隐寺“智慧寺院管理系统”近期正式上线，网上流传一张照片，一位僧人正在讲解该系统。</p>
+<p>4、<a href="https://semaphoreci.com/blog/javascript-bun#what-is-bun">Bun：Node.js 的替代品</a>（英文）</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081504.webp" /></p>
+<p>Bun 是 Zig 语言写的 JavaScript 服务器运行环境，目标是兼容 Node.js，并且将打包器、转码器、包管理都包含在内。本文是对它的测评，最终评价很不错。</p>
+<p>5、<a href="https://goldin.io/blog/stop-using-todo">停止在代码注释中使用 TODO</a>（英文）</p>
+<p>很多程序员习惯在代码注释写 TODO，表示待完成的任务。作者建议不要再写 TODO，而用具体的任务替代，比如需要添加文档写“DOCME”，需要添加测试写“TESTME”。</p>
+<p>6、<a href="https://www.xda-developers.com/xiaomi-12s-ultra-vs-apple-iphone-13-pro-max-camera-shootout-comparison/">小米 12s Ultra 与 iPhone 13 Pro Max 的摄像头对比</a>（英文）</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081404.webp" /></p>
+<p>小米最新发布的 12s Ultra 手机，有着1英寸传感器，比 iPhone 13 Pro Max 大了许多。XDA 论坛对两者的拍照和视频能力，进行了对比。</p>
+<p>7、<a href="https://www.cnblogs.com/foohack/p/4103212.html">OpenSSL 与 OpenSSH 的区别</a>（中文）</p>
+<p>OpenSSL 与 OpenSSH 都是开源软件，它们的区别是：前者是 C 语言函数库，实现了 SSL 加密协议；后者是加密 Shell 的开源实现，提供了加密登录的客户端和服务端，它依赖于 OpenSSL。</p>
+<p>8、<a href="https://simonwillison.net/2022/Jul/9/gpt-3-explain-code/">使用人工智能解释代码</a>（英文）</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202207/bg2022070917.webp" /></p>
+<p>作者将代码提交给人工智能模型 GPT-3，让模型说出这段代码是什么意思，结果令人震惊。</p>
+<h2 id="_5">工具</h2>
+<p>1、<a href="https://maccy.app/">Maccy</a></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202206/bg2022062406.webp" /></p>
+<p>一个 macOS 系统的开源软件，可以保存系统剪贴版的历史，查看每一次复制粘贴的内容。</p>
+<p>2、<a href="https://nudeui.com/">Nude UI</a></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081301.webp" /></p>
+<p>著名前端开发者 Lea Verou 做的 Web Component 组件库，目前只有五六个表单组件，都是轻量级组件，非常易用，效果不错。</p>
+<p>3、<a href="https://uchinoko-maker.jp/">卡通猫生成器</a></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081309.webp" /></p>
+<p>一个网页小工具，可以生成卡通猫图片，猫的每个部分都可以定制。</p>
+<p>4、<a href="https://nicolargo.github.io/glances/">Glances</a></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202206/bg2022062601.webp" /></p>
+<p>一个 Python 写的系统监控工具，最大特点就是跨平台，Linux/Windows/Mac 都能用。</p>
+<p>5、<a href="https://github.com/x2bool/xlite">XLite</a></p>
+<p>这个工具可以将 Excel 表格文件导入 SQLite，使用 SQL 进行查询。</p>
+<p>6、<a href="https://github.com/jina-ai/jina">Jina</a></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081812.webp" /></p>
+<p>一个基于 Python 的框架，用于构建神经搜索系统，针对图像、音频、视频等进行搜索，比如<a href="https://github.com/lhr0909/lipstick-db">口红搜索</a>（寻找适合某张人脸照片的口红）。（<a href="https://github.com/ruanyf/weekly/issues/2565">@Guanngxu</a> 投稿）</p>
+<p>7、<a href="https://github.com/foamzou/ITraffic-monitor-for-mac">ITraffic-monitor-for-mac</a></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081813.webp" /></p>
+<p>实时显示 macOS 每个进程的网络速率，适配明暗两个主题。（<a href="https://github.com/ruanyf/weekly/issues/2568">@foamzou</a> 投稿）</p>
+<p>8、<a href="https://github.com/chenquan/diskusage">diskusage</a></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081814.webp" /></p>
+<p>一个显示磁盘占用情况的命令行工具。虽然 Linux 已经有了 ncdu，但是这个工具是用 Go 写的，可以跨平台（Linux、Mac &amp; Windows）。（<a href="https://github.com/ruanyf/weekly/issues/2567">@chenquan</a> 投稿）</p>
+<p>9、<a href="https://gitjournal.io/">GitJournal</a></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202206/bg2022062906.webp" /></p>
+<p>一个手机的笔记 App，支持用 Markdown 做笔记，推送到远程 Git 仓库。它的安卓 App 是免费的，iOS App 是收费的。</p>
+<p>10、<a href="https://unpaywall.org/">Unpaywall</a></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202205/bg2022050706.webp" /></p>
+<p>一个浏览器插件，在各种论文数据库的页面上，添加下载按钮。周刊此前介绍过同类插件，这个看上去更正规一些。</p>
+<p>另有一个论文数据库 <a href="https://oa.mg/">OA.mg</a>，用来查找论文。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202205/bg2022050705.webp" /></p>
+<h2 id="_6">活动</h2>
+<p>1、<a href="https://juejin.cn/vip?utm_source=ruanyifeng0819&amp;utm_medium=gzh&amp;utm_campaign=202207vip">掘金会员</a></p>
+<p><a href="https://juejin.cn/">稀土掘金社区</a>一直是国内非常受欢迎的技术社区，背后有字节的支持，网站上有大量学习资源，尤其是前端内容。</p>
+<p>最近，他们整合了资源，推出了“掘金会员”，加入就能解锁90%的课程和小册，享受简历优化和面试指导，还有专属的会员群和客服。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081811.webp" /></p>
+<p>现在有优惠活动，<strong>限时五折</strong>就能<a href="https://juejin.cn/vip?utm_source=ruanyifeng0819&amp;utm_medium=gzh&amp;utm_campaign=202207vip">加入</a>，爱学习的同学可以考虑，充分使用掘金社区，提升自己的竞争力。已经参加预购的同学，别忘了补款。</p>
+<h2 id="_7">资源</h2>
+<p>1、<a href="https://lhbg-book.link/">通过构建博客生成器学习 Haskell</a></p>
+<p>一本免费阅读的 Haskell 英文教程，从零教起，对初学者很友好。</p>
+<p>2、<a href="https://ophysics.com/index.html">oPhysics</a></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081815.webp" /></p>
+<p>这个网站收集可以网页交互的物理学演示，有几十个作品。实时调节参数，就能看到结果。（<a href="https://github.com/ruanyf/weekly/issues/2570">@meq1986</a> 投稿）</p>
+<p>3、<a href="https://treevis.net/">treevis.net</a></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202206/bg2022060911.webp" /></p>
+<p>这个网站收集了300种数据可视化案例，可以当作自己选择可视化形式时的灵感。</p>
+<p>4、<a href="https://www.gilesorr.com/wm/table.html">Unix 窗口管理器清单</a></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202206/bg2022061101.webp" /></p>
+<p>这个网站收集近200种 Unix/Linux 系统的窗口管理器。如果你不喜欢桌面环境自带的窗口管理器，可以换一个。</p>
+<p>5、<a href="https://www.oezratty.net/wordpress/2021/understanding-quantum-technologies-2021/">理解量子技术</a>（Understanding Quantum Technologies，2021版）</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202206/bg2022062001.webp" /></p>
+<p>一本免费的英文电子书，向初学者介绍量子计算各方面的基础知识，带有彩色插图，厚达800多页。</p>
+<h2 id="_8">图片</h2>
+<p>1、<a href="https://en.wikipedia.org/wiki/Hunger_stone">饥饿石</a></p>
+<p>今年夏天，欧洲发生了极端高温，很多河道都水位大降。</p>
+<p>流经德国和捷克的易北河，水位下降以后，露出了河底的“饥饿石”。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081604.webp" /></p>
+<p>所谓“饥饿石”，就是15世纪到19世纪发生干旱时，当时的人们在这些石头上刻了字，提醒后人，如果再看到这些石头露出水面，就意味着会发生饥饿。</p>
+<p>2、<a href="https://kottke.org/22/03/pixel-birds-and-other-animals">像素动物</a></p>
+<p>一个日本艺术家贴出了，他绘制的大量像素动物，非常有趣。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202203/bg2022033105.webp" /></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202203/bg2022033106.webp" /></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202203/bg2022033107.webp" /></p>
+<p>3、<a href="https://www.washingtonpost.com/science/2022/08/12/splooting-squirrel-meaning-definition-new-york/">松鼠散热</a></p>
+<p>游客最近在纽约公园里面，拍到松鼠贴着地面趴着的照片。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081302.webp" /></p>
+<p>公园解释，这并不是松鼠失常或受伤，而是纽约天气太热，松鼠在树荫下的地面上伸展身体，扩大表面积，有利于散热。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202208/bg2022081303.webp" /></p>
+<h2 id="33">纽约托马斯街33号</h2>
+<p>原文网址：<a href="https://theintercept.com/2016/11/16/the-nsas-spy-hub-in-new-york-hidden-in-plain-sight/">theintercept.com</a></p>
+<p>上个世纪60年代，美国国家安全局决定在纽约市中心建造一座能够承受原子弹爆炸的摩天大楼。</p>
+<p>这座楼高达170米，有29层和三层地下室，但没有一扇窗户。如果发生灾难，它储存的食物足够1500人维持两周。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202112/bg2021122205.webp" /></p>
+<p>它的主要目的，并不是在核战争中保护人类免受核辐射，而是保护计算机和通信系统在核爆后还能正常工作。</p>
+<p>建成后，它成了美国最重要的电信枢纽之一，也是世界上最大的长途电话处理中心，现在交给 AT&amp;T 的子公司纽约电话公司运营，至少表面上如此。它的内部情况和运营细节从来没有曝光过。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202112/bg2021122207.webp" /></p>
+<p>它在1969年开工建设，1974年竣工，位于曼哈顿下城的心脏地带，地址是托马斯街33号。</p>
+<p>它是一座巨大的灰色混凝土塔，没有窗户，也没有外部的灯光照明。到了晚上，就变成一个巨大的黑影，只有硕大的方形通风口发出独特而沉闷的嗡嗡声。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202112/bg2021122206.webp" /></p>
+<p>上图中间不亮灯的大楼，就是托马斯街33号。</p>
+<p>除了通风口，大楼唯一的口子就是底层的出入口。这就是外界知道的关于这栋楼的一切。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202112/bg2021122208.webp" /></p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202112/bg2021122209.webp" /></p>
+<h2 id="_9">言论</h2>
+<p>1、</p>
+<p>一个好的领导（或者产品经理），应该具备五项技能：SQL、Excel、简洁写作、讲故事、区分优先级。</p>
+<p>-- <a href="https://www.craigkerstiens.com/2021/04/27/top-5-product-and-management-skills-sql-excel-clear-communication-story-prioritization/">《前5位的产品和管理技能》</a></p>
+<p>2、</p>
+<p>SSR（服务端渲染）是一个新名词，但是30年前，人们就在服务端使用 PHP 进行“SSR”了，并且积累了这方面的很多知识。</p>
+<p>可是 PHP 的这种做法不再时髦了，哪怕它跟现在的做法并没有本质区别，主要原因大概是它不是在最近36个月内发明的。</p>
+<p>-- <a href="https://news.ycombinator.com/item?id=31723278">Hacker News 读者</a></p>
+<p>3、</p>
+<p>Arch Linux 的优点和缺点都是它的滚动更新机制。一方面，你总是能让系统保持最新版本，另一方面，你无法轻易地让某个软件保持特定版本，所以不适合用作生产环境服务器。</p>
+<p>--<a href="https://heyburns2.medium.com/why-does-arch-linux-exist-f865a79a0721">《Arch Linux 为何存在》</a></p>
+<p>4、</p>
+<p>如果你是一个工程师，那么在成为资深工程师之前，永远不要担任管理职务。</p>
+<p>-- <a href="https://charity.wtf/2022/03/24/twin-anxieties-of-the-engineer-manager-pendulum/">《工程师/经理的钟摆焦虑》</a></p>
+<p>5、</p>
+<p>Windows 95 安装文件的体积是 19 MB，到了现在，一张网页可能就不止这个大小。</p>
+<p>-- <a href="https://www.neowin.net/forum/topic/1060820-how-big-were-the-different-windows-versions-95-19-mb/">《不同的 Windows 体积有多大？》</a></p>
+<h2 id="_10">历史上的本周</h2>
+<p>2021年（第 171 期）：<a href="https://www.ruanyifeng.com/blog/2021/08/weekly-issue-171.html">云服务流量有多贵？</a></p>
+<p>2020年（第 120 期）：<a href="https://www.ruanyifeng.com/blog/2020/08/weekly-issue-120.html">只有开放才能打败封锁</a></p>
+<p>2019年（第 69 期）：<a href="https://www.ruanyifeng.com/blog/2019/08/weekly-issue-69.html">做得好 vs 做得快</a></p>
+<p>2018年（第 18 期）：<a href="https://www.ruanyifeng.com/blog/2018/08/weekly-issue-18.html">无人机攻击，难以防范</a></p>
+<h2 id="_11">鸣谢</h2>
+<p>国产软件 <a href="https://flowus.cn?promotionChannel=GW_RYF_01">FlowUs</a> 提供个人专栏服务（查看<a href="https://ruanyf-weekly.flowus.cn/?code=FLOWUS&amp;promotionChannel=WX_RYF_00">周刊专栏</a>），集成了“文档+表格+网盘”，适合知识库、数据管理、文件存储多种用途。</p>
+<p><img alt="" src="https://cdn.beekka.com/blogimg/asset/202207/bg2022072108.webp" /></p>
+<p>（完）</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 WangYongJie
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/xiaodongxier" target="_blank" rel="noopener" title="squidfunk on Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:admin@xiaodongxier.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.7l167.6-182.9c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.codehilite.copy", "navigation.path", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.indexes", "toc.follow", "navigation.top", "search.suggest", "search.highlight", "search.share", "header.autohide", "announce.dismiss"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>

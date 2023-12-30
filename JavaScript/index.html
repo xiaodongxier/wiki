@@ -1,213 +1,334 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="wangyongjie" /><link rel="canonical" href="https://xiaodongxier.com/JavaScript/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>JavaScript 短代码 - 知识管理</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
-        // Current page data
-        var mkdocs_page_name = "JavaScript \u77ed\u4ee3\u7801";
-        var mkdocs_page_input_path = "JavaScript/index.md";
-        var mkdocs_page_url = "/JavaScript/";
-      </script>
-    
-    <!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
-    <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> 知识管理
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">首页</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../nav/">书签</a>
-                </li>
-              </ul>
-              <p class="caption"><span class="caption-text">JavaScript</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">JavaScript 短代码</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#js">js数组转字符串</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#js_1">js数组去重</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#js_2">js数组去空格</a>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="JS%E5%88%A0%E9%99%A4%E5%AF%B9%E8%B1%A1%E4%B8%AD%E6%9F%90%E6%9D%A1%E6%95%B0%E6%8D%AE/">JS删除对象中某条数据</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="JS%E5%A4%9A%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/">JS多文件类型判断</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="JS%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2/">JS大小写转换</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="JS%E5%AF%B9%E8%B1%A1%E5%90%88%E5%B9%B6/">JS对象合并</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="JS%E5%AF%BB%E6%89%BE%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%9F%90%E4%B8%AA%E6%95%B0%E6%8D%AE/">JS寻找数组对象的某个数据</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="JS%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E5%B1%82%E7%BA%A7%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/">JS数组对象层级格式转换</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="JS%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E7%AD%9B%E9%80%89%E6%8C%87%E5%AE%9A%E5%90%8E%E7%BC%80%E6%96%87%E4%BB%B6/">JS筛选指定后缀文件</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="JS%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E8%AF%BB%E5%8F%96/">JS本地存储读取</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BCJSON%E4%B8%8EJSON%E4%BA%92%E8%BD%AC/">字符串格JSON与JSON互转</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">UI库</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="#">AntDesign</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../UI%E5%BA%93/AntDesign/Antd%E4%B8%ADTable%E7%BB%84%E4%BB%B6%E8%A1%8C%E7%B1%BB%E5%90%8D%E6%B7%BB%E5%8A%A0/">Antd中Table组件行类名添加</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../UI%E5%BA%93/AntDesign/table%E8%A1%A8%E6%A0%BC%E5%88%86%E9%A1%B5/">table表格分页</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../UI%E5%BA%93/AntDesign/table%E8%A1%A8%E6%A0%BC%E8%8E%B7%E5%8F%96%E8%A1%8C%E6%95%B0%E6%8D%AE/">选择多行获取多行数据</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../UI%E5%BA%93/AntDesign/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B9%8B%E7%B1%BB%E5%9E%8B%E9%99%90%E5%88%B6/">文件上传之类型限制</a>
-                </li>
-    </ul>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Vue</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../Vue/PDF%E6%B5%81%E6%95%B0%E6%8D%AE%E9%A2%84%E8%A7%88/">PDF流数据预览</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Vue/Vue%E5%AF%BC%E5%87%BAPDF/">Vue导出PDF</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Vue/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E6%B5%81%E4%B8%8B%E8%BD%BD/">二进制文件流下载</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../Vue/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%93%E5%8D%B0%E4%BF%9D%E5%AD%98pdf%E9%87%8D%E5%91%BD%E5%90%8D/">浏览器打印保存pdf重命名</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">工具相关</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/">说明</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Apple</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/Apple/Apple%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA/">Apple数据导出</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/Apple/Mac%E6%9C%AC%E5%9C%B0%E9%9A%8F%E6%9C%BA%E7%94%9F%E6%88%90%E6%96%87%E4%BB%B6/">Mac本地随机生成文件</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/Apple/Mac%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4%E4%B8%8D%E7%94%9F%E6%95%88/">Mac终端命令不生效</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/Apple/%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91%E5%BC%B9%E7%AA%97%E9%97%AE%E9%A2%98/">iPhone 连接电脑频繁出现弹窗问题</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">ChatGPT</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/ChatGPT/chatgpt-ui/">chatgpt-ui</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Git</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/Git/%E6%92%A4%E9%94%80commit%E6%93%8D%E4%BD%9C/">撤销commit操作</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">GitHub</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/GitHub/GitHub%E7%9B%B8%E5%85%B3API/">GitHub相关API</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/GitHub/Github%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE/">Github加速访问</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/GitHub/%E9%80%9A%E8%BF%87GitHub%E7%9A%84Actions%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/">通过GitHub的Actions实现自动部署</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">MkDocs</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/MkDocs/Mac%E5%AE%89%E8%A3%85MkDocs/">Mac安装MkDocs</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/MkDocs/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8MkDocs/">为什么使用 MkDocs</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/MkDocs/%E5%8F%82%E8%80%83/">参考</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/MkDocs/%E9%85%8D%E7%BD%AE/">mkdocs.yml 配置项</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">开发环境</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/">包管理工具</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">流程图相关</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/%E6%B5%81%E7%A8%8B%E5%9B%BE%E7%9B%B8%E5%85%B3/LogicFlow/">LogicFlow 流程图编辑框架</a>
-                </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">移动端</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/%E7%A7%BB%E5%8A%A8%E7%AB%AF/nuxt3%E4%BD%BF%E7%94%A8vconsole/">Nuxt3使用vconsole</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/%E7%A7%BB%E5%8A%A8%E7%AB%AF/vConsole/">vConsole - 移动端开发调试利器</a>
-                </li>
-    </ul>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">草稿箱</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../%E8%8D%89%E7%A8%BF%E7%AE%B1/markdown/">markdown语法测试</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../%E8%8D%89%E7%A8%BF%E7%AE%B1/%E5%8F%82%E8%80%83/">参考</a>
-                  </li>
-              </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">知识管理</a>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">JavaScript</li>
-      <li class="breadcrumb-item active">JavaScript 短代码</li>
-    <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/xiaodongxier/edit/master/docs/JavaScript/index.md">Edit on xiaodongxier</a>
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="javascript">JavaScript 短代码</h1>
+        <meta name="author" content="wangyongjie">
+        <link rel="canonical" href="https://xiaodongxier.com/JavaScript/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>JavaScript 短代码 - 知识管理</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">知识管理</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">首页</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../nav/" class="nav-link">书签</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">JavaScript <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">JavaScript 短代码</a>
+</li>
+                                    
+<li>
+    <a href="JS%E5%88%A0%E9%99%A4%E5%AF%B9%E8%B1%A1%E4%B8%AD%E6%9F%90%E6%9D%A1%E6%95%B0%E6%8D%AE/" class="dropdown-item">JS删除对象中某条数据</a>
+</li>
+                                    
+<li>
+    <a href="JS%E5%A4%9A%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/" class="dropdown-item">JS多文件类型判断</a>
+</li>
+                                    
+<li>
+    <a href="JS%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2/" class="dropdown-item">JS大小写转换</a>
+</li>
+                                    
+<li>
+    <a href="JS%E5%AF%B9%E8%B1%A1%E5%90%88%E5%B9%B6/" class="dropdown-item">JS对象合并</a>
+</li>
+                                    
+<li>
+    <a href="JS%E5%AF%BB%E6%89%BE%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%9F%90%E4%B8%AA%E6%95%B0%E6%8D%AE/" class="dropdown-item">JS寻找数组对象的某个数据</a>
+</li>
+                                    
+<li>
+    <a href="JS%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E5%B1%82%E7%BA%A7%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/" class="dropdown-item">JS数组对象层级格式转换</a>
+</li>
+                                    
+<li>
+    <a href="JS%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E7%AD%9B%E9%80%89%E6%8C%87%E5%AE%9A%E5%90%8E%E7%BC%80%E6%96%87%E4%BB%B6/" class="dropdown-item">JS筛选指定后缀文件</a>
+</li>
+                                    
+<li>
+    <a href="JS%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E8%AF%BB%E5%8F%96/" class="dropdown-item">JS本地存储读取</a>
+</li>
+                                    
+<li>
+    <a href="%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%BCJSON%E4%B8%8EJSON%E4%BA%92%E8%BD%AC/" class="dropdown-item">字符串格JSON与JSON互转</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">UI库 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">AntDesign</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../UI%E5%BA%93/AntDesign/Antd%E4%B8%ADTable%E7%BB%84%E4%BB%B6%E8%A1%8C%E7%B1%BB%E5%90%8D%E6%B7%BB%E5%8A%A0/" class="dropdown-item">Antd中Table组件行类名添加</a>
+</li>
+            
+<li>
+    <a href="../UI%E5%BA%93/AntDesign/table%E8%A1%A8%E6%A0%BC%E5%88%86%E9%A1%B5/" class="dropdown-item">table表格分页</a>
+</li>
+            
+<li>
+    <a href="../UI%E5%BA%93/AntDesign/table%E8%A1%A8%E6%A0%BC%E8%8E%B7%E5%8F%96%E8%A1%8C%E6%95%B0%E6%8D%AE/" class="dropdown-item">选择多行获取多行数据</a>
+</li>
+            
+<li>
+    <a href="../UI%E5%BA%93/AntDesign/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B9%8B%E7%B1%BB%E5%9E%8B%E9%99%90%E5%88%B6/" class="dropdown-item">文件上传之类型限制</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Vue <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Vue/PDF%E6%B5%81%E6%95%B0%E6%8D%AE%E9%A2%84%E8%A7%88/" class="dropdown-item">PDF流数据预览</a>
+</li>
+                                    
+<li>
+    <a href="../Vue/Vue%E5%AF%BC%E5%87%BAPDF/" class="dropdown-item">Vue导出PDF</a>
+</li>
+                                    
+<li>
+    <a href="../Vue/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E6%B5%81%E4%B8%8B%E8%BD%BD/" class="dropdown-item">二进制文件流下载</a>
+</li>
+                                    
+<li>
+    <a href="../Vue/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%93%E5%8D%B0%E4%BF%9D%E5%AD%98pdf%E9%87%8D%E5%91%BD%E5%90%8D/" class="dropdown-item">浏览器打印保存pdf重命名</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">工具相关 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/" class="dropdown-item">说明</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Apple</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/Apple/Apple%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA/" class="dropdown-item">Apple数据导出</a>
+</li>
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/Apple/Mac%E6%9C%AC%E5%9C%B0%E9%9A%8F%E6%9C%BA%E7%94%9F%E6%88%90%E6%96%87%E4%BB%B6/" class="dropdown-item">Mac本地随机生成文件</a>
+</li>
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/Apple/Mac%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4%E4%B8%8D%E7%94%9F%E6%95%88/" class="dropdown-item">Mac终端命令不生效</a>
+</li>
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/Apple/%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91%E5%BC%B9%E7%AA%97%E9%97%AE%E9%A2%98/" class="dropdown-item">iPhone 连接电脑频繁出现弹窗问题</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">ChatGPT</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/ChatGPT/chatgpt-ui/" class="dropdown-item">chatgpt-ui</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Git</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/Git/%E6%92%A4%E9%94%80commit%E6%93%8D%E4%BD%9C/" class="dropdown-item">撤销commit操作</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">GitHub</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/GitHub/GitHub%E7%9B%B8%E5%85%B3API/" class="dropdown-item">GitHub相关API</a>
+</li>
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/GitHub/Github%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE/" class="dropdown-item">Github加速访问</a>
+</li>
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/GitHub/%E9%80%9A%E8%BF%87GitHub%E7%9A%84Actions%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/" class="dropdown-item">通过GitHub的Actions实现自动部署</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">MkDocs</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/MkDocs/Mac%E5%AE%89%E8%A3%85MkDocs/" class="dropdown-item">Mac安装MkDocs</a>
+</li>
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/MkDocs/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8MkDocs/" class="dropdown-item">为什么使用 MkDocs</a>
+</li>
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/MkDocs/%E5%8F%82%E8%80%83/" class="dropdown-item">参考</a>
+</li>
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/MkDocs/%E9%85%8D%E7%BD%AE/" class="dropdown-item">mkdocs.yml 配置项</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">开发环境</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" class="dropdown-item">包管理工具</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">流程图相关</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/%E6%B5%81%E7%A8%8B%E5%9B%BE%E7%9B%B8%E5%85%B3/LogicFlow/" class="dropdown-item">LogicFlow 流程图编辑框架</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">移动端</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/%E7%A7%BB%E5%8A%A8%E7%AB%AF/nuxt3%E4%BD%BF%E7%94%A8vconsole/" class="dropdown-item">Nuxt3使用vconsole</a>
+</li>
+            
+<li>
+    <a href="../%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/%E7%A7%BB%E5%8A%A8%E7%AB%AF/vConsole/" class="dropdown-item">vConsole - 移动端开发调试利器</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">草稿箱 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../%E8%8D%89%E7%A8%BF%E7%AE%B1/markdown/" class="dropdown-item">markdown语法测试</a>
+</li>
+                                    
+<li>
+    <a href="../%E8%8D%89%E7%A8%BF%E7%AE%B1/%E5%8F%82%E8%80%83/" class="dropdown-item">参考</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../nav/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="JS%E5%88%A0%E9%99%A4%E5%AF%B9%E8%B1%A1%E4%B8%AD%E6%9F%90%E6%9D%A1%E6%95%B0%E6%8D%AE/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/xiaodongxier/edit/master/docs/JavaScript/index.md" class="nav-link">Edit on xiaodongxier
+                                    </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#javascript" class="nav-link">JavaScript 短代码</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#js" class="nav-link">js数组转字符串</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#js_1" class="nav-link">js数组去重</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#js_2" class="nav-link">js数组去空格</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="javascript">JavaScript 短代码</h1>
 <h2 id="js">js数组转字符串</h2>
 <pre><code class="language-js">var numbers = [1, 2, 3, 4, 5];
 var str = numbers.join(&quot;,&quot;);
@@ -224,53 +345,84 @@ console.log(newArr); // [1, 2, 3, 4, 5]
 <pre><code class="language-js">var str = &quot;  hello world  &quot;;
 var newStr = str.replace(/\s/g, &quot;&quot;);
 console.log(newStr); // &quot;helloworld&quot;
-</code></pre>
-              
+</code></pre></div>
             </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../nav/" class="btn btn-neutral float-left" title="书签"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="JS%E5%88%A0%E9%99%A4%E5%AF%B9%E8%B1%A1%E4%B8%AD%E6%9F%90%E6%9D%A1%E6%95%B0%E6%8D%AE/" class="btn btn-neutral float-right" title="JS删除对象中某条数据">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-      <p>Copyright &copy; 2023 WangYongJie</p>
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-          
         </div>
-      </div>
 
-    </section>
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2023 WangYongJie</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-      <span><a href="../nav/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="JS%E5%88%A0%E9%99%A4%E5%AF%B9%E8%B1%A1%E4%B8%AD%E6%9F%90%E6%9D%A1%E6%95%B0%E6%8D%AE/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
-        jQuery(function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        });
-    </script>
 
-</body>
+    </body>
 </html>

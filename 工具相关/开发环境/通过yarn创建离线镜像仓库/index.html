@@ -2279,6 +2279,27 @@
 
 
 <h1 id="yarn">通过yarn创建离线镜像仓库</h1>
+<p>1、配置是离线镜像缓存文件夹的位置</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>yarn<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>yarn-offline-mirror<span class="w"> </span>./npm-packages-offline-cache
+</code></pre></div>
+<p>2、帮助清理所有未链接的依赖项(可以不设置)。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>yarn<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>yarn-offline-mirror-pruning<span class="w"> </span><span class="nb">true</span>
+</code></pre></div>
+<p>3、上面设置将创建~/.yarnrc，如果不是全局设置，而是仅当前项目要设置，则需要移动该文件到当前项目目录中：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mv<span class="w"> </span>~/.yarnrc<span class="w"> </span>.
+</code></pre></div>
+<p>注意后面有个点  </p>
+<p>4、删除之前的node_modules和<a href="https://so.csdn.net/so/search?q=yarn&amp;spm=1001.2101.3001.7020">yarn</a>.lock并从新构建</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span>node_modules/<span class="w"> </span>yarn.lock
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>yarn<span class="w"> </span>install
+</code></pre></div>
+<p>install成功后在npm-packages-offline-cache能看到.tgz压缩⽂件  </p>
+<p>5、离线装置node_modules<br />
+测试脱机状态的方法如下(需要关闭有线或无线网络连接)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>yarn<span class="w"> </span>cache<span class="w"> </span>clean
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>yarn<span class="w"> </span>install<span class="w"> </span>--offlline
+</code></pre></div>
+<p>我是先删掉原本项目下的node_modules目录，关闭网络，再yarn install --offline后项目目录下出现跟原来一致的node_modules目录</p>
 
 
 

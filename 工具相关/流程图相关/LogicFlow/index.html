@@ -2491,11 +2491,17 @@
 
 
 <h1 id="logic-flow">Logic Flow</h1>
+<blockquote>
+<p>LogicFlow案例分享 :https://github.com/didi/LogicFlow/issues/716
+转载地址：https://github.com/hsole/layoutFlow</p>
+</blockquote>
 <p>随着项目中流程图被运营同学画的越来越复杂，出现了一个流程图上存在几百个节点的情况，流程图带来的<strong>业务逻辑可视化效果越来越不明显</strong>。虽然我们提供了分组、注释、记号等修饰性功能去支持标识流程中重要的业务关键点，但是效果仍然不明显。这个时候想再去通过人为调整去让混乱的流程图变得清晰，<strong>比我们代码重构还难</strong>。所以为了解决这个问题，我们增加了自动布局和一键美化功能，通过实践发现这两种方案效果都不错，有自己独特的应用场景。</p>
 <p>自动布局大家最常见到的效果应该是脑图。画图的人不需要手动调整节点的位置，由系统自动计算出节点合适的位置。</p>
-<p><img alt="" src="https://gitcdn.xiaodongxier.com/obsidian/202401031902164.webp" /></p>
-<p><a href="https://camo.githubusercontent.com/0393edbc8e7f0712dd7ff8621124e1c2d5c92e39cd0cf2337d605aeff5fb9c92/68747470733a2f2f70312d6a75656a696e2e62797465696d672e636f6d2f746f732d636e2d692d6b3375316662706663702f38643564396430356562643534656235623165343761613836643263323433347e74706c762d6b3375316662706663702d77617465726d61726b2e696d6167653f"><img alt="" src="https://camo.githubusercontent.com/0393edbc8e7f0712dd7ff8621124e1c2d5c92e39cd0cf2337d605aeff5fb9c92/68747470733a2f2f70312d6a75656a696e2e62797465696d672e636f6d2f746f732d636e2d692d6b3375316662706663702f38643564396430356562643534656235623165343761613836643263323433347e74706c762d6b3375316662706663702d77617465726d61726b2e696d6167653f" />
-</a></p>
+<!-- ![](https://gitcdn.xiaodongxier.com/obsidian/202401031902164.webp) -->
+<p><img alt="" src="https://gitcdn.xiaodongxier.com/image/20240103190940.gif" /></p>
+<!-- [![](https://camo.githubusercontent.com/0393edbc8e7f0712dd7ff8621124e1c2d5c92e39cd0cf2337d605aeff5fb9c92/68747470733a2f2f70312d6a75656a696e2e62797465696d672e636f6d2f746f732d636e2d692d6b3375316662706663702f38643564396430356562643534656235623165343761613836643263323433347e74706c762d6b3375316662706663702d77617465726d61726b2e696d6167653f) -->
+<!-- ](https://camo.githubusercontent.com/0393edbc8e7f0712dd7ff8621124e1c2d5c92e39cd0cf2337d605aeff5fb9c92/68747470733a2f2f70312d6a75656a696e2e62797465696d672e636f6d2f746f732d636e2d692d6b3375316662706663702f38643564396430356562643534656235623165343761613836643263323433347e74706c762d6b3375316662706663702d77617465726d61726b2e696d6167653f) -->
+
 <h2 id="_1">自动布局的优缺点</h2>
 <p><strong>在实际项目中，并不是所有的流程图都可以用自动布局，需要基于具体的产品来结合自动布局的优缺点来权衡。</strong> </p>
 <p>自动布局优点：</p>
@@ -2597,8 +2603,10 @@
 </code></pre></div>
 <p>最后，把图数据交给LogicFlow重新渲染就行。</p>
 <p>一键美化在产品上是一个非常理想的功能，不论流程图多混乱，只需要我们点击一下一键美化就自动变成整齐美观的流程图。</p>
-<p><a href="https://camo.githubusercontent.com/8136b73e1b598fe5934820af427a96c64715fef60ba54b82ad8e04c22f7555ab/68747470733a2f2f70392d6a75656a696e2e62797465696d672e636f6d2f746f732d636e2d692d6b3375316662706663702f38663239616462303363613434313331396239643334333432663365613735357e74706c762d6b3375316662706663702d77617465726d61726b2e696d6167653f"><img alt="" src="https://camo.githubusercontent.com/8136b73e1b598fe5934820af427a96c64715fef60ba54b82ad8e04c22f7555ab/68747470733a2f2f70392d6a75656a696e2e62797465696d672e636f6d2f746f732d636e2d692d6b3375316662706663702f38663239616462303363613434313331396239643334333432663365613735357e74706c762d6b3375316662706663702d77617465726d61726b2e696d6167653f" />
-</a></p>
+<p><img alt="20240103191014" src="https://gitcdn.xiaodongxier.com/image/20240103191014.gif" /></p>
+<!-- [![](https://camo.githubusercontent.com/8136b73e1b598fe5934820af427a96c64715fef60ba54b82ad8e04c22f7555ab/68747470733a2f2f70392d6a75656a696e2e62797465696d672e636f6d2f746f732d636e2d692d6b3375316662706663702f38663239616462303363613434313331396239643334333432663365613735357e74706c762d6b3375316662706663702d77617465726d61726b2e696d6167653f) -->
+<!-- ](https://camo.githubusercontent.com/8136b73e1b598fe5934820af427a96c64715fef60ba54b82ad8e04c22f7555ab/68747470733a2f2f70392d6a75656a696e2e62797465696d672e636f6d2f746f732d636e2d692d6b3375316662706663702f38663239616462303363613434313331396239643334333432663365613735357e74706c762d6b3375316662706663702d77617465726d61726b2e696d6167653f) -->
+
 <h2 id="_3">实现一键美化</h2>
 <p>和上面的自动布局不同的是，在我们业务场景中，流程图会存在环这种结构。这个时候直接用树布局是不合适的，所以我们使用dagre布局。在网上找了一圈后，发现<a href="https://github.com/antvis/layout">https://github.com/antvis/layout</a>提供的dagre布局最好用（G6里面的dagre布局也是用的这个）。一键美化的实现思路和自动布局类似，都是把LogicFlow中的图数据传给布局库，然后再把得到的新的图数据重新使用LogicFlow渲染。这里为了方便，我把一键美化给封装成了一个LogicFlow插件，然后在里面做了一些符合LogicFlow特殊的处理。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">DagreLayout</span><span class="p">,</span><span class="w"> </span><span class="nx">DagreLayoutOptions</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@antv/layout&#39;</span><span class="p">;</span>

@@ -2137,6 +2137,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#d3-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      d3-hierarchy
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2441,6 +2450,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#d3-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      d3-hierarchy
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2501,32 +2519,7 @@
 <p><img alt="" src="https://gitcdn.xiaodongxier.com/obsidian/202401022225485.webp" /></p>
 <p>在流程图的场景下，不需要渲染大量的节点（最多几千个元素），对于动画的诉求也不高。Svg 基于 DOM 的特性会更适合我们，一个是学习成本和开发成本更低，另一个是基于 DOM 可以做的拓展也更多。不过 Svg 标签内部并不支持插入其他比如 div 这种标签，所以在实现某些功能的时候，都需要结合其他 HTML 标签。</p>
 <p>所以最终我们选择使用 HTML + Svg 来完成图的渲染，Svg 负责图形、线的部分，HTML 来实现文本、菜单、背景等图层。</p>
-<hr />
-<ol>
-<li>：
-开发团队：AntV 是蚂蚁金服的数据可视化团队开发的。
-特点：G6 是一个强大的图形库，专注于关系数据的可视化。它提供了丰富的图表类型、布局算法和交互功能。
-适用场景：复杂的图表应用，如工作流编辑器、组织结构图、ER 图等。
-技术栈：主要使用 TypeScript 进行开发，也支持 JavaScript.
-社区和文档：社区活跃，提供详尽的文档和示例。</li>
-<li>jsPlumb：
-开发团队：jsPlumb 是一个独立的开源项目。
-特点：jsPlumb 专注于创建可视化和交互式的连接线。它提供了便捷的 API 来创建和管理节点之间的连接。
-适用场景：主要用于需要连接点和线的拖拽界面，如流程设计器或可视化编程界面。
-技术栈：使用纯 JavaScript 开发，对多种前端框架有良好的支持。
-• 社区和文档：社区相对较小，但文档齐全，提供了基本的教程和示例。</li>
-<li>Logic Flow:
-开发团队：Logic Flow 是由深圳市凡科互联网科技有限公司开发的。
-特点：Logic Flow 是一个基于 Vuejs 的流程图绘制工具库，它易于上手，提供了丰富的自定义节点和快速构建流程图的能力。
-适用场景：适合需要在 Vuejs 项目中快速搭建流程图编辑器的场景。
-技术栈：主要基于 Vue.js,适台在 Vue 项目中使用。
-社区和文档：文档比较完备，但由于较新，社区规模可能不如其他两者大。
-结：
-如果你的项目需要高度定制化的图表和强大的图形操作功能，且使用 TypeScript 开发，AntV G6 可能是最佳选择。
-如果你需要一个独立的、专注于连接线管理和节点拖拽的库，jsPlumb 是一个好的选择。
-如果你正在使用 Vuejs 并希望快速集成流程图功能，Logic Flow 可能更适合你的需求。
-王选择这些库时，需要考虑你的具体需求、技术栈的匹配以及你和你的团队对这些工具的熟悉程度。</li>
-</ol>
+<h2 id="d3-hierarchy"><a href="https://github.com/d3/d3-hierarchy">d3-hierarchy</a></h2>
 
 
 

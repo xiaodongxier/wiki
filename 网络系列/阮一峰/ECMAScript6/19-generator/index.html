@@ -12,13 +12,13 @@
         <meta name="author" content="wangyongjie">
       
       
-        <link rel="canonical" href="https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E9%98%AE%E4%B8%80%E5%B3%B0/ECMAScript6/generator/">
+        <link rel="canonical" href="https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E9%98%AE%E4%B8%80%E5%B3%B0/ECMAScript6/19-generator/">
       
       
-        <link rel="prev" href="../generator-async/">
+        <link rel="prev" href="../18-iterator/">
       
       
-        <link rel="next" href="../mixin/">
+        <link rel="next" href="../acknowledgment/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Generator 函数的语法 - 知识管理</title>
+        <title>19-Generator 函数的语法 - 知识管理</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#generator" class="md-skip">
+        <a href="#19-generator" class="md-skip">
           跳转至
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Generator 函数的语法
+              19-Generator 函数的语法
             
           </span>
         </div>
@@ -2858,6 +2858,274 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    19-Generator 函数的语法
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    19-Generator 函数的语法
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      简介
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yield" class="md-nav__link">
+    <span class="md-ellipsis">
+      yield 表达式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterator" class="md-nav__link">
+    <span class="md-ellipsis">
+      与 Iterator 接口的关系
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next" class="md-nav__link">
+    <span class="md-ellipsis">
+      next 方法的参数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forof" class="md-nav__link">
+    <span class="md-ellipsis">
+      for...of 循环
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generatorprototypethrow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generator.prototype.throw()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generatorprototypereturn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generator.prototype.return()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nextthrowreturn" class="md-nav__link">
+    <span class="md-ellipsis">
+      next()、throw()、return() 的共同点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yield_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      yield* 表达式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      作为对象属性的 Generator 函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generator-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generator 函数的this
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      含义
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="含义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generator_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generator 与状态机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generator_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generator 与协程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generator_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generator 与上下文
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      （1）异步操作的同步化表达
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      （2）控制流管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-iterator" class="md-nav__link">
+    <span class="md-ellipsis">
+      （3）部署 Iterator 接口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      （4）作为数据结构
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
@@ -3038,274 +3306,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Generator 函数的语法
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Generator 函数的语法
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      简介
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="简介">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      基本概念
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#yield" class="md-nav__link">
-    <span class="md-ellipsis">
-      yield 表达式
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#iterator" class="md-nav__link">
-    <span class="md-ellipsis">
-      与 Iterator 接口的关系
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next" class="md-nav__link">
-    <span class="md-ellipsis">
-      next 方法的参数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#forof" class="md-nav__link">
-    <span class="md-ellipsis">
-      for...of 循环
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generatorprototypethrow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generator.prototype.throw()
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generatorprototypereturn" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generator.prototype.return()
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nextthrowreturn" class="md-nav__link">
-    <span class="md-ellipsis">
-      next()、throw()、return() 的共同点
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#yield_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      yield* 表达式
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generator_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      作为对象属性的 Generator 函数
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generator-this" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generator 函数的this
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      含义
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="含义">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generator_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generator 与状态机
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generator_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generator 与协程
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generator_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generator 与上下文
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      应用
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="应用">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      （1）异步操作的同步化表达
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      （2）控制流管理
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-iterator" class="md-nav__link">
-    <span class="md-ellipsis">
-      （3）部署 Iterator 接口
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      （4）作为数据结构
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3735,7 +3735,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generator_1" class="md-nav__link">
+  <a href="#generator" class="md-nav__link">
     <span class="md-ellipsis">
       作为对象属性的 Generator 函数
     </span>
@@ -3763,7 +3763,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generator_2" class="md-nav__link">
+  <a href="#generator_1" class="md-nav__link">
     <span class="md-ellipsis">
       Generator 与状态机
     </span>
@@ -3772,7 +3772,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#generator_3" class="md-nav__link">
+  <a href="#generator_2" class="md-nav__link">
     <span class="md-ellipsis">
       Generator 与协程
     </span>
@@ -3781,7 +3781,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#generator_4" class="md-nav__link">
+  <a href="#generator_3" class="md-nav__link">
     <span class="md-ellipsis">
       Generator 与上下文
     </span>
@@ -3860,7 +3860,7 @@
                   
 
   
-    <a href="https://github.com/xiaodongxier/wiki_content/edit/main/docs/网络系列/阮一峰/ECMAScript6/generator.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/xiaodongxier/wiki_content/edit/main/docs/网络系列/阮一峰/ECMAScript6/19-generator.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -3869,14 +3869,14 @@
     
       
     
-    <a href="https://github.com/xiaodongxier/wiki_content/raw/main/docs/网络系列/阮一峰/ECMAScript6/generator.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/xiaodongxier/wiki_content/raw/main/docs/网络系列/阮一峰/ECMAScript6/19-generator.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="generator">Generator 函数的语法</h1>
+<h1 id="19-generator">19-Generator 函数的语法</h1>
 <h2 id="_1">简介</h2>
 <h3 id="_2">基本概念</h3>
 <p>Generator 函数是 ES6 提供的一种异步编程解决方案，语法行为与传统函数完全不同。本章详细介绍 Generator 函数的语法和 API，它的异步编程应用请看《Generator 函数的异步应用》一章。</p>
@@ -4720,7 +4720,7 @@
 <a id="__codelineno-48-34" name="__codelineno-48-34" href="#__codelineno-48-34"></a><span class="nx">result</span>
 <a id="__codelineno-48-35" name="__codelineno-48-35" href="#__codelineno-48-35"></a><span class="c1">// [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;]</span>
 </code></pre></div>
-<h2 id="generator_1">作为对象属性的 Generator 函数</h2>
+<h2 id="generator">作为对象属性的 Generator 函数</h2>
 <p>如果一个对象的属性是 Generator 函数，可以简写成下面的形式。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="w">  </span><span class="o">*</span><span class="w"> </span><span class="nx">myGeneratorMethod</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -4827,7 +4827,7 @@
 <a id="__codelineno-56-19" name="__codelineno-56-19" href="#__codelineno-56-19"></a><span class="nx">f</span><span class="p">.</span><span class="nx">c</span><span class="w"> </span><span class="c1">// 3</span>
 </code></pre></div>
 <h2 id="_3">含义</h2>
-<h3 id="generator_2">Generator 与状态机</h3>
+<h3 id="generator_1">Generator 与状态机</h3>
 <p>Generator 是实现状态机的最佳结构。比如，下面的<code>clock</code>函数就是一个状态机。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">ticking</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 <a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">clock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -4849,7 +4849,7 @@
 <a id="__codelineno-58-8" name="__codelineno-58-8" href="#__codelineno-58-8"></a><span class="p">};</span>
 </code></pre></div>
 <p>上面的 Generator 实现与 ES5 实现对比，可以看到少了用来保存状态的外部变量<code>ticking</code>，这样就更简洁，更安全（状态不会被非法篡改）、更符合函数式编程的思想，在写法上也更优雅。Generator 之所以可以不用外部变量保存状态，是因为它本身就包含了一个状态信息，即目前是否处于暂停态。</p>
-<h3 id="generator_3">Generator 与协程</h3>
+<h3 id="generator_2">Generator 与协程</h3>
 <p>协程（coroutine）是一种程序运行的方式，可以理解成“协作的线程”或“协作的函数”。协程既可以用单线程实现，也可以用多线程实现。前者是一种特殊的子例程，后者是一种特殊的线程。</p>
 <p><strong>（1）协程与子例程的差异</strong></p>
 <p>传统的“子例程”（subroutine）采用堆栈式“后进先出”的执行方式，只有当调用的子函数完全执行完毕，才会结束执行父函数。协程与其不同，多个线程（单线程情况下，即多个函数）可以并行执行，但是只有一个线程（或函数）处于正在运行的状态，其他线程（或函数）都处于暂停态（suspended），线程（或函数）之间可以交换执行权。也就是说，一个线程（或函数）执行到一半，可以暂停执行，将执行权交给另一个线程（或函数），等到稍后收回执行权的时候，再恢复执行。这种可以并行执行、交换执行权的线程（或函数），就称为协程。</p>
@@ -4859,7 +4859,7 @@
 <p>由于 JavaScript 是单线程语言，只能保持一个调用栈。引入协程以后，每个任务可以保持自己的调用栈。这样做的最大好处，就是抛出错误的时候，可以找到原始的调用栈。不至于像异步操作的回调函数那样，一旦出错，原始的调用栈早就结束。</p>
 <p>Generator 函数是 ES6 对协程的实现，但属于不完全实现。Generator 函数被称为“半协程”（semi-coroutine），意思是只有 Generator 函数的调用者，才能将程序的执行权还给 Generator 函数。如果是完全执行的协程，任何函数都可以让暂停的协程继续执行。</p>
 <p>如果将 Generator 函数当作协程，完全可以将多个需要互相协作的任务写成 Generator 函数，它们之间使用<code>yield</code>表达式交换控制权。</p>
-<h3 id="generator_4">Generator 与上下文</h3>
+<h3 id="generator_3">Generator 与上下文</h3>
 <p>JavaScript 代码运行时，会产生一个全局的上下文环境（context，又称运行环境），包含了当前所有的变量和对象。然后，执行函数（或块级代码）的时候，又会在当前上下文环境的上层，产生一个函数运行的上下文，变成当前（active）的上下文，由此形成一个上下文环境的堆栈（context stack）。</p>
 <p>这个堆栈是“后进先出”的数据结构，最后产生的上下文环境首先执行完成，退出堆栈，然后再执行完成它下层的上下文，直至所有代码执行完成，堆栈清空。</p>
 <p>Generator 函数不是这样，它执行产生的上下文环境，一旦遇到<code>yield</code>命令，就会暂时退出堆栈，但是并不消失，里面的所有变量和对象会冻结在当前状态。等到对它执行<code>next</code>命令时，这个上下文环境又会重新加入调用栈，冻结的变量和对象恢复执行。</p>
@@ -5098,7 +5098,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../generator-async/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Generator 函数的异步应用">
+          <a href="../18-iterator/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 18-Iterator 和 for...of 循环">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -5108,20 +5108,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Generator 函数的异步应用
+                18-Iterator 和 for...of 循环
               </div>
             </div>
           </a>
         
         
           
-          <a href="../mixin/" class="md-footer__link md-footer__link--next" aria-label="下一页: Mixin">
+          <a href="../acknowledgment/" class="md-footer__link md-footer__link--next" aria-label="下一页: 鸣谢">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Mixin
+                鸣谢
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -4,6 +4,6 @@
   src: "...";
 } */
 :root {
-  --md-text-font: "LXGW WenKai";
+  --md-text-font: "LXGW WenKai" !important;
 }
 

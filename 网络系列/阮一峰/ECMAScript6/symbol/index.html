@@ -26,7 +26,7 @@
     
     
       
-        <title>Symbol - 知识管理</title>
+        <title>13-Symbol - 知识管理</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#symbol" class="md-skip">
+        <a href="#13-symbol" class="md-skip">
           跳转至
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Symbol
+              13-Symbol
             
           </span>
         </div>
@@ -3231,7 +3231,7 @@
           
   
   <span class="md-ellipsis">
-    Symbol
+    13-Symbol
   </span>
   
 
@@ -3242,7 +3242,7 @@
         
   
   <span class="md-ellipsis">
-    Symbol
+    13-Symbol
   </span>
   
 
@@ -3282,7 +3282,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#symbol_1" class="md-nav__link">
+  <a href="#symbol" class="md-nav__link">
     <span class="md-ellipsis">
       作为属性名的 Symbol
     </span>
@@ -3327,7 +3327,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#symbol_2" class="md-nav__link">
+  <a href="#symbol_1" class="md-nav__link">
     <span class="md-ellipsis">
       内置的 Symbol 值
     </span>
@@ -3627,7 +3627,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#symbol_1" class="md-nav__link">
+  <a href="#symbol" class="md-nav__link">
     <span class="md-ellipsis">
       作为属性名的 Symbol
     </span>
@@ -3672,7 +3672,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#symbol_2" class="md-nav__link">
+  <a href="#symbol_1" class="md-nav__link">
     <span class="md-ellipsis">
       内置的 Symbol 值
     </span>
@@ -3816,7 +3816,7 @@
   
 
 
-<h1 id="symbol">Symbol</h1>
+<h1 id="13-symbol">13-Symbol</h1>
 <h2 id="_1">概述</h2>
 <p>ES5 的对象属性名都是字符串，这容易造成属性名的冲突。比如，你使用了一个他人提供的对象，但又想为这个对象添加新的方法（mixin 模式），新方法的名字就有可能与现有方法产生冲突。如果有一种机制，保证每个属性的名字都是独一无二的就好了，这样就从根本上防止属性名的冲突。这就是 ES6 引入<code>Symbol</code>的原因。</p>
 <p>ES6 引入了一种新的原始数据类型<code>Symbol</code>，表示独一无二的值。它属于 JavaScript 语言的原生数据类型之一，其他数据类型是：<code>undefined</code>、<code>null</code>、布尔值（Boolean）、字符串（String）、数值（Number）、大整数（BigInt）、对象（Object）。</p>
@@ -3904,7 +3904,7 @@
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nx">sym</span><span class="p">.</span><span class="nx">description</span><span class="w"> </span><span class="c1">// &quot;foo&quot;</span>
 </code></pre></div>
-<h2 id="symbol_1">作为属性名的 Symbol</h2>
+<h2 id="symbol">作为属性名的 Symbol</h2>
 <p>由于每一个 Symbol 值都是不相等的，这意味着只要 Symbol 值作为标识符，用于对象的属性名，就能保证不会出现同名的属性。这对于一个对象由多个模块构成的情况非常有用，能防止某一个键被不小心改写或覆盖。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">mySymbol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Symbol</span><span class="p">();</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
@@ -4184,7 +4184,7 @@
 <a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="c1">// 后面代码相同 ……</span>
 </code></pre></div>
 <p>上面代码将导致其他脚本都无法引用<code>FOO_KEY</code>。但这样也有一个问题，就是如果多次执行这个脚本，每次得到的<code>FOO_KEY</code>都是不一样的。虽然 Node 会将脚本的执行结果缓存，一般情况下，不会多次执行同一个脚本，但是用户可以手动清除缓存，所以也不是绝对可靠。</p>
-<h2 id="symbol_2">内置的 Symbol 值</h2>
+<h2 id="symbol_1">内置的 Symbol 值</h2>
 <p>除了定义自己使用的 Symbol 值以外，ES6 还提供了 11 个内置的 Symbol 值，指向语言内部使用的方法。</p>
 <h3 id="symbolhasinstance">Symbol.hasInstance</h3>
 <p>对象的<code>Symbol.hasInstance</code>属性，指向一个内部方法。当其他对象使用<code>instanceof</code>运算符，判断是否为该对象的实例时，会调用这个方法。比如，<code>foo instanceof Foo</code>在语言内部，实际调用的是<code>Foo[Symbol.hasInstance](foo)</code>。</p>

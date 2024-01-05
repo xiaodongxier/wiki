@@ -12,13 +12,13 @@
         <meta name="author" content="wangyongjie">
       
       
-        <link rel="canonical" href="https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E9%98%AE%E4%B8%80%E5%B3%B0/ECMAScript6/string/">
+        <link rel="canonical" href="https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E7%B3%BB%E5%88%97/%E9%98%AE%E4%B8%80%E5%B3%B0/ECMAScript6/04-string/">
       
       
-        <link rel="prev" href="../string-methods/">
+        <link rel="prev" href="../03-destructuring/">
       
       
-        <link rel="next" href="../style/">
+        <link rel="next" href="../acknowledgment/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>字符串的扩展 - 知识管理</title>
+        <title>04-字符串的扩展 - 知识管理</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#04-" class="md-skip">
           跳转至
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              字符串的扩展
+              04-字符串的扩展
             
           </span>
         </div>
@@ -2525,6 +2525,160 @@
   
   
     <li class="md-nav__item">
+      <a href="../03-destructuring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03-变量的解构赋值
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    04-字符串的扩展
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    04-字符串的扩展
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unicode" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符的 Unicode 表示法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符串的遍历器接口
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#u2028-u2029" class="md-nav__link">
+    <span class="md-ellipsis">
+      直接输入 U+2028 和 U+2029
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jsonstringify" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON.stringify() 的改造
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      模板字符串
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      实例：模板编译
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      标签模板
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      模板字符串的限制
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../acknowledgment/" class="md-nav__link">
         
   
@@ -2677,27 +2831,6 @@
   
   <span class="md-ellipsis">
     装饰器
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../destructuring/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    变量的解构赋值
   </span>
   
 
@@ -3173,139 +3306,6 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    字符串的扩展
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    字符串的扩展
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#unicode" class="md-nav__link">
-    <span class="md-ellipsis">
-      字符的 Unicode 表示法
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      字符串的遍历器接口
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#u2028-u2029" class="md-nav__link">
-    <span class="md-ellipsis">
-      直接输入 U+2028 和 U+2029
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jsonstringify" class="md-nav__link">
-    <span class="md-ellipsis">
-      JSON.stringify() 的改造
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      模板字符串
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      实例：模板编译
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      标签模板
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      模板字符串的限制
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
@@ -3513,7 +3513,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       字符串的遍历器接口
     </span>
@@ -3540,7 +3540,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       模板字符串
     </span>
@@ -3549,7 +3549,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       实例：模板编译
     </span>
@@ -3558,7 +3558,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       标签模板
     </span>
@@ -3567,7 +3567,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       模板字符串的限制
     </span>
@@ -3590,7 +3590,7 @@
                   
 
   
-    <a href="https://github.com/xiaodongxier/wiki_content/edit/main/docs/网络系列/阮一峰/ECMAScript6/string.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/xiaodongxier/wiki_content/edit/main/docs/网络系列/阮一峰/ECMAScript6/04-string.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -3599,14 +3599,14 @@
     
       
     
-    <a href="https://github.com/xiaodongxier/wiki_content/raw/main/docs/网络系列/阮一峰/ECMAScript6/string.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/xiaodongxier/wiki_content/raw/main/docs/网络系列/阮一峰/ECMAScript6/04-string.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="_1">字符串的扩展</h1>
+<h1 id="04-">04-字符串的扩展</h1>
 <p>本章介绍 ES6 对字符串的改造和增强，下一章介绍字符串对象的新增方法。</p>
 <h2 id="unicode">字符的 Unicode 表示法</h2>
 <p>ES6 加强了对 Unicode 的支持，允许采用<code>\uxxxx</code>形式表示一个字符，其中<code>xxxx</code>表示字符的 Unicode 码点。</p>
@@ -3642,7 +3642,7 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="s1">&#39;\u007A&#39;</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;z&#39;</span><span class="w"> </span><span class="c1">// true</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="s1">&#39;\u{7A}&#39;</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;z&#39;</span><span class="w"> </span><span class="c1">// true</span>
 </code></pre></div>
-<h2 id="_2">字符串的遍历器接口</h2>
+<h2 id="_1">字符串的遍历器接口</h2>
 <p>ES6 为字符串添加了遍历器接口（详见《Iterator》一章），使得字符串可以被<code>for...of</code>循环遍历。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">codePoint</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="s1">&#39;foo&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">codePoint</span><span class="p">)</span>
@@ -3698,7 +3698,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="s1">&#39;\u{D834}&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// &quot;&quot;\\uD834&quot;&quot;</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="s1">&#39;\uDF06\uD834&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// &quot;&quot;\\udf06\\ud834&quot;&quot;</span>
 </code></pre></div>
-<h2 id="_3">模板字符串</h2>
+<h2 id="_2">模板字符串</h2>
 <p>传统的 JavaScript 语言，输出模板通常是这样写的（下面使用了 jQuery 的方法）。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#result&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="s1">&#39;There are &lt;b&gt;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">basket</span><span class="p">.</span><span class="nx">count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&lt;/b&gt; &#39;</span><span class="w"> </span><span class="o">+</span>
@@ -3826,7 +3826,7 @@
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="nx">func</span><span class="p">(</span><span class="s1">&#39;Jack&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// &quot;Hello Jack!&quot;</span>
 </code></pre></div>
 <p>上面代码中，模板字符串写成了一个函数的返回值。执行这个函数，就相当于执行这个模板字符串了。</p>
-<h2 id="_4">实例：模板编译</h2>
+<h2 id="_3">实例：模板编译</h2>
 <p>下面，我们来看一个通过模板字符串，生成正式模板的实例。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">template</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span>
 <a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="sb">&lt;ul&gt;</span>
@@ -3909,7 +3909,7 @@
 <a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="c1">//     &lt;li&gt;cleaner&lt;/li&gt;</span>
 <a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="c1">//   &lt;/ul&gt;</span>
 </code></pre></div>
-<h2 id="_5">标签模板</h2>
+<h2 id="_4">标签模板</h2>
 <p>模板字符串的功能，不仅仅是上面这些。它可以紧跟在一个函数名后面，该函数将被调用来处理这个模板字符串。这被称为“标签模板”功能（tagged template）。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nx">alert</span><span class="sb">`hello`</span>
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="c1">// 等同于</span>
@@ -4081,7 +4081,7 @@
 <a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a><span class="p">}</span>
 </code></pre></div>
 <p>上面代码中，<code>tag</code>函数的第一个参数<code>strings</code>，有一个<code>raw</code>属性，也指向一个数组。该数组的成员与<code>strings</code>数组完全一致。比如，<code>strings</code>数组是<code>["First line\nSecond line"]</code>，那么<code>strings.raw</code>数组就是<code>["First line\\nSecond line"]</code>。两者唯一的区别，就是字符串里面的斜杠都被转义了。比如，strings.raw 数组会将<code>\n</code>视为<code>\\</code>和<code>n</code>两个字符，而不是换行符。这是为了方便取得转义之前的原始模板而设计的。</p>
-<h2 id="_6">模板字符串的限制</h2>
+<h2 id="_5">模板字符串的限制</h2>
 <p>前面提到标签模板里面，可以内嵌其他语言。但是，模板字符串默认会将字符串转义，导致无法嵌入其他语言。</p>
 <p>举例来说，标签模板里面可以嵌入 LaTEX 语言。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">latex</span><span class="p">(</span><span class="nx">strings</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -4138,7 +4138,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../string-methods/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 字符串的新增方法">
+          <a href="../03-destructuring/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 03-变量的解构赋值">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4148,20 +4148,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                字符串的新增方法
+                03-变量的解构赋值
               </div>
             </div>
           </a>
         
         
           
-          <a href="../style/" class="md-footer__link md-footer__link--next" aria-label="下一页: 编程风格">
+          <a href="../acknowledgment/" class="md-footer__link md-footer__link--next" aria-label="下一页: 鸣谢">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                编程风格
+                鸣谢
               </div>
             </div>
             <div class="md-footer__button md-icon">

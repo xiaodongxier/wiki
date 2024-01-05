@@ -26,7 +26,7 @@
     
     
       
-        <title>对象的新增方法 - 知识管理</title>
+        <title>11-对象的新增方法 - 知识管理</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#11-" class="md-skip">
           跳转至
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              对象的新增方法
+              11-对象的新增方法
             
           </span>
         </div>
@@ -2937,7 +2937,7 @@
           
   
   <span class="md-ellipsis">
-    对象的新增方法
+    11-对象的新增方法
   </span>
   
 
@@ -2948,7 +2948,7 @@
         
   
   <span class="md-ellipsis">
-    对象的新增方法
+    11-对象的新增方法
   </span>
   
 
@@ -2989,7 +2989,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       基本用法
     </span>
@@ -2998,7 +2998,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       注意点
     </span>
@@ -3007,7 +3007,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       常见用途
     </span>
@@ -3613,7 +3613,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       基本用法
     </span>
@@ -3622,7 +3622,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       注意点
     </span>
@@ -3631,7 +3631,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       常见用途
     </span>
@@ -3786,7 +3786,7 @@
   
 
 
-<h1 id="_1">对象的新增方法</h1>
+<h1 id="11-">11-对象的新增方法</h1>
 <p>本章介绍 Object 对象的新增方法。</p>
 <h2 id="objectis">Object.is()</h2>
 <p>ES5 比较两个值是否相等，只有两个运算符：相等运算符（<code>==</code>）和严格相等运算符（<code>===</code>）。它们都有缺点，前者会自动转换数据类型，后者的<code>NaN</code>不等于自身，以及<code>+0</code>等于<code>-0</code>。JavaScript 缺乏一种运算，在所有环境中，只要两个值是一样的，它们就应该相等。</p>
@@ -3819,7 +3819,7 @@
 <a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">});</span>
 </code></pre></div>
 <h2 id="objectassign">Object.assign()</h2>
-<h3 id="_2">基本用法</h3>
+<h3 id="_1">基本用法</h3>
 <p><code>Object.assign()</code>方法用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target）。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="p">};</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
@@ -3883,7 +3883,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">({</span><span class="w"> </span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;b&#39;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">[</span><span class="nb">Symbol</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)]</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;d&#39;</span><span class="w"> </span><span class="p">})</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="c1">// { a: &#39;b&#39;, Symbol(c): &#39;d&#39; }</span>
 </code></pre></div>
-<h3 id="_3">注意点</h3>
+<h3 id="_2">注意点</h3>
 <p><strong>（1）浅拷贝</strong></p>
 <p><code>Object.assign()</code>方法实行的是浅拷贝，而不是深拷贝。也就是说，如果源对象某个属性的值是对象，那么目标对象拷贝得到的是这个对象的引用。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">}};</span>
@@ -3919,7 +3919,7 @@
 <a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="c1">// { foo: 1 }</span>
 </code></pre></div>
 <p>上面代码中，<code>source</code>对象的<code>foo</code>属性是一个取值函数，<code>Object.assign()</code>不会复制这个取值函数，只会拿到值以后，将这个值复制过去。</p>
-<h3 id="_4">常见用途</h3>
+<h3 id="_3">常见用途</h3>
 <p><code>Object.assign()</code>方法有很多用处。</p>
 <p><strong>（1）为对象添加属性</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">class</span><span class="w"> </span><span class="nx">Point</span><span class="w"> </span><span class="p">{</span>

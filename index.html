@@ -2688,7 +2688,9 @@ mkdocs serve
   }
 </style>
 <script type="text/javascript">
-  document.getElementById('__comments').innerHTML = '留言板'
+  setTimeout(function() {
+    document.getElementById('__comments').innerHTML = '留言板'
+  }, 500);
 </script>
 
 

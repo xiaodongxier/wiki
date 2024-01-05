@@ -26,7 +26,7 @@
     
     
       
-        <title>运算符的扩展 - 知识管理</title>
+        <title>12-运算符的扩展 - 知识管理</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#12-" class="md-skip">
           跳转至
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              运算符的扩展
+              12-运算符的扩展
             
           </span>
         </div>
@@ -2979,7 +2979,7 @@
           
   
   <span class="md-ellipsis">
-    运算符的扩展
+    12-运算符的扩展
   </span>
   
 
@@ -2990,7 +2990,7 @@
         
   
   <span class="md-ellipsis">
-    运算符的扩展
+    12-运算符的扩展
   </span>
   
 
@@ -3012,7 +3012,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       指数运算符
     </span>
@@ -3021,7 +3021,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       链判断运算符
     </span>
@@ -3039,7 +3039,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       逻辑赋值运算符
     </span>
@@ -3048,7 +3048,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       #!命令
     </span>
@@ -3477,7 +3477,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       指数运算符
     </span>
@@ -3486,7 +3486,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       链判断运算符
     </span>
@@ -3504,7 +3504,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       逻辑赋值运算符
     </span>
@@ -3513,7 +3513,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       #!命令
     </span>
@@ -3552,9 +3552,9 @@
   
 
 
-<h1 id="_1">运算符的扩展</h1>
+<h1 id="12-">12-运算符的扩展</h1>
 <p>本章介绍 ES6 后续标准添加的一些运算符。</p>
-<h2 id="_2">指数运算符</h2>
+<h2 id="_1">指数运算符</h2>
 <p>ES2016 新增了一个指数运算符（<code>**</code>）。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="mf">2</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="c1">// 4</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="mf">2</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="c1">// 8</span>
@@ -3574,7 +3574,7 @@
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nx">b</span><span class="w"> </span><span class="o">**=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">// 等同于 b = b * b * b;</span>
 </code></pre></div>
-<h2 id="_3">链判断运算符</h2>
+<h2 id="_2">链判断运算符</h2>
 <p>编程实务中，如果读取对象内部的某个属性，往往需要判断一下，属性的上层对象是否存在。比如，读取<code>message.body.user.firstName</code>这个属性，安全的写法是写成下面这样。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// 错误的写法</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">const</span><span class="w">  </span><span class="nx">firstName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">message</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">firstName</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;default&#39;</span><span class="p">;</span>
@@ -3722,7 +3722,7 @@
 <a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="p">(</span><span class="nx">lhs</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="nx">middle</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">rhs</span><span class="p">;</span>
 <a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="nx">lhs</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="p">(</span><span class="nx">middle</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">rhs</span><span class="p">);</span>
 </code></pre></div>
-<h2 id="_4">逻辑赋值运算符</h2>
+<h2 id="_3">逻辑赋值运算符</h2>
 <p>ES2021 引入了三个新的<a href="https://github.com/tc39/proposal-logical-assignment">逻辑赋值运算符</a>（logical assignment operators），将逻辑运算符与赋值运算符进行结合。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1">// 或赋值运算符</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="nx">x</span><span class="w"> </span><span class="o">||=</span><span class="w"> </span><span class="nx">y</span>
@@ -3760,7 +3760,7 @@
 <a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">  </span><span class="nx">opts</span><span class="p">.</span><span class="nx">baz</span><span class="w"> </span><span class="o">??=</span><span class="w"> </span><span class="s1">&#39;qux&#39;</span><span class="p">;</span>
 <a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="p">}</span>
 </code></pre></div>
-<h2 id="_5"><code>#!</code>命令</h2>
+<h2 id="_4"><code>#!</code>命令</h2>
 <p>Unix 的命令行脚本都支持<code>#!</code>命令，又称为 Shebang 或 Hashbang。这个命令放在脚本的第一行，用来指定脚本的执行器。</p>
 <p>比如 Bash 脚本的第一行。</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="ch">#!/bin/sh</span>

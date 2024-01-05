@@ -7,3 +7,8 @@
   --md-text-font: "LXGW WenKai" !important;
 }
 
+/* 隐藏顶部导航栏第一个伪首页 */
+[href="../.."],
+.md-tabs__list > li:nth-child(1) {
+  display: none;
+}

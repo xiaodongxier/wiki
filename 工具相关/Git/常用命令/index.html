@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1767,6 +1772,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -3442,6 +3449,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -3472,9 +3481,62 @@
   
 
 
-  <h1>常用命令</h1>
-
-
+<h1 id="_1">常用命令</h1>
+<p>Git 是一个常用的分布式版本控制系统，对于程序员来说，熟练掌握 Git 命令是非常重要的。以下是一些 Git 常用命令的总结和详细描述：</p>
+<ol>
+<li>
+<p><code>git init</code> - 初始化本地仓库。在当前目录新建一个 Git 代码库，生成 <code>.git</code> 文件夹，里面包含了必需的仓库文件。</p>
+</li>
+<li>
+<p><code>git clone &lt;repo&gt;</code> - 克隆远程仓库。将远程仓库的内容克隆到本地，<code>&lt;repo&gt;</code> 是远程仓库地址。</p>
+</li>
+<li>
+<p><code>git add &lt;file&gt;</code> - 添加文件到暂存区。将工作区的文件改动添加到暂存区，<code>&lt;file&gt;</code>可以是文件或目录，也可以是<code>.</code>代表添加所有文件变更。</p>
+</li>
+<li>
+<p><code>git status</code> - 查看仓库当前状态。显示有变更的文件和暂存区状态。</p>
+</li>
+<li>
+<p><code>git diff</code> - 查看文件变更内容。比较文件的不同，即暂存区和工作区的差异。</p>
+</li>
+<li>
+<p><code>git commit -m "&lt;message&gt;"</code> - 提交更新。将暂存区的内容添加到仓库中，<code>&lt;message&gt;</code>是本次提交的说明。</p>
+</li>
+<li>
+<p><code>git push &lt;remote&gt; &lt;branch&gt;</code> - 推送数据到远程仓库。将本地的分支版本上传到远程并合并，<code>&lt;remote&gt;</code>是远程仓库名，<code>&lt;branch&gt;</code>是分支名。</p>
+</li>
+<li>
+<p><code>git pull &lt;remote&gt; &lt;branch&gt;</code> - 从远程获取代码并合并。从远程仓库的指定分支拉取最新内容并与本地指定分支合并。</p>
+</li>
+<li>
+<p><code>git branch</code> - 列出本地所有分支。不带参数时列出本地分支，加上 <code>-a</code> 参数可以查看所有分支（包括远程）。</p>
+</li>
+<li>
+<p><code>git branch &lt;branch_name&gt;</code> - 创建新分支。<code>&lt;branch_name&gt;</code> 是新建的分支名称。</p>
+</li>
+<li>
+<p><code>git checkout &lt;branch&gt;</code> - 切换分支。切换到指定分支并更新工作区，<code>&lt;branch&gt;</code> 是目标分支名。</p>
+</li>
+<li>
+<p><code>git merge &lt;branch&gt;</code> - 合并分支。将指定分支合并到当前分支。</p>
+</li>
+<li>
+<p><code>git log</code> - 查看提交历史。查看当前分支的版本历史。</p>
+</li>
+<li>
+<p><code>git fetch &lt;remote&gt;</code> - 从远程获取最新版本到本地，不会自动合并。</p>
+</li>
+<li>
+<p><code>git reset --hard &lt;commit&gt;</code> - 回滚到指定commit。将HEAD指向指定commit，同时更新工作区和暂存区。</p>
+</li>
+<li>
+<p><code>git stash</code> - 暂存当前修改，将工作区的改动保存起来，可以在其他分支上使用。</p>
+</li>
+<li>
+<p><code>git tag &lt;tag_name&gt;</code> - 打标签。用于标记发布版本号。</p>
+</li>
+</ol>
+<p>请注意，上述命令的使用可能会根据具体情况有所变化，需要根据实际工作场景灵活运用。此外，Git 还有很多高级功能和命令，需要在实际工作中根据需要学习和掌握。</p>
 
 
 

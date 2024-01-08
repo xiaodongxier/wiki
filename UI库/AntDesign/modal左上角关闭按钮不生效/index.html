@@ -3777,6 +3777,17 @@
 
 
 <h1 id="modal">modal左上角关闭按钮不生效</h1>
+<p>如果没有使用 <code>v-model</code>，需要 <code>cancel</code> 事件控制 </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;a-modal
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  title=&quot;Title&quot;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  :visible=&quot;visible&quot;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  :confirm-loading=&quot;confirmLoading&quot;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  @ok=&quot;handleOk&quot;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  @cancel=&quot;handleCancel&quot;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>&gt;
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  &lt;p&gt;{{ ModalText }}&lt;/p&gt;
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>&lt;/a-modal&gt;
+</code></pre></div>
 
 
 

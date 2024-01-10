@@ -1544,6 +1544,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    多选框默认选中全部不允许修改
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1553,6 +1564,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      已知
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chatgpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      ChatGPT
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3850,6 +3898,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      已知
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chatgpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      ChatGPT
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3880,55 +3954,74 @@
 
 
 <h1 id="_1">多选框默认选中全部不允许修改</h1>
-<p>如果你希望保持复选框的颜色不变灰，同时不允许用户取消勾选，那么你可能需要自定义一些样式，并且在交互上进行阻止。这通常意味着你需要覆盖 Ant Design Vue 组件的默认样式，并且通过事件监听来阻止勾选状态的变化。</p>
-<p>首先，设置所有复选框为默认选中状态：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;template&gt;
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  &lt;a-checkbox-group :options=&quot;checkListItem&quot; v-model=&quot;checkedList&quot; @change=&quot;handleChange&quot; /&gt;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&lt;/template&gt;
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>&lt;script&gt;
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>export default {
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  data() {
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    const checkListItem = [
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>      { label: &#39;选项1&#39;, value: &#39;选项1&#39; },
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      { label: &#39;选项2&#39;, value: &#39;选项2&#39; },
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>      { label: &#39;选项3&#39;, value: &#39;选项3&#39; },
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>      // 更多选项...
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    ];
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    // 初始化选中的项为全部选项
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    const checkedList = checkListItem.map(item =&gt; item.value);
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    return {
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>      checkedList,
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>      checkListItem,
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    };
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>  },
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>  methods: {
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    handleChange(checkedValues) {
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>      // 如果有任何取消勾选的行为，强制恢复到全选状态
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>      if (checkedValues.length &lt; this.checkListItem.length) {
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        this.$nextTick(() =&gt; {
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>          this.checkedList = this.checkListItem.map(item =&gt; item.value);
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>        });
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>      }
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    },
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>  },
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>};
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>&lt;/script&gt;
+<h2 id="_2">已知</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;a-checkbox-group v-if=&quot;pageInfo.checkItem&quot; :default-value=&quot;checkListItem&quot; :options=&quot;checkListItem&quot; disabled /&gt;
 </code></pre></div>
-<p>然后，为了保持原始复选框的颜色不变，你可以通过添加自定义样式来覆盖 Ant Design Vue 的默认样式。这个步骤取决于你使用的是哪个版本的 Ant Design Vue 和你的项目构建配置。</p>
-<p>下面是一个可能的样式覆盖示例，你可以根据实际情况调整选择器和样式规则：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c">/* 在你的组件的 &lt;style&gt; 标签或者全局样式文件中 */</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c">/* 覆盖默认的禁用复选框样式 */</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">.</span><span class="nc">ant-checkbox-wrapper-disabled</span><span class="w"> </span><span class="p">.</span><span class="nc">ant-checkbox-inner</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span><span class="w"> </span><span class="c">/* 设置背景颜色，根据需要调整 */</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#d9d9d9</span><span class="p">;</span><span class="w"> </span><span class="c">/* 设置边框颜色，根据需要调整 */</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#0081FF</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#0081FF</span><span class="p">;</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">.</span><span class="nc">ant-checkbox-wrapper-disabled</span><span class="w"> </span><span class="p">.</span><span class="nc">ant-checkbox-inner</span><span class="p">::</span><span class="nd">after</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#1890ff</span><span class="p">;</span><span class="w"> </span><span class="c">/* 设置勾选的颜色，根据需要调整 */</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span><span class="w"> </span><span class="c">/* 设置勾选的颜色，根据需要调整 */</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">.</span><span class="nc">ant-checkbox-disabled</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">span</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgb</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">70</span><span class="kt">%</span><span class="p">);</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="chatgpt">ChatGPT</h2>
+<p>如果你希望保持复选框的颜色不变灰，同时不允许用户取消勾选，那么你可能需要自定义一些样式，并且在交互上进行阻止。这通常意味着你需要覆盖 Ant Design Vue 组件的默认样式，并且通过事件监听来阻止勾选状态的变化。</p>
+<p>首先，设置所有复选框为默认选中状态：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;template&gt;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  &lt;a-checkbox-group :options=&quot;checkListItem&quot; v-model=&quot;checkedList&quot; @change=&quot;handleChange&quot; /&gt;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&lt;/template&gt;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>&lt;script&gt;
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>export default {
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  data() {
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    const checkListItem = [
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>      { label: &#39;选项1&#39;, value: &#39;选项1&#39; },
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>      { label: &#39;选项2&#39;, value: &#39;选项2&#39; },
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>      { label: &#39;选项3&#39;, value: &#39;选项3&#39; },
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>      // 更多选项...
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    ];
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    // 初始化选中的项为全部选项
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    const checkedList = checkListItem.map(item =&gt; item.value);
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    return {
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>      checkedList,
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>      checkListItem,
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    };
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>  },
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>  methods: {
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>    handleChange(checkedValues) {
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>      // 如果有任何取消勾选的行为，强制恢复到全选状态
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>      if (checkedValues.length &lt; this.checkListItem.length) {
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>        this.$nextTick(() =&gt; {
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>          this.checkedList = this.checkListItem.map(item =&gt; item.value);
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>        });
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>      }
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    },
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>  },
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>};
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>&lt;/script&gt;
+</code></pre></div>
+<p>然后，为了保持原始复选框的颜色不变，你可以通过添加自定义样式来覆盖 Ant Design Vue 的默认样式。这个步骤取决于你使用的是哪个版本的 Ant Design Vue 和你的项目构建配置。</p>
+<p>下面是一个可能的样式覆盖示例，你可以根据实际情况调整选择器和样式规则：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c">/* 在你的组件的 &lt;style&gt; 标签或者全局样式文件中 */</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c">/* 覆盖默认的禁用复选框样式 */</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">.</span><span class="nc">ant-checkbox-wrapper-disabled</span><span class="w"> </span><span class="p">.</span><span class="nc">ant-checkbox-inner</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span><span class="w"> </span><span class="c">/* 设置背景颜色，根据需要调整 */</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#d9d9d9</span><span class="p">;</span><span class="w"> </span><span class="c">/* 设置边框颜色，根据需要调整 */</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">.</span><span class="nc">ant-checkbox-wrapper-disabled</span><span class="w"> </span><span class="p">.</span><span class="nc">ant-checkbox-inner</span><span class="p">::</span><span class="nd">after</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#1890ff</span><span class="p">;</span><span class="w"> </span><span class="c">/* 设置勾选的颜色，根据需要调整 */</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">}</span>
 </code></pre></div>
 <p>请注意，样式覆盖可能会对你的应用中的其他复选框产生影响，因此你可能需要使用更具体的选择器来限定这些样式规则的作用范围，例如添加特定的类名或 ID。</p>
 <p>以上方法可以确保所有复选框默认被选中，看起来与未禁用状态一致，并阻止用户取消勾选。</p>

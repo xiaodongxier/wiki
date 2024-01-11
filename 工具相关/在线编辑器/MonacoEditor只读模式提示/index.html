@@ -2756,6 +2756,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../%E6%B5%81%E7%A8%8B%E5%9B%BE%E7%9B%B8%E5%85%B3/LogicFlow%E4%BA%8B%E4%BB%B6%E9%80%9A%E4%BF%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LogicFlow 事件通信
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../%E6%B5%81%E7%A8%8B%E5%9B%BE%E7%9B%B8%E5%85%B3/LogicFlow%E5%AE%98%E6%96%B9API%E7%9B%B8%E5%85%B3/" class="md-nav__link">
         
   
@@ -3967,6 +3988,30 @@
 
 
 <h1 id="monacoeditor">MonacoEditor只读模式提示</h1>
+<p>Monaco Editor的<code>readOnly</code>属性确实会阻止用户进行编辑，但是它不会触发任何事件来允许我们自定义只读模式下的提示信息。由于Monaco Editor没有直接的API来更改只读模式的提示信息，通常需要采取一些额外的步骤来实现这个功能。</p>
+<p>一种可能的方法是通过覆盖默认的行为。具体来说，可以尝试使用<code>editor.onDidAttemptReadOnlyEdit</code>事件来监听只读尝试编辑的动作，然后展示自定义提示。下面是一个可能的实现方法：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// 初始化编辑器</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">this</span><span class="p">.</span><span class="nx">monacoEditor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">monaco</span><span class="p">.</span><span class="nx">editor</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">$refs</span><span class="p">.</span><span class="nx">codeEditContainer</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">selectFileInfo</span><span class="p">.</span><span class="nx">content</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nx">language</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;javascript&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// 假设是 JavaScript 代码</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nx">readOnly</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// 只读模式</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nx">automaticLayout</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nx">scrollBeyondLastLine</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nx">quickSuggestions</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nx">suggestOnTriggerCharacters</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nx">contextmenu</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">});</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1">// 监听只读编辑器上的尝试编辑动作</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">this</span><span class="p">.</span><span class="nx">monacoEditor</span><span class="p">.</span><span class="nx">onDidAttemptReadOnlyEdit</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="c1">// 在这里显示自定义提示信息</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="c1">// 例如，使用浏览器的alert函数或者一个自定义的弹窗组件</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;只读模式禁止修改&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">});</span>
+</code></pre></div>
+<p>请注意，<code>onDidAttemptReadOnlyEdit</code> 是一个比较新的事件，可能需要在较新版本的 Monaco Editor 中才有。如果你的 Monaco Editor 版本不支持这个事件，上述代码将不会工作。此外，如果你使用的是一个封装了 Monaco Editor 的库或组件，它可能不会提供对这个事件的直接访问。</p>
+<p>另外，如果你在网页上已经有了自定义的提示系统，比如使用了某个UI框架提供的提示组件，你可能需要将上述的<code>alert</code>调用替换为该提示系统的调用方法，以保持网页UI风格的一致性。</p>
+<p>如果你提供的版本信息和具体的使用场景，我可能能提供更加精确的建议。</p>
 
 
 
@@ -4036,7 +4081,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2017 - 2023 WangYongJie
+      Copyright &copy; 2017 - 2024 WangYongJie
     </div>
   
   

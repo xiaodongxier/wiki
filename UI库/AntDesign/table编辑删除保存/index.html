@@ -4105,122 +4105,121 @@
   <h1>Table编辑删除保存</h1>
 
 <h2 id="table">table编辑删除保存</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;a-tab-pane key=&quot;2&quot; tab=&quot;计算信息&quot; force-render&gt;
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&lt;a-table :columns=&quot;columns&quot; :data-source=&quot;dataSource&quot; :pagination=&quot;false&quot; :locale=&quot;{emptyText: &#39;暂无数据,&#39;}&quot;&gt;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  &lt;span slot=&quot;tagKey&quot; slot-scope=&quot;text, record&quot;&gt;
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    &lt;span v-if=&quot;record.edit&quot;&gt;
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      &lt;a-input v-model=&quot;record.tagKey&quot; /&gt;
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    &lt;/span&gt;
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    &lt;span v-else&gt;{{ text }}&lt;/span&gt;
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  &lt;/span&gt;
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  &lt;span slot=&quot;tagName&quot; slot-scope=&quot;text, record&quot;&gt;
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    &lt;span v-if=&quot;record.edit&quot;&gt;
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>      &lt;a-input v-model=&quot;record.tagName&quot; /&gt;
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    &lt;/span&gt;
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    &lt;span v-else&gt;{{ text }}&lt;/span&gt;
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  &lt;/span&gt;
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  &lt;span slot=&quot;action&quot; slot-scope=&quot;text, record&quot;&gt;
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    &lt;a v-if=&quot;record.edit&quot; @click=&quot;saveTextInfo(record)&quot;&gt;保存&lt;/a&gt;
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    &lt;a v-else @click=&quot;deleteTextInfo(record)&quot;&gt;删除&lt;/a&gt;
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    &lt;a-divider type=&quot;vertical&quot; /&gt;
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    &lt;a @click=&quot;editTextInfo(record)&quot;&gt;编辑&lt;/a&gt;
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>  &lt;/span&gt;
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>&lt;/a-table&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;a-table :columns=&quot;columns&quot; :data-source=&quot;dataSource&quot; :pagination=&quot;false&quot; :locale=&quot;{emptyText: &#39;暂无数据,&#39;}&quot;&gt;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  &lt;span slot=&quot;tagKey&quot; slot-scope=&quot;text, record&quot;&gt;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    &lt;span v-if=&quot;record.edit&quot;&gt;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      &lt;a-input v-model=&quot;record.tagKey&quot; /&gt;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    &lt;/span&gt;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    &lt;span v-else&gt;{{ text }}&lt;/span&gt;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  &lt;/span&gt;
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  &lt;span slot=&quot;tagName&quot; slot-scope=&quot;text, record&quot;&gt;
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    &lt;span v-if=&quot;record.edit&quot;&gt;
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      &lt;a-input v-model=&quot;record.tagName&quot; /&gt;
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    &lt;/span&gt;
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    &lt;span v-else&gt;{{ text }}&lt;/span&gt;
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  &lt;/span&gt;
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  &lt;span slot=&quot;action&quot; slot-scope=&quot;text, record&quot;&gt;
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    &lt;a v-if=&quot;record.edit&quot; @click=&quot;saveTextInfo(record)&quot;&gt;保存&lt;/a&gt;
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    &lt;a v-else @click=&quot;deleteTextInfo(record)&quot;&gt;删除&lt;/a&gt;
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    &lt;a-divider type=&quot;vertical&quot; /&gt;
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    &lt;a @click=&quot;editTextInfo(record)&quot;&gt;编辑&lt;/a&gt;
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>  &lt;/span&gt;
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>&lt;/a-table&gt;
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>columns: [
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    {
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>      title: &quot;序号&quot;,
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      dataIndex: &quot;num&quot;,
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      width: &quot;15%&quot;,
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      align: &quot;center&quot;,
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>      customRender: (t, r, index) =&gt; {
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        return parseInt(index) + 1;
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>      }
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    },
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    {
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>      title: &quot;文本名称&quot;,
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>      dataIndex: &quot;tagKey&quot;,
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>      key: &quot;tagKey&quot;,
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>      align: &quot;center&quot;,
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>      width: &quot;35%&quot;,
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>      scopedSlots: { customRender: &quot;tagKey&quot; }
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    },
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    {
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>      title: &quot;报告文本标签&quot;,
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>      dataIndex: &quot;tagName&quot;,
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>      key: &quot;tagName&quot;,
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>      align: &quot;center&quot;,
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>      width: &quot;35%&quot;,
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>      scopedSlots: { customRender: &quot;tagName&quot; }
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    },
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>    {
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>      title: &quot;操作&quot;,
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>      key: &quot;action&quot;,
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>      align: &quot;center&quot;,
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>      width: &quot;15%&quot;,
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>      scopedSlots: { customRender: &quot;action&quot; }
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>    }
-<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>  ],
-<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>  dataSource: [
-<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>    {
-<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>      tagKey: &quot;文本名称文本名称文本名称文本名称&quot;,
-<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>      tagName: &quot;报告文本标签报告文本标签报告文本标签报告文本标签&quot;,
-<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>      edit: true
-<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>    },
-<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>    {
-<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>      tagKey: &quot;文本名称文本名称文本名称文本名称&quot;,
-<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>      tagName: &quot;报告文本标签报告文本标签报告文本标签报告文本标签&quot;,
-<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>      edit: false
-<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>    }
-<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>  ],
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">columns</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;序号&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nx">dataIndex</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;num&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;15%&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nx">align</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="nx">customRender</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;文本名称&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="nx">dataIndex</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tagKey&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tagKey&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">      </span><span class="nx">align</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">      </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;35%&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">      </span><span class="nx">scopedSlots</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">customRender</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tagKey&quot;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;报告文本标签&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">      </span><span class="nx">dataIndex</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tagName&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">      </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tagName&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">      </span><span class="nx">align</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">      </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;35%&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">      </span><span class="nx">scopedSlots</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">customRender</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tagName&quot;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;操作&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">      </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;action&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">      </span><span class="nx">align</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">      </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;15%&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">      </span><span class="nx">scopedSlots</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">customRender</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;action&quot;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">  </span><span class="nx">dataSource</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">      </span><span class="nx">tagKey</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;文本名称文本名称文本名称文本名称&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">      </span><span class="nx">tagName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;报告文本标签报告文本标签报告文本标签报告文本标签&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">      </span><span class="nx">edit</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">      </span><span class="nx">tagKey</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;文本名称文本名称文本名称文本名称&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">      </span><span class="nx">tagName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;报告文本标签报告文本标签报告文本标签报告文本标签&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">      </span><span class="nx">edit</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">  </span><span class="p">],</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> modifyState() {
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>      this.dataSource.forEach(item =&gt; {
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        item.edit = false;
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>      });
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    },
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    addTextInfo() {
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>      const initInfo = {
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        tagKey: &quot;&quot;,
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        tagName: &quot;&quot;,
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        edit: true
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>      };
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>      this.modifyState();
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>      this.dataSource.push(initInfo);
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    },
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    saveTextInfo(record) {
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>      console.log(record);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w"> </span><span class="nx">modifyState</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">dataSource</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="nx">item</span><span class="p">.</span><span class="nx">edit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span><span class="p">});</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nx">addTextInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">initInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="nx">tagKey</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="nx">tagName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="nx">edit</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">      </span><span class="p">};</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">modifyState</span><span class="p">();</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">dataSource</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">initInfo</span><span class="p">);</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="nx">saveTextInfo</span><span class="p">(</span><span class="nx">record</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">record</span><span class="p">);</span>
 <a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>      // 需要保存的记录的 tagKey 和 tagName
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>      const { tagKey, tagName } = record;
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>      const index = this.dataSource.findIndex(item =&gt; item.tagKey === tagKey);
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>      // 创建一个新数组，不包括要删除的元素
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>      const newDataSource = this.dataSource.filter((item, currentIndex) =&gt; currentIndex !== index);
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>      // 检查是否有相同的 tagKey 或 tagName
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>      const existingRecord = newDataSource.find(item =&gt; item.tagKey === tagKey || item.tagName === tagName);
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>      if (existingRecord) {
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>        // 如果找到了相同的记录，则提示用户
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>        this.$message.error(&quot;已存在相同的文本名称或文本标签，请修改后再尝试保存&quot;);
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>      } else {
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>        this.$message.success(&quot;保存成功&quot;);
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>        this.modifyState();
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>      }
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>    },
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>    deleteTextInfo(record) {
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>      const tagKey = record.tagKey;
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>      const index = this.dataSource.findIndex(item =&gt; item.tagKey === tagKey);
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>      if (index !== -1) {
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>        this.dataSource.splice(index, 1);
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>      }
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>    },
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>    editTextInfo(record) {
-<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>      const tagKey = record.tagKey;
-<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>      const index = this.dataSource.findIndex(item =&gt; item.tagKey === tagKey);
-<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>      if (index !== -1) {
-<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>        // 找到了匹配的记录，现在设置 edit 为 true
-<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>        this.$set(this.dataSource[index], &quot;edit&quot;, true);
-<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>      }
-<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>    },
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">      </span><span class="c1">// 需要保存的记录的 tagKey 和 tagName</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">tagKey</span><span class="p">,</span><span class="w"> </span><span class="nx">tagName</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">record</span><span class="p">;</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">dataSource</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">tagKey</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">tagKey</span><span class="p">);</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">      </span><span class="c1">// 创建一个新数组，不包括要删除的元素</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">newDataSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">dataSource</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">item</span><span class="p">,</span><span class="w"> </span><span class="nx">currentIndex</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">currentIndex</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="nx">index</span><span class="p">);</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">      </span><span class="c1">// 检查是否有相同的 tagKey 或 tagName</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">existingRecord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">newDataSource</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">tagKey</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">tagKey</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">tagName</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">tagName</span><span class="p">);</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">existingRecord</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">        </span><span class="c1">// 如果找到了相同的记录，则提示用户</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">$message</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;已存在相同的文本名称或文本标签，请修改后再尝试保存&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">$message</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="s2">&quot;保存成功&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">modifyState</span><span class="p">();</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">    </span><span class="nx">deleteTextInfo</span><span class="p">(</span><span class="nx">record</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">tagKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">record</span><span class="p">.</span><span class="nx">tagKey</span><span class="p">;</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">dataSource</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">tagKey</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">tagKey</span><span class="p">);</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">index</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">dataSource</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="w">    </span><span class="nx">editTextInfo</span><span class="p">(</span><span class="nx">record</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">tagKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">record</span><span class="p">.</span><span class="nx">tagKey</span><span class="p">;</span>
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">dataSource</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">tagKey</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">tagKey</span><span class="p">);</span>
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">index</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="w">        </span><span class="c1">// 找到了匹配的记录，现在设置 edit 为 true</span>
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">$set</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">dataSource</span><span class="p">[</span><span class="nx">index</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;edit&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="w">    </span><span class="p">},</span>
 </code></pre></div>
 
 

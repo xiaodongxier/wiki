@@ -4619,45 +4619,41 @@
 </code></pre></div>
 <p>在这段代码中，我们首先对<code>isArr</code>执行<code>some()</code>方法，检查其中的每个<code>id</code>是否作为<code>parentId</code>存在于<code>edges</code>数组的任何对象中。如果<code>some()</code>方法找到了这样的情况，它会立即返回<code>true</code>，表示<code>isArr</code>中至少有一个元素出现在了<code>edges</code>中的<code>parentId</code>属性。由于我们想要的是相反的结果（如果有一个在就返回<code>false</code>），所以我们在外层使用了逻辑非操作符<code>!</code>来反转这个结果。因此，如果<code>isArr</code>中的任何一个元素都不存在于<code>edges</code>中的<code>parentId</code>属性，<code>isNotInEdges</code>将为<code>true</code>。</p>
 <h2 id="2">方案2</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>为了判断`isArr`数组中的元素是否全部不在`edges`数组的`parentId`字段中，我们可以使用数组的`every()`方法。这个方法会检查数组中的所有元素是否都符合提供的测试函数。如果所有元素都通过测试，它返回`true`；如果有任何一个元素未通过测试，它返回`false`。
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>我们可以组合`every()`和`some()`方法来实现这一逻辑：对`isArr`使用`every()`方法，确保其内的每个元素都不在`edges`的`parentId`中，然后使用`some()`方法来测试每个元素是否出现在`edges`中。
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>以下是实现这一逻辑的JavaScript代码：
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>```javascript
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>const isArr = [&quot;ff33002340944c1c8d6bc8f71edc07e4&quot;, &quot;1&quot;, &quot;2&quot;];
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>const edges = [
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    {
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        &quot;parentId&quot;: &quot;ff33002340944c1c8d6bc8f71edc07e4&quot;,
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        &quot;childId&quot;: &quot;8f8d3b4e3fb9442d8d9e4fe608bb2fe9&quot;,
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        &quot;sortTime&quot;: 1705303791366
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    },
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    {
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        &quot;parentId&quot;: &quot;af0f2910299b4290bb8cb06722023919&quot;,
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        &quot;childId&quot;: &quot;8f8d3b4e3fb9442d8d9e4fe608bb2fe9&quot;,
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>        &quot;sortTime&quot;: 1705303791440
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    },
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    {
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>        &quot;parentId&quot;: &quot;1d819da622834e4395817324f122565d&quot;,
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        &quot;childId&quot;: &quot;8f8d3b4e3fb9442d8d9e4fe608bb2fe9&quot;,
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        &quot;sortTime&quot;: 1705303791599
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>    },
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>    {
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>        &quot;parentId&quot;: &quot;048ed0031e0942d4a941c667116ad2ef&quot;,
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>        &quot;childId&quot;: &quot;1d819da622834e4395817324f122565d&quot;,
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>        &quot;sortTime&quot;: 1705303791680
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>    },
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>    {
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>        &quot;parentId&quot;: &quot;048ed0031e0942d4a941c667116ad2ef&quot;,
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>        &quot;childId&quot;: &quot;ff33002340944c1c8d6bc8f71edc07e4&quot;,
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>        &quot;sortTime&quot;: 1705303791750
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>    }
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>];
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>const areNotInEdges = isArr.every(id =&gt; !edges.some(edge =&gt; edge.parentId === id));
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>console.log(areNotInEdges); // 返回：true 或者 false
+<p>为了判断<code>isArr</code>数组中的元素是否全部不在<code>edges</code>数组的<code>parentId</code>字段中，我们可以使用数组的<code>every()</code>方法。这个方法会检查数组中的所有元素是否都符合提供的测试函数。如果所有元素都通过测试，它返回<code>true</code>；如果有任何一个元素未通过测试，它返回<code>false</code>。</p>
+<p>我们可以组合<code>every()</code>和<code>some()</code>方法来实现这一逻辑：对<code>isArr</code>使用<code>every()</code>方法，确保其内的每个元素都不在<code>edges</code>的<code>parentId</code>中，然后使用<code>some()</code>方法来测试每个元素是否出现在<code>edges</code>中。</p>
+<p>以下是实现这一逻辑的JavaScript代码：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">isArr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ff33002340944c1c8d6bc8f71edc07e4&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">];</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">edges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="s2">&quot;parentId&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ff33002340944c1c8d6bc8f71edc07e4&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="s2">&quot;childId&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;8f8d3b4e3fb9442d8d9e4fe608bb2fe9&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="s2">&quot;sortTime&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1705303791366</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="s2">&quot;parentId&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;af0f2910299b4290bb8cb06722023919&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="s2">&quot;childId&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;8f8d3b4e3fb9442d8d9e4fe608bb2fe9&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="s2">&quot;sortTime&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1705303791440</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="s2">&quot;parentId&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1d819da622834e4395817324f122565d&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="s2">&quot;childId&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;8f8d3b4e3fb9442d8d9e4fe608bb2fe9&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">        </span><span class="s2">&quot;sortTime&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1705303791599</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">        </span><span class="s2">&quot;parentId&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;048ed0031e0942d4a941c667116ad2ef&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">        </span><span class="s2">&quot;childId&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1d819da622834e4395817324f122565d&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">        </span><span class="s2">&quot;sortTime&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1705303791680</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">        </span><span class="s2">&quot;parentId&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;048ed0031e0942d4a941c667116ad2ef&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">        </span><span class="s2">&quot;childId&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ff33002340944c1c8d6bc8f71edc07e4&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">        </span><span class="s2">&quot;sortTime&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1705303791750</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="p">];</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="kd">const</span><span class="w"> </span><span class="nx">areNotInEdges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">isArr</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">id</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">!</span><span class="nx">edges</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">edge</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">edge</span><span class="p">.</span><span class="nx">parentId</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">id</span><span class="p">));</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">areNotInEdges</span><span class="p">);</span><span class="w"> </span><span class="c1">// 返回：true 或者 false</span>
 </code></pre></div>
 <p>在这段代码中，<code>every()</code>方法会对<code>isArr</code>中的每个<code>id</code>执行测试函数：如果<code>id</code>不在<code>edges</code>的任何一个<code>parentId</code>中，测试函数会返回<code>true</code>；如果<code>id</code>找到了匹配的<code>parentId</code>，<code>some()</code>方法会返回<code>true</code>，测试函数随之返回<code>false</code>。只要<code>isArr</code>中有一个元素出现在了<code>edges</code>中的<code>parentId</code>属性，<code>areNotInEdges</code>就会为<code>false</code>；否则，如果全部不在，<code>areNotInEdges</code>为<code>true</code>。
 ```</p>

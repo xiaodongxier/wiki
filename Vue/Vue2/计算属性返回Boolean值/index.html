@@ -12,13 +12,13 @@
         <meta name="author" content="wangyongjie">
       
       
-        <link rel="canonical" href="https://wiki.wangyongjie.cn/Vue/Vue2/%E7%88%B6%E7%BB%84%E4%BB%B6%E5%90%91%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE/">
+        <link rel="canonical" href="https://wiki.wangyongjie.cn/Vue/Vue2/%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E8%BF%94%E5%9B%9EBoolean%E5%80%BC/">
       
       
-        <link rel="prev" href="../%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E4%B8%8E%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91/">
+        <link rel="prev" href="../%E7%BD%91%E9%A1%B5%E6%89%93%E5%8D%B0/">
       
       
-        <link rel="next" href="../%E7%BD%91%E9%A1%B5%E6%89%93%E5%8D%B0/">
+        <link rel="next" href="../../Vue3/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>父组件向子组件传递数据 - 知识沉淀</title>
+        <title>计算属性返回Boolean值 - 知识沉淀</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#boolean" class="md-skip">
           跳转至
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              父组件向子组件传递数据
+              计算属性返回Boolean值
             
           </span>
         </div>
@@ -1700,19 +1700,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../%E7%88%B6%E7%BB%84%E4%BB%B6%E5%90%91%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1721,7 +1712,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1752,10 +1742,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E8%BF%94%E5%9B%9EBoolean%E5%80%BC/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1764,6 +1763,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -4376,7 +4376,7 @@
                   
 
   
-    <a href="https://github.com/xiaodongxier/wiki_content/edit/main/docs/Vue/Vue2/父组件向子组件传递数据.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/xiaodongxier/wiki_content/edit/main/docs/Vue/Vue2/计算属性返回Boolean值.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -4385,116 +4385,26 @@
     
       
     
-    <a href="https://github.com/xiaodongxier/wiki_content/raw/main/docs/Vue/Vue2/父组件向子组件传递数据.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/xiaodongxier/wiki_content/raw/main/docs/Vue/Vue2/计算属性返回Boolean值.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="_1">父组件向子组件传递数据</h1>
-<blockquote>
-<p>在Vue.js中，可以通过props属性将父组件的数据传递给子组件。然后在子组件中，可以通过监听父组件传递的数据，实时更新子组件的视图。</p>
-</blockquote>
-<p>以下是一个示例代码：</p>
-<p>父组件：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;template&gt;
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  &lt;div&gt;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    &lt;button @click=&quot;addData&quot;&gt;添加数据&lt;/button&gt;
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    &lt;child-component :childData=&quot;parentData&quot;&gt;&lt;/child-component&gt;
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  &lt;/div&gt;
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>&lt;/template&gt;
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>&lt;script&gt;
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>import ChildComponent from &#39;./ChildComponent.vue&#39;;
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>export default {
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  data() {
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    return {
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>      parentData: [] // 父组件的数据
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    };
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>  },
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  methods: {
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    addData() {
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>      this.parentData.push(&#39;新数据&#39;); // 点击按钮时，向父组件的数据中添加新数据
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    }
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>  },
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>  components: {
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    ChildComponent
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>  }
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>};
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>&lt;/script&gt;
+<h1 id="boolean">计算属性返回Boolean值</h1>
+<p>在Vue 2中，计算属性应当始终返回一个值，以确保它的行为一致性。从你的代码片段来看，当条件满足时，<code>isFile</code> 计算属性返回 <code>true</code>，但当条件不满足时，并没有返回值，这在JavaScript中意味着它会返回 <code>undefined</code>，这可能不是你想要的行为。</p>
+<p>为了确保 <code>isFile</code> 总是返回一个布尔值，你可以简化你的代码如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">computed</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nx">isFile</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">allowStatuses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Pending_modify&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Modifying&quot;</span><span class="p">];</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="c1">// 使用逻辑非(!)操作符两次可以将任何值转换为布尔值</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">!!</span><span class="nx">allowStatuses</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">itemNodeInfo</span><span class="p">.</span><span class="nx">properties</span><span class="p">.</span><span class="nx">status</span><span class="p">);</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
 </code></pre></div>
-<p>子组件：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;template&gt;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  &lt;div&gt;
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    &lt;ul&gt;
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      &lt;li v-for=&quot;item in childData&quot; :key=&quot;item&quot;&gt;{{ item }}&lt;/li&gt;
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    &lt;/ul&gt;
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  &lt;/div&gt;
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>&lt;/template&gt;
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>&lt;script&gt;
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>export default {
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  props: [&#39;childData&#39;] // 接收父组件传递的数据
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>};
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>&lt;/script&gt;
-</code></pre></div>
-<p>在父组件中，点击按钮时，会调用<code>addData</code>方法，向父组件的数据<code>parentData</code>中添加新数据。然后将<code>parentData</code>通过props属性传递给子组件。</p>
-<p>在子组件中，通过使用<code>v-for</code>指令循环遍历<code>childData</code>，将每个数据项渲染到页面上。</p>
-<p>这样，当父组件点击按钮添加数据时，子组件会实时更新视图，显示最新的数据。</p>
-<blockquote>
-<p>props 完整的写法是什么？需要类型和默认值等内容的写法</p>
-</blockquote>
-<p>下面是props的完整写法，包括类型和默认值：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nx">propName</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="nx">Type</span><span class="p">,</span><span class="w"> </span><span class="c1">// 属性的类型，例如：String, Number, Boolean, Object, Array等</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="nx">DefaultValue</span><span class="w"> </span><span class="c1">// 属性的默认值</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nx">required</span><span class="o">:</span><span class="w"> </span><span class="nb">Boolean</span><span class="p">,</span><span class="w"> </span><span class="c1">// 是否必需，默认为false</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nx">validator</span><span class="o">:</span><span class="w"> </span><span class="nb">Function</span><span class="w"> </span><span class="c1">// 自定义验证函数</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">}</span>
-</code></pre></div>
-<p>其中，<code>propName</code>是属性名，<code>Type</code>是属性的类型，<code>DefaultValue</code>是属性的默认值。</p>
-<p>以下是一个示例：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;默认消息&#39;</span><span class="p">,</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nx">required</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nx">validator</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">      </span><span class="c1">// 自定义验证函数，返回true表示验证通过，返回false表示验证不通过</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">value</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">}</span>
-</code></pre></div>
-<p>在上述示例中，<code>message</code>是属性名，类型为String，如果父组件没有传递<code>message</code>属性时，它的默认值为<code>'默认消息'</code>。<code>required</code>属性设置为<code>true</code>，表示该属性是必需的，如果父组件没有传递该属性，将会在控制台输出警告。<code>validator</code>属性是一个自定义的验证函数，用于验证<code>message</code>属性的值是否符合要求，如果返回false，将会在控制台输出警告。</p>
-<blockquote>
-<p>下面在vscode爆红Type of the default value for 'taskFlowData' prop must be a function.</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w"> </span><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nx">taskFlowData</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">      </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="nb">Object</span><span class="p">,</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">      </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">      </span><span class="nx">required</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="p">},</span>
-</code></pre></div>
-<p>在Vue.js中，当使用对象或数组作为默认值时，需要将默认值设为一个函数，而不是直接使用对象或数组字面量。这是因为对象或数组在JavaScript中是引用类型，如果直接使用对象或数组字面量作为默认值，将会导致它们在不同组件实例之间共享，可能会造成数据混乱。</p>
-<p>所以，你可以将<code>default</code>属性的值改为一个函数，返回一个新的对象：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nx">taskFlowData</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="nb">Object</span><span class="p">,</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="p">{};</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="nx">required</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">}</span>
-</code></pre></div>
-<p>这样做可以确保每个组件实例都有自己独立的<code>taskFlowData</code>对象。</p>
+<p>在这里，<code>includes</code> 方法会检测 <code>this.itemNodeInfo.properties.status</code> 是否在 <code>allowStatuses</code> 数组中。如果是，<code>includes</code> 方法返回 <code>true</code>，否则返回 <code>false</code>。使用 <code>!!</code> 是一种常见的JavaScript技巧来将一个值强制转换成布尔值，确保计算属性 <code>isFile</code> 总是返回 <code>true</code> 或 <code>false</code>。</p>
+<p>这样，无论 <code>this.itemNodeInfo.properties.status</code> 的值是什么，<code>isFile</code> 都将返回一个明确的布尔值。</p>
 
 
 
@@ -4524,7 +4434,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E4%B8%8E%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 父子组件通信与事件触发">
+          <a href="../%E7%BD%91%E9%A1%B5%E6%89%93%E5%8D%B0/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 网页打印">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4534,20 +4444,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                父子组件通信与事件触发
+                网页打印
               </div>
             </div>
           </a>
         
         
           
-          <a href="../%E7%BD%91%E9%A1%B5%E6%89%93%E5%8D%B0/" class="md-footer__link md-footer__link--next" aria-label="下一页: 网页打印">
+          <a href="../../Vue3/" class="md-footer__link md-footer__link--next" aria-label="下一页: Vue3">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                网页打印
+                Vue3
               </div>
             </div>
             <div class="md-footer__button md-icon">

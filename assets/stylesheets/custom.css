@@ -1,0 +1,4 @@
+.md-footer-meta__inner.md-grid {
+  /* display: flex; */
+  align-items: center !important;
+}

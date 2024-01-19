@@ -1,4 +1,13 @@
 .md-footer-meta__inner.md-grid {
   /* display: flex; */
   align-items: center !important;
+  flex-direction: column-reverse;
+}
+
+/* 隐藏页面上的统计 */
+/* .heng + .la-data-widget__container */
+.heng + span {
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
 }

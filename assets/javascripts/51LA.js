@@ -5,7 +5,7 @@
   script.className = "heng";
   script.crossOrigin = "anonymous";
   script.charset = "UTF-8";
-  script.src = "https://v6-widget.51.la/v6/Jf8rVs7oam5pFYhA/quote.js?theme=#FFFFFF,#E0E0E0,#E0E0E0,#E0E0E0,#FFFFFF,#FFFFFF,14&f=14&display=0,1,0,1,0,0,1,1";
+  script.src = "https://v6-widget.51.la/v6/Jf8rVs7oam5pFYhA/quote.js?theme=#FFFFFF,#E0E0E0,#E0E0E0,#E0E0E0,#FFFFFF,#FFFFFF,14&f=14&display=0,1,0,1,0,0,1,0";
   // document.head.appendChild(script);
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(script, s);

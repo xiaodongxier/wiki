@@ -2,6 +2,8 @@
   /* display: flex; */
   align-items: center !important;
   flex-direction: column-reverse;
+  text-align: center;
+  overflow: hidden;
 }
 
 /* 隐藏页面上的统计 */

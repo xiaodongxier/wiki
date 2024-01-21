@@ -13,3 +13,8 @@
   opacity: 0;
   visibility: hidden;
 }
+
+.md-typeset img, .md-typeset video {
+  border: 4px solid #4051b54a;
+  border-radius: 16px;
+}

@@ -12,7 +12,7 @@
         <meta name="author" content="wangyongjie">
       
       
-        <link rel="canonical" href="https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E6%8E%98%E9%87%91/%E5%8F%91%E5%B8%83Vue3%20%E5%B0%A4%E9%9B%A8%E6%BA%AA%E7%8A%AF%E7%9A%843%E4%B8%AA%E9%94%99/">
+        <link rel="canonical" href="https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E6%8E%98%E9%87%91/%E5%8F%91%E5%B8%83Vue3%E5%B0%A4%E9%9B%A8%E6%BA%AA%E7%8A%AF%E7%9A%843%E4%B8%AA%E9%94%99/">
       
       
         <link rel="prev" href="../../">
@@ -26,7 +26,7 @@
     
     
       
-        <title>发布 Vue3 让尤雨溪吃尽苦头：犯了3个错，每一个都需开发者警惕 - 知识沉淀</title>
+        <title>发布 Vue3 尤雨溪犯的3个错: 每一个都需开发者警惕 - 知识沉淀</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              发布 Vue3 让尤雨溪吃尽苦头：犯了3个错，每一个都需开发者警惕
+              发布 Vue3 尤雨溪犯的3个错: 每一个都需开发者警惕
             
           </span>
         </div>
@@ -3760,7 +3760,7 @@
           
   
   <span class="md-ellipsis">
-    发布 Vue3 让尤雨溪吃尽苦头：犯了3个错，每一个都需开发者警惕
+    发布 Vue3 尤雨溪犯的3个错: 每一个都需开发者警惕
   </span>
   
 
@@ -3771,7 +3771,7 @@
         
   
   <span class="md-ellipsis">
-    发布 Vue3 让尤雨溪吃尽苦头：犯了3个错，每一个都需开发者警惕
+    发布 Vue3 尤雨溪犯的3个错: 每一个都需开发者警惕
   </span>
   
 
@@ -5584,7 +5584,9 @@
   
 
 
-<h1 id="vue3-3">发布 Vue3 让尤雨溪吃尽苦头：犯了3个错，每一个都需开发者警惕</h1>
+<h1 id="vue3-3">发布 Vue3 尤雨溪犯的3个错: 每一个都需开发者警惕</h1>
+<!-- # 发布 Vue3 让尤雨溪吃尽苦头：犯了3个错，每一个都需开发者警惕 -->
+
 <blockquote>
 <p>转载地址：https://juejin.cn/post/7326547700944699432</p>
 </blockquote>
@@ -5601,7 +5603,7 @@
 <p>“导致第二个错误的原因，是我低估了升级对生态库的影响。我忽略了生态库的作者适配 Vue 3 所需要花费的工作量。”</p>
 <p>由于他们对许多内部 API 和行为做了变更，对于依赖这些内部行为的大型库而言，升级到 Vue 3 变得“非常困难”。这导致了诸如 Nuxt、Beautify 等主要生态库的升级拖延时间很长。</p>
 <p>“事实上，这些也是有互相依赖关系的应用因为升级难度而停滞在旧版本的首要原因之一。所以这里学到的教训是，<strong>生态系统依赖的重要性不容忽视。</strong>  ”</p>
-<p><img alt="" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5216b6ff0f08452684b328119f092133~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=1080&amp;h=587&amp;s=180348&amp;e=png&amp;b=2c2f3c" /></p>
+<p><img alt="" src="https://gitcdn.xiaodongxier.com/wiki/202401221833815.webp" /></p>
 <p>为了应对这种情况，Vue 采用了一个对生态系统进行自动化持续集成的系统，该系统可以自动测试 Vue 的所有核心变更与其上下游所依赖库的兼容情况。</p>
 <p>“目前我们已经成功集成了超过 15 个项目到系统中，而且未来还将继续增加。在发布之前，可以针对每个提交运行所有这些下游库，这样就可以在发布之前检测出潜在问题。通过这个系统，我们还能够与这些生态库的作者密切合作，共同解决可能出现的问题，以确保在发布时一切都能够顺利进行。”</p>
 <p>“Vue 不鼓励，甚至禁止生态库的作者们使用其内部 API，因为这是导致这类库升级困难的主要因素之一。”</p>

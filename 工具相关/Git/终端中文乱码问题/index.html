@@ -2572,6 +2572,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    终端中文乱码问题
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2581,6 +2592,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考：
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5545,6 +5584,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考：
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -5562,10 +5618,19 @@
 
 
 <h1 id="_1">终端中文乱码问题</h1>
-<p><img alt="" src="https://gitcdn.xiaodongxier.com/wiki/20240116230041.png" /></p>
+<p><img alt="" src="https://gitcdn.xiaodongxier.com/wiki/202401211612537.webp" /></p>
 <p><img alt="" src="https://gitcdn.xiaodongxier.com/wiki/202401211624939.webp" /></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git config --global core. quotepath false
+<p>最近遇到 Mac 的 Git Status 显示中文乱码的问题，类似：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="s2">&quot;docs/\345\267\245\345\205\267\347\233\270\345\205\263/\350\243\205\346\234\272\345\277\205\345\244\207/\347\273\210\347\253\257\344\270\255\346\226\207\344\271\261\347\240\201.md&quot;</span>
 </code></pre></div>
+<p>解决方法是：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.quotepath<span class="w"> </span><span class="nb">false</span>
+</code></pre></div>
+<h2 id="_2">参考：</h2>
+<ul>
+<li><a href="https://javahashbrown.github.io/Blog/mac%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E6%95%B0%E5%AD%97%E7%BC%96%E7%A0%81%E7%9A%84%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/">Mac终端中文显示数字编码的设置问题</a></li>
+<li><a href="https://cuiqingcai.com/9476.html">Mac 终端 Git Status 显示中文乱码</a></li>
+</ul>
 
 
 

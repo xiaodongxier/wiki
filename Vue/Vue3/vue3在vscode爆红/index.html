@@ -26,7 +26,7 @@
     
     
       
-        <title>Vue3在vscode爆红 - 知识沉淀</title>
+        <title>vue3 Vetur报错：has no default export 组件没有默认导出 - 知识沉淀</title>
       
     
     
@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#vue3-veturhas-no-default-export" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -110,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Vue3在vscode爆红
+              vue3 Vetur报错：has no default export 组件没有默认导出
             
           </span>
         </div>
@@ -1974,16 +1979,75 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    vue3 Vetur报错：has no default export 组件没有默认导出
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Vue3在vscode爆红
+    vue3 Vetur报错：has no default export 组件没有默认导出
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      报错描述
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      错误原因
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      解决办法
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -5640,6 +5704,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      报错描述
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      错误原因
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      解决办法
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -5657,9 +5758,20 @@
   
 
 
-  <h1>Vue3在vscode爆红</h1>
-
-
+<h1 id="vue3-veturhas-no-default-export">vue3 Vetur报错：has no default export 组件没有默认导出</h1>
+<h2 id="_1">报错描述</h2>
+<p>在vue3项目ts写法报错组件没有默认导出，这种情况代码本身没有问题，程序能正常执行，对于强迫症的我表示看得很难受  </p>
+<p><img alt="" src="https://gitcdn.xiaodongxier.com/wiki/20240124215338.png" /></p>
+<h2 id="_2">错误原因</h2>
+<p>经过资料查询是 <code>Vetur 暂不支持ts</code></p>
+<h2 id="_3">解决办法</h2>
+<ol>
+<li>更换支持ts的语法高亮插件<code>Volar</code>以取代 <code>Vetur</code>(推荐此方法)</li>
+</ol>
+<p><img alt="" src="https://img-blog.csdnimg.cn/1b3ad7bf9c344b5bbe431b2fbb2c4c57.png" /></p>
+<ol>
+<li>禁用 <code>Volar</code> 插件</li>
+</ol>
 
 
 

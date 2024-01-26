@@ -5910,8 +5910,16 @@
 <li>onDeactivated</li>
 </ul>
 <h2 id="setup">拉开序幕的 Setup</h2>
-<p>vue2 中 data 定义的数据 在vue3中 直接变成了变量</p>
-<p>vue2 methods 里面的方法 在vue3中 直接变成了函数</p>
+<ul>
+<li>vue2 中 data 定义的数据 </li>
+<li>
+<p>vue3中 直接通过变量定义数据 </p>
+</li>
+<li>
+<p>vue2 methods 里面的方法 </p>
+</li>
+<li>vue3中 直接通过函数定义方法</li>
+</ul>
 <p>vue3中弱化 this</p>
 <p>setup 函数的执行顺序 是在 beforeCreate 之前执行的</p>
 <p>```js Vue2
@@ -5927,7 +5935,7 @@ methods: {
     this.age += 1
   }
 }
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>```js Vue3
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>```js
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>setup(){
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  let name = &quot;张三&quot;;
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  let age = 18;

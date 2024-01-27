@@ -17,5 +17,5 @@
 window.addEventListener("load", function() {
   const element = document.querySelector(".md-copyright");
   const la51 = document.querySelector(".la-data-widget__container").innerHTML;
-  element.insertAdjacentHTML('afterend', `<div>${la51}</div>(202401开始)`);
+  element.insertAdjacentHTML('afterend', `<div>${la51}(202401开始)</div>`);
 });

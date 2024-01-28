@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#consoletimeend" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2410,6 +2415,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -5787,6 +5794,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -5804,9 +5813,15 @@
   
 
 
-  <h1>console.timeEnd</h1>
-
-<p>console.timeEnd.md</p>
+<h1 id="consoletimeend">console.timeEnd</h1>
+<p><code>console.timeEnd</code> 是 <code>JavaScript</code> 中的一个 <code>console</code> 对象的方法，用于结束计时器并输出经过的时间。它与 <code>console.time</code> 方法一起使用，用于测量代码段的执行时间。</p>
+<p>使用 <code>console.time</code> 方法开始计时器，在代码段执行完毕后，使用<code>console.timeEnd</code> 方法结束计时器并输出经过的时间。<code>console.timeEnd</code> 方法的参数是与 <code>console.time</code> 方法中传入的参数相同，用于标识计时器。</p>
+<p>示例代码如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">time</span><span class="p">(</span><span class="s1">&#39;myTimer&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">// 执行一些代码</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">timeEnd</span><span class="p">(</span><span class="s1">&#39;myTimer&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p>上述代码将输出经过的时间，单位为毫秒（ms），并在控制台中显示类似于"myTimer: 123ms"的信息。</p>
 
 
 

@@ -5883,8 +5883,8 @@
 <h1 id="16-computed">16-computed计算属性</h1>
 <p><img alt="方法调用多次" src="https://gitcdn.xiaodongxier.com/wiki/20240128173836.png" /></p>
 <ul>
-<li>computed 有缓存，数据没变化的，调用多次只打印一次，如下 <code>fullName</code></li>
-<li>方法调用多次，每次都调用一次，如下 <code>fullName1</code></li>
+<li>computed 有缓存，数据没变化的，调用多次只打印一次，如下 <code>fullName</code>，使用的时候直接 <code>{{ fullName }}</code></li>
+<li>方法调用多次，每次都调用一次，如下 <code>fullName1</code>，使用的时候需要使用<code>()</code>调用方法 <code>{{ fullName1() }}</code></li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">&quot;child-wrap&quot;</span><span class="o">&gt;</span>

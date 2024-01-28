@@ -2232,6 +2232,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../17-watch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17-watch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ref%E4%B8%8Ereactive/" class="md-nav__link">
         
   
@@ -5991,6 +6012,10 @@
 
 
 <h1 id="03-torefstoref">03-toRefs与toRef</h1>
+<p>toRefs和toRef是Vue 3中用于响应式转换的两个函数。</p>
+<p>toRefs函数可以将一个响应式对象转换为一个普通的对象，其中对象的每个属性都是一个Ref对象。这样做的好处是在使用普通对象时，可以保持响应式，当对象的属性发生变化时，变化也会被检测到。toRefs函数在Vue 3中特别适用于在组合式API中使用。</p>
+<p>toRef函数可以将一个响应式对象的某个属性转换为一个Ref对象。这样做的好处是可以将一个特定的属性提取出来，使其可以在组件中进行单独的响应式处理。toRef函数在Vue 3中特别适用于在模板中使用。</p>
+<p>总的来说，toRefs和toRef函数都是用于在Vue 3中进行响应式转换的工具函数，它们可以使对象或对象的属性具备响应式能力。</p>
 <h2 id="_1">基本写法</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;child-wrap&quot;</span><span class="p">&gt;</span>

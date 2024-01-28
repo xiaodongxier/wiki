@@ -5926,6 +5926,66 @@
 <a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>&lt;/script&gt;
 <a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>&lt;style lang=&quot;&quot; scoped&gt;&lt;/style&gt;
 </code></pre></div>
+<p>修改 computed 属性</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;template&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  &lt;div class=&quot;child-wrap&quot;&gt;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    {{ title }}
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    &lt;br&gt;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    姓：&lt;input v-model=&quot;info.firstName&quot;&gt;
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    &lt;br&gt;
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    名：&lt;input v-model=&quot;info.lastName&quot;&gt;
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    &lt;br&gt;
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    全名：{{ fullName1() }}
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    &lt;br&gt;
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    全名：{{ fullName1() }}
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    &lt;br&gt;
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    全名：{{ fullName1() }}
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    &lt;br&gt;
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    &lt;button @click=&quot;handleName()&quot;&gt;改为李四&lt;/button&gt;
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>  &lt;/div&gt;
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>&lt;/template&gt;
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>&lt;script setup lang=&quot;ts&quot;&gt;
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>import { ref,reactive, computed } from &#39;vue&#39;;
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>const title = ref(&quot;computed相关&quot;)
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>const info = reactive({
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>  title: &quot;computed&quot;,
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>  firstName: &quot;zhang&quot;,
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>  lastName: &quot;san&quot;,
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>})
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>function fullName1(){
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>  console.log(&quot;方法调用了一次&quot;);
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>  return info.firstName.slice(0,1).toUpperCase() + info.firstName.slice(1) + &quot;-&quot; +  info.lastName
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>}
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>// 这么定义的 fullName 是只读的计算属性
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>// const fullName = computed(()=&gt;{
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>//   console.log(&quot;computed调用了一次&quot;);
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>//   return info.firstName.slice(0,1).toUpperCase() + info.firstName.slice(1) + &quot;-&quot; +  info.lastName
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>// })
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>const fullName = computed({
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>  get(){
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>    return info.firstName.slice(0,1).toUpperCase() + info.firstName.slice(1) + &quot;-&quot; +  info.lastName
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>  },
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>  set(val){
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>    console.log(&quot;set方法被调用了&quot;,val);
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>     const [arr1,arr2] = val.split(&quot;-&quot;);
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>    console.log(&quot;set方法被调用了,arr1&quot;,arr1);
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>    console.log(&quot;set方法被调用了,arr2&quot;,arr2);
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>    info.firstName = arr1
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>    info.lastName = arr2
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>  },
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>})
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>function handleName(){
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>  fullName.value = &quot;li-si&quot;
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>  console.log(fullName.value);
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>}
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>&lt;/script&gt;
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>&lt;style lang=&quot;&quot; scoped&gt;&lt;/style&gt;
+</code></pre></div>
 
 
 

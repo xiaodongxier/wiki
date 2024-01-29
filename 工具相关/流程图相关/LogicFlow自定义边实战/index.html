@@ -6107,9 +6107,7 @@
 <a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="p">};</span>
 </code></pre></div>
 <h2 id="_2">步骤</h2>
-<ol>
-<li>选择需要继承的内置的边</li>
-</ol>
+<p>1.选择需要继承的内置的边</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// 直线</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">LineEdge</span><span class="p">,</span><span class="w"> </span><span class="nx">PolylineEdgeModel</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@logicflow/core&quot;</span><span class="p">;</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">// 折线</span>
@@ -6119,9 +6117,7 @@
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">// 圆角折线 CurvedEdge</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">CurvedEdge</span><span class="p">,</span><span class="w"> </span><span class="nx">CurvedEdgeModel</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@logicflow/extension&quot;</span><span class="p">;</span>
 </code></pre></div>
-<ol>
-<li>对选择的继承内容进行编辑</li>
-</ol>
+<p>2.对选择的继承内容进行编辑</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">BezierEdge</span><span class="p">,</span><span class="w"> </span><span class="nx">BezierEdgeModel</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@logicflow/core&quot;</span><span class="p">;</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">class</span><span class="w"> </span><span class="nx">myCurvedEdge</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">BezierEdge</span><span class="w"> </span><span class="p">{}</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kd">class</span><span class="w"> </span><span class="nx">myCurvedEdgeModel</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">BezierEdgeModel</span><span class="w"> </span><span class="p">{</span>
@@ -6165,9 +6161,7 @@
 <a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="nx">myCurvedEdgeModel</span>
 <a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="p">};</span>
 </code></pre></div>
-<ol>
-<li>使用</li>
-</ol>
+<p>3.使用</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">formatEdgesData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edgesInit</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;TaskEdge&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// line 、 polyline 、 bezier 、 TaskEdge</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nx">sourceNodeId</span><span class="o">:</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">parentId</span><span class="p">,</span>

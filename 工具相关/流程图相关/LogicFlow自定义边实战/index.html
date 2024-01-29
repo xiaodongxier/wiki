@@ -3634,6 +3634,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#model-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model 和 View 的含义：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么不推荐自定义 Edge 的 View：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       选择自定义边继承的内置边
@@ -5950,6 +5968,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#model-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model 和 View 的含义：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么不推荐自定义 Edge 的 View：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       选择自定义边继承的内置边
@@ -5981,16 +6017,10 @@
 <p>官方文档：<a href="https://beta.logic-flow.cn/tutorial/basic-edge#%E9%80%89%E6%8B%A9%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BE%B9%E7%BB%A7%E6%89%BF%E7%9A%84%E5%86%85%E7%BD%AE%E8%BE%B9">LogicFlow自定义边相关文档</a></p>
 </blockquote>
 <p>和节点一样，LogicFlow 的边也支持基于继承的自定义机制。同样也只需同时继承<code>view</code>和<code>model</code>。 但是和节点不一样的是，由于边的编辑复杂度问题，绝大多数情况下，自定义边时不推荐自定义<code>view</code>。 只需要在自定义edgeModel中样式类即可。</p>
-<div class="admonition note 在线工具类">
-<p class="admonition-title">Note</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-massa, nec semper lorem quam in massa.</p>
-</div>
-<div class="admonition note 在线工具类">
-<p class="admonition-title">Note</p>
+<div class="admonition 为什么不推荐自定义view">
+<p class="admonition-title">为什么不推荐自定义view</p>
 <p>在LogicFlow中，边（Edge）和节点（Node）的自定义机制提供了灵活的方式来扩展和定制图形和行为。这种机制基于面向对象的继承原理，允许开发者通过继承并扩展现有的模型（Model）和视图（View）类来创建自定义的边和节点。</p>
-<p>### Model 和 View 的含义：</p>
+<h4 id="model-view">Model 和 View 的含义：</h4>
 <ul>
 <li>
 <p><strong>Model</strong>：负责数据的管理和业务逻辑。对于边而言，<code>EdgeModel</code>包含了边的基础数据（如起点、终点、标签等）以及与这些数据相关的业务逻辑（如数据初始化、数据更新逻辑等）。Model层不涉及任何与显示相关的细节。</p>
@@ -5999,14 +6029,11 @@ massa, nec semper lorem quam in massa.</p>
 <p><strong>View</strong>：负责图形的渲染和展示逻辑。<code>EdgeView</code>控制边的渲染方式，包括边的形状、颜色、粗细等视觉属性。View层专注于如何在画布上绘制边，但不包含业务逻辑。</p>
 </li>
 </ul>
-<p>### 为什么不推荐自定义 Edge 的 View：</p>
+<h4 id="edge-view">为什么不推荐自定义 Edge 的 View：</h4>
 <p>边的渲染和编辑比节点更为复杂，主要因为边涉及到更多的几何计算和交互处理。边的显示不仅仅是简单的图形，还可能包括箭头、标签、动画等元素，且边的形状可能是直线、曲线或其他更复杂的形状。此外，边的编辑（如拖动边来改变形状或方向）涉及到更为复杂的几何计算和用户交互逻辑。</p>
 <p>由于这些原因，LogicFlow官方文档建议在大多数情况下，自定义边时不推荐自定义View层。通过在<code>EdgeModel</code>中定义样式和行为，开发者可以满足绝大多数的自定义需求，同时避免处理边渲染和编辑的复杂性。这种方法简化了自定义边的过程，使得开发者可以更加专注于业务逻辑的实现，而不是边的几何和交互细节。</p>
 <p>简而言之，不推荐自定义边的View是因为管理和实现边的视觉和交互逻辑相对复杂，而通过Model来定义样式和部分行为已经足够满足大多数自定义需求，且更加简单和高效。</p>
 </div>
-<ul>
-<li>选择自定义边继承的内置边</li>
-</ul>
 <h2 id="_1">选择自定义边继承的内置边</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// 直线</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">LineEdge</span><span class="p">,</span><span class="w"> </span><span class="nx">PolylineEdgeModel</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@logicflow/core&quot;</span><span class="p">;</span>

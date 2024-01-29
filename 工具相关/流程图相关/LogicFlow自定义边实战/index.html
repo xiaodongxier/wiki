@@ -6119,6 +6119,64 @@
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">// 圆角折线 CurvedEdge</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">CurvedEdge</span><span class="p">,</span><span class="w"> </span><span class="nx">CurvedEdgeModel</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@logicflow/extension&quot;</span><span class="p">;</span>
 </code></pre></div>
+<ol>
+<li>对选择的继承内容进行编辑</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">BezierEdge</span><span class="p">,</span><span class="w"> </span><span class="nx">BezierEdgeModel</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@logicflow/core&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">class</span><span class="w"> </span><span class="nx">myCurvedEdge</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">BezierEdge</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kd">class</span><span class="w"> </span><span class="nx">myCurvedEdgeModel</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">BezierEdgeModel</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="c1">// 流程图上所有的节点实例操作以及事件，行为监听都在 LogicFlow 实例上进行。</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">graphModel</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">super</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">graphModel</span><span class="p">);</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="c1">// 禁用边的拖动</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">draggable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="c1">// 初始化边数据。</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="nx">initEdgeData</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="k">super</span><span class="p">.</span><span class="nx">initEdgeData</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span><span class="p">;</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">  </span><span class="c1">// 自定义边样式属性.</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span><span class="nx">getEdgeStyle</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">style</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">super</span><span class="p">.</span><span class="nx">getEdgeStyle</span><span class="p">();</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="nx">style</span><span class="p">.</span><span class="nx">strokeWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="c1">// style.stroke = &quot;rgb(130, 179, 102)&quot;;</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="nx">style</span><span class="p">.</span><span class="nx">stroke</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;#ccc&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">style</span><span class="p">;</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">  </span><span class="c1">// 设置 model 形状属性，每次 properties 发生变化会触发</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">  </span><span class="nx">setAttributes</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="c1">// this.isAnimation = true;</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">menu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">  </span><span class="c1">// 自定义边动画样式</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">  </span><span class="nx">getEdgeAnimationStyle</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">style</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">super</span><span class="p">.</span><span class="nx">getEdgeAnimationStyle</span><span class="p">();</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">    </span><span class="nx">style</span><span class="p">.</span><span class="nx">strokeDasharray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;15 5&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">    </span><span class="nx">style</span><span class="p">.</span><span class="nx">animationDuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;50s&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">    </span><span class="nx">style</span><span class="p">.</span><span class="nx">stroke</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;#ccc&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">style</span><span class="p">;</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="p">}</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="c1">// 导出给予组件使用 ，TaskEdge 为名称</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;TaskEdge&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">  </span><span class="nx">view</span><span class="o">:</span><span class="w"> </span><span class="nx">myCurvedEdge</span><span class="p">,</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">  </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="nx">myCurvedEdgeModel</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="p">};</span>
+</code></pre></div>
+<ol>
+<li>使用</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">formatEdgesData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edgesInit</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;TaskEdge&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// line 、 polyline 、 bezier 、 TaskEdge</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nx">sourceNodeId</span><span class="o">:</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">parentId</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nx">targetNodeId</span><span class="o">:</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">childId</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="nx">properties</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="p">...</span><span class="nx">item</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">}));</span>
+</code></pre></div>
 
 
 

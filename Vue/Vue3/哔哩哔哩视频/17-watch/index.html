@@ -6497,6 +6497,15 @@
 <a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;oldVal&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">oldVal</span><span class="p">);</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="p">})</span>
 </code></pre></div>
+<ul>
+<li>对象类型，仅监听里面的数据，整个对象变化监听不到</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// 只监听对象里面的数据</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nx">watch</span><span class="p">(</span><span class="nx">sum</span><span class="p">.</span><span class="nx">info</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">newVal</span><span class="p">,</span><span class="w"> </span><span class="nx">oldVal</span><span class="p">)=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;newVal&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">newVal</span><span class="p">);</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;oldVal&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">oldVal</span><span class="p">);</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">})</span>
+</code></pre></div>
 
 
 

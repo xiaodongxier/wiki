@@ -6361,6 +6361,47 @@
 <li>第二个参数 数据变化的回调</li>
 <li>第三个参数 配置项，可以配置 deep 和 immediate 等其他项</li>
 </ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;template&gt;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  &lt;div class=&quot;child-wrap&quot;&gt;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    &lt;h3&gt;{{title}}&lt;/h3&gt;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    &lt;br&gt;
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    姓名：{{ sum.name }}
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    &lt;br&gt;
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    年龄：{{ sum.age }}
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    &lt;br&gt;
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    &lt;button @click=&quot;handleName&quot;&gt;切换姓名&lt;/button&gt;
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    &lt;button @click=&quot;handleAge&quot;&gt;切换年龄&lt;/button&gt;
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    &lt;button @click=&quot;handleSum&quot;&gt;切换所有&lt;/button&gt;
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>  &lt;/div&gt;
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>&lt;/template&gt;
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>&lt;script setup lang=&quot;ts&quot;&gt;
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>import { ref , watch} from &#39;vue&#39;;
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>const title = ref(&quot;watch相关-监视ref定义的对象类型&quot;)
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>const sum = ref({
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>  name: &quot;wang&quot;,
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>  age : 18
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>});
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>function handleName(){
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>  sum.value.name += &quot;~&quot;
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>}
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>function handleAge(){
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>  sum.value.age += 1
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>}
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>function handleSum() {
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>  sum.value = {
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>    name: &quot;hahha&quot;,
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>    age : 28
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>  }
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>}
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>watch(sum, (newVal, oldVal)=&gt; {
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>  console.log(&quot;newVal&quot;, newVal);
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>  console.log(&quot;oldVal&quot;, oldVal);
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>},
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>{
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>  deep:true
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>})
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>&lt;/script&gt;
+</code></pre></div>
 
 
 

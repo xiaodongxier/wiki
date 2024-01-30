@@ -6484,6 +6484,7 @@
 <h2 id="reactiveref">监视reactive/ref定义的数据(对象类型)某个属性</h2>
 <ul>
 <li>若监视的不是对象类型，需要写成函数形式</li>
+<li>监视的是响应式对象数据的某个属性，且数据是对象类型，可以直接写，也可以写函数，更推荐函数，</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">watch</span><span class="p">(()=&gt;{</span><span class="k">return</span><span class="w"> </span><span class="nx">sum</span><span class="p">.</span><span class="nx">name</span><span class="p">},</span><span class="w"> </span><span class="p">(</span><span class="nx">newVal</span><span class="p">,</span><span class="w"> </span><span class="nx">oldVal</span><span class="p">)=&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;newVal&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">newVal</span><span class="p">);</span>

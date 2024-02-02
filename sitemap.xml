@@ -2171,16 +2171,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.wangyongjie.cn/%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/%E7%A7%BB%E5%8A%A8%E7%AB%AF/nuxt3%E4%BD%BF%E7%94%A8vconsole/</loc>
-         <lastmod>2024-02-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.wangyongjie.cn/%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/%E7%A7%BB%E5%8A%A8%E7%AB%AF/vConsole/</loc>
-         <lastmod>2024-02-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wiki.wangyongjie.cn/%E5%B7%A5%E5%85%B7%E7%9B%B8%E5%85%B3/%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/</loc>
          <lastmod>2024-02-02</lastmod>
          <changefreq>daily</changefreq>
@@ -2282,6 +2272,16 @@
     </url>
     <url>
          <loc>https://wiki.wangyongjie.cn/%E7%94%9F%E6%B4%BB%E7%9B%B8%E5%85%B3/%E9%9D%9E%E4%BA%AC%E7%B1%8D%E6%97%A0%E6%88%BF%E4%B8%8A%E5%B9%BC%E5%84%BF%E5%9B%AD%E8%AE%B0%E5%BD%95/</loc>
+         <lastmod>2024-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.wangyongjie.cn/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%9B%B8%E5%85%B3/nuxt3%E4%BD%BF%E7%94%A8vconsole/</loc>
+         <lastmod>2024-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.wangyongjie.cn/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%9B%B8%E5%85%B3/vConsole/</loc>
          <lastmod>2024-02-02</lastmod>
          <changefreq>daily</changefreq>
     </url>

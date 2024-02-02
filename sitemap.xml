@@ -836,17 +836,52 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/01-basic/grammar/</loc>
+         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/01.%E5%85%A5%E9%97%A8%E7%AF%87/1.1-introduction/</loc>
          <lastmod>2024-02-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/01-basic/history/</loc>
+         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/01.%E5%85%A5%E9%97%A8%E7%AF%87/1.2-history/</loc>
          <lastmod>2024-02-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/01-basic/introduction/</loc>
+         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/01.%E5%85%A5%E9%97%A8%E7%AF%87/1.3-grammar/</loc>
+         <lastmod>2024-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/2.types/array/</loc>
+         <lastmod>2024-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/2.types/function/</loc>
+         <lastmod>2024-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/2.types/general/</loc>
+         <lastmod>2024-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/2.types/null-undefined-boolean/</loc>
+         <lastmod>2024-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/2.types/number/</loc>
+         <lastmod>2024-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/2.types/object/</loc>
+         <lastmod>2024-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/2.types/string/</loc>
          <lastmod>2024-02-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1202,41 +1237,6 @@
     </url>
     <url>
          <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/stdlib/wrapper/</loc>
-         <lastmod>2024-02-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/types/array/</loc>
-         <lastmod>2024-02-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/types/function/</loc>
-         <lastmod>2024-02-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/types/general/</loc>
-         <lastmod>2024-02-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/types/null-undefined-boolean/</loc>
-         <lastmod>2024-02-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/types/number/</loc>
-         <lastmod>2024-02-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/types/object/</loc>
-         <lastmod>2024-02-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.wangyongjie.cn/%E7%BD%91%E7%BB%9C%E8%BD%AC%E8%BD%BD/%E9%98%AE%E4%B8%80%E5%B3%B0/JavaScript/types/string/</loc>
          <lastmod>2024-02-02</lastmod>
          <changefreq>daily</changefreq>
     </url>

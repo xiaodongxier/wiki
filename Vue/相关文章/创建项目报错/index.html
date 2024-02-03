@@ -13052,6 +13052,11 @@
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>error<span class="w"> </span>An<span class="w"> </span>unexpected<span class="w"> </span>error<span class="w"> </span>occurred:<span class="w"> </span><span class="s2">&quot;https://registry.npm.taobao.org/@vue%2fcli-plugin-babel: certificate has expired&quot;</span>.
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w"> </span>ERROR<span class="w">  </span><span class="nb">command</span><span class="w"> </span>failed:<span class="w"> </span>yarn<span class="w"> </span>
 </code></pre></div>
+<blockquote>
+<p>临时解决方案</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>yarn<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>strict-ssl<span class="w"> </span><span class="nb">false</span>
+</code></pre></div>
 <p>当你在使用 <code>vue create project</code> 命令创建 Vue 项目时遇到的错误信息表明存在两个主要问题：</p>
 <ol>
 <li>
@@ -13067,12 +13072,12 @@
 <ul>
 <li><strong>使用 npm:</strong></li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npm<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>registry<span class="w"> </span>https://registry.npmjs.org/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npm<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>registry<span class="w"> </span>https://registry.npmjs.org/
 </code></pre></div>
 <ul>
 <li><strong>使用 yarn:</strong></li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>yarn<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>registry<span class="w"> </span>https://registry.npmjs.org/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>yarn<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>registry<span class="w"> </span>https://registry.npmjs.org/
 </code></pre></div>
 <p>更改镜像源后，再次尝试创建项目。</p>
 <h3 id="2-yarn-npm">方法 2：更新 Yarn 和 NPM</h3>
@@ -13080,12 +13085,12 @@
 <ul>
 <li><strong>更新 npm:</strong></li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>npm
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>npm
 </code></pre></div>
 <ul>
 <li><strong>更新 yarn:</strong></li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>yarn
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>yarn
 </code></pre></div>
 <h3 id="3">方法 3：手动检查和更新证书</h3>
 <p>如果问题仅与特定源的证书过期相关，你可能需要联系该源的维护者以更新证书。同时，确保你的操作系统和所有相关的软件（如 Node.js）都是最新版本，以便支持最新的安全协议和证书。</p>
@@ -13094,12 +13099,12 @@
 <ul>
 <li><strong>对于 npm:</strong></li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>npm<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>strict-ssl<span class="w"> </span><span class="nb">false</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>npm<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>strict-ssl<span class="w"> </span><span class="nb">false</span>
 </code></pre></div>
 <ul>
 <li><strong>对于 yarn:</strong></li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>yarn<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>strict-ssl<span class="w"> </span><span class="nb">false</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>yarn<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>strict-ssl<span class="w"> </span><span class="nb">false</span>
 </code></pre></div>
 <p>请记住，在问题解决后应该撤销这个设置，以保持最佳的安全性。</p>
 <h3 id="5">方法 5：检查网络连接</h3>

@@ -10765,6 +10765,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#41-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      41. CSS选择器的优先级是如何确定的？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-z-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      42. 解释z-index和堆叠上下文。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      43. 如何优化CSS渲染性能？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      44. 什么是关键渲染路径？CSS如何影响它？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      45. 如何使用CSS实现复杂动画？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-cssbem" class="md-nav__link">
+    <span class="md-ellipsis">
+      46. 解释CSS中的BEM命名约定。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-csscss" class="md-nav__link">
+    <span class="md-ellipsis">
+      49. 什么是CSS框架？举例几个常用的CSS框架。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#50-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      50. 如何处理跨浏览器的CSS兼容性问题？
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -13430,6 +13502,78 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#41-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      41. CSS选择器的优先级是如何确定的？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-z-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      42. 解释z-index和堆叠上下文。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      43. 如何优化CSS渲染性能？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      44. 什么是关键渲染路径？CSS如何影响它？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      45. 如何使用CSS实现复杂动画？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-cssbem" class="md-nav__link">
+    <span class="md-ellipsis">
+      46. 解释CSS中的BEM命名约定。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-csscss" class="md-nav__link">
+    <span class="md-ellipsis">
+      49. 什么是CSS框架？举例几个常用的CSS框架。
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#50-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      50. 如何处理跨浏览器的CSS兼容性问题？
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -13715,6 +13859,88 @@ CSS自定义属性（也称为CSS变量）可以在文档的任何地方定义�
 <a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p">}</span>
 </code></pre></div>
 <p>此外，还可以提供一个切换按钮，允许用户手动在暗色模式和浅色模式之间切换，通常涉及到JavaScript来动态改变网页的CSS类或变量。</p>
+<p>继续回答之前列出的CSS面试题目的详细解答。</p>
+<h3 id="41-css">41. CSS选择器的优先级是如何确定的？</h3>
+<p>CSS选择器的优先级决定了当多个规则应用于同一个元素时，哪些规则将胜出并被应用。优先级由以下因素决定（从高到低）：</p>
+<ol>
+<li><strong>重要性</strong>：使用<code>!important</code>声明的规则拥有最高的优先级。</li>
+<li><strong>特指性</strong>：选择器特指性越高，优先级越高。计算方法如下：</li>
+<li>对于每个ID选择器，加0,1,0,0。</li>
+<li>对于每个类选择器、属性选择器或伪类选择器，加0,0,1,0。</li>
+<li>对于每个元素选择器或伪元素选择器，加0,0,0,1。</li>
+<li>组合选择器本身不增加特指性，但其组成部分各自增加。</li>
+<li><strong>来源</strong>：样式表的来源也会影响优先级。依次是浏览器声明、用户声明、作者声明。通常，作者的CSS覆盖用户的默认样式，用户的样式覆盖浏览器的默认样式。</li>
+<li><strong>顺序</strong>：如果其他因素相同，最后声明的样式将优先应用。</li>
+</ol>
+<p>例如，内联样式（在HTML元素上直接使用<code>style</code>属性）的特指性最高，其次是ID选择器，然后是类选择器和属性选择器，最后是元素选择器。</p>
+<h3 id="42-z-index">42. 解释<code>z-index</code>和堆叠上下文。</h3>
+<p><code>z-index</code>属性在CSS中用于控制元素沿Z轴的堆叠顺序，即决定哪个元素覆盖在其他元素上面。<code>z-index</code>仅在元素的<code>position</code>属性为<code>relative</code>、<code>absolute</code>、<code>fixed</code>或<code>sticky</code>时有效。</p>
+<ul>
+<li><strong>堆叠上下文</strong>：是一个三维的概念，决定了页面上元素的层叠顺序。元素可以通过<code>z-index</code>创建新的堆叠上下文，而每个堆叠上下文都是独立的。</li>
+<li><strong><code>z-index</code>值</strong>：可以是正数、负数或<code>auto</code>（默认）。元素的<code>z-index</code>值越大，它就越位于顶部。在同一个堆叠上下文中，<code>z-index</code>值较高的元素将覆盖<code>z-index</code>值较低的元素。</li>
+</ul>
+<p>创建新的堆叠上下文的情况不仅限于<code>z-index</code>值的变化，还包括使用CSS属性如<code>opacity</code>、<code>transform</code>、<code>filter</code>等条件下也会创建新的堆叠上下文。</p>
+<p>接着回答之前列出的CSS面试题目的详细解答。</p>
+<h3 id="43-css">43. 如何优化CSS渲染性能？</h3>
+<p>优化CSS渲染性能主要目的是减少浏览器渲染页面所需的时间。这里有几种方法：</p>
+<ul>
+<li><strong>减少CSS文件大小</strong>：通过压缩CSS文件（移除空白、换行、注释等）减小文件大小。工具如CSS Minifier可以帮助自动化这一过程。</li>
+<li><strong>合并CSS文件</strong>：减少HTTP请求的数量通过合并多个CSS文件为一个（尽管HTTP/2对此的需求降低）。</li>
+<li><strong>使用CSS选择器的最佳实践</strong>：避免过度具体的选择器，减少使用通用选择器（*）和标签选择器，因为它们效率较低。</li>
+<li><strong>异步加载非关键CSS</strong>：将影响页面首次渲染的关键CSS内联在HTML中，其余CSS通过JavaScript异步加载。</li>
+<li><strong>利用浏览器缓存</strong>：通过设置合理的缓存策略，避免用户在每次访问时都重新下载CSS文件。</li>
+<li><strong>移除未使用的CSS</strong>：工具如PurifyCSS可以帮助识别和移除项目中未被使用的CSS代码，减少文件体积。</li>
+</ul>
+<h3 id="44-css">44. 什么是关键渲染路径？CSS如何影响它？</h3>
+<p>关键渲染路径是指浏览器将HTML、CSS和JavaScript等资源转换成屏幕上像素的过程。这个路径包括构建DOM树、CSSOM树、渲染树、布局和绘制等步骤。CSS直接影响构建CSSOM树和渲染树的过程：</p>
+<ul>
+<li><strong>阻塞渲染</strong>：浏览器必须下载并解析CSS文件才能构建CSSOM树，如果CSS资源被阻塞，页面渲染也会被延迟。</li>
+<li><strong>优化关键渲染路径</strong>：通过优化CSS的加载和解析，比如通过媒体查询指定的非关键CSS、内联关键CSS和异步加载非关键CSS等方式，可以加快页面渲染速度。</li>
+</ul>
+<h3 id="45-css">45. 如何使用CSS实现复杂动画？</h3>
+<p>使用CSS实现复杂动画主要依靠<code>@keyframes</code>规则和动画属性：</p>
+<ul>
+<li><strong><code>@keyframes</code>规则</strong>：定义动画序列，指定在动画过程中每个阶段的样式。例如：</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">@</span><span class="k">keyframes</span><span class="w"> </span><span class="nt">slidein</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">from</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateX</span><span class="p">(</span><span class="mi">0</span><span class="kt">%</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nt">to</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">translateX</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>动画属性</strong>：将<code>@keyframes</code>动画应用于元素，并配置动画的持续时间、延迟、迭代次数等。例如：</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">.</span><span class="nc">slider</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="k">animation</span><span class="p">:</span><span class="w"> </span><span class="n">slidein</span><span class="w"> </span><span class="mi">3</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease-in-out</span><span class="w"> </span><span class="kc">infinite</span><span class="p">;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><strong>动画性能</strong>：使用属性如<code>transform</code>和<code>opacity</code>可以利用GPU加速，提高动画的性能。</li>
+</ul>
+<h3 id="46-cssbem">46. 解释CSS中的BEM命名约定。</h3>
+<p>BEM（块（Block）、元素（Element）、修饰符（Modifier））是一种CSS类命名方法，旨在通过明确的命名约定来帮助开发者快速理解一个元素在页面上的作用和相互关系。</p>
+<ul>
+<li><strong>块（Block）</strong>：代表独立的、功能性的组件（例如<code>.button</code>）。</li>
+<li><strong>元素（Element）</strong>：代表块的一部分，且没有独立的意义，只有在放到块的上下文中才有意义（例如<code>.button__text</code>）。</li>
+<li><strong>修饰符（Modifier）</strong>：用于描述块或元素的状态或版本（例如<code>.button--large</code>）。</li>
+</ul>
+<p>BEM方法的优点包括提高CSS的可维护性，易于理解和缩小搜索范围，同时避免样式冲突。</p>
+<h3 id="49-csscss">49. 什么是CSS框架？举例几个常用的CSS框架。</h3>
+<p>CSS框架是预先设计好的样式表集合，提供了一系列标准化的CSS类，帮助开发者快速构建和设计网站。这些框架通常包括网格系统、响应式设计工具、预设的字体样式和组件等。常见的CSS框架包括：</p>
+<ul>
+<li><strong>Bootstrap</strong>：最流行的前端框架之一，提供丰富的布局、组件和插件。</li>
+<li><strong>Foundation</strong>：一个高级响应式前端框架，专注于可访问性
+。。。。。。</li>
+</ul>
+<h3 id="50-css">50. 如何处理跨浏览器的CSS兼容性问题？</h3>
+<p>跨浏览器的CSS兼容性问题可以通过以下方法处理：</p>
+<ul>
+<li><strong>使用CSS重置</strong>（CSS Reset）或<strong>规范化样式表</strong>（Normalize.css）来减少浏览器之间的默认样式差异。</li>
+<li><strong>前缀</strong>：使用供应商前缀来确保新CSS特性在不同浏览器上的兼容性。可以手动添加，也可以使用工具如Autoprefixer自动处理。</li>
+<li><strong>特性检测</strong>：使用Modernizr之类的库来检测浏览器对某些CSS特性的支持情况，并根据支持情况应用备选样式。</li>
+<li><strong>条件注释</strong>：特别是针对旧版本的IE浏览器，可以使用条件注释加载特定的CSS文件或样式规则。</li>
+<li><strong>渐进增强和优雅降级</strong>：设计时考虑核心功能的可用性，然后增加增强功能，对于不支持这些增强的浏览器保证基本功能的可用。</li>
+</ul>
 
 
 

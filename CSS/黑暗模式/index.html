@@ -838,13 +838,14 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      总结
+      总结实践
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="总结实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       详细解答演示
@@ -852,8 +853,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#html" class="md-nav__link">
     <span class="md-ellipsis">
       HTML
@@ -861,8 +862,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#css-stylecss" class="md-nav__link">
     <span class="md-ellipsis">
       CSS (style.css)
@@ -870,13 +871,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#javascript-scriptjs" class="md-nav__link">
     <span class="md-ellipsis">
       JavaScript (script.js)
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -13050,13 +13056,14 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      总结
+      总结实践
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="总结实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       详细解答演示
@@ -13064,8 +13071,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#html" class="md-nav__link">
     <span class="md-ellipsis">
       HTML
@@ -13073,8 +13080,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#css-stylecss" class="md-nav__link">
     <span class="md-ellipsis">
       CSS (style.css)
@@ -13082,13 +13089,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#javascript-scriptjs" class="md-nav__link">
     <span class="md-ellipsis">
       JavaScript (script.js)
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -13168,13 +13180,13 @@
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;data-theme&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">newTheme</span><span class="p">);</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">});</span>
 </code></pre></div>
-<h3 id="_2">总结</h3>
+<h3 id="_2">总结实践</h3>
 <p>这篇文章介绍了使用CSS和JavaScript实现网站黑暗模式的基础方法。通过结合使用CSS自定义属性、<code>prefers-color-scheme</code>媒体查询以及可选的JavaScript代码，开发者可以灵活地为用户提供深色和浅色主题切换的功能。这种实现方式不仅增强了用户体验，还可以根据用户的系统设置自动适配显示模式，或允许用户根据个人喜好手动切换。</p>
-<h3 id="_3">详细解答演示</h3>
+<h4 id="_3">详细解答演示</h4>
 <p>在CSS中，<code>:root</code>伪类匹配文档树的根元素。在HTML中，这个根元素通常是<code>&lt;html&gt;</code>标签。通过在<code>:root</code>中定义CSS变量，你可以在整个文档中任何地方使用这些变量。这是一种定义全局CSS变量的常用方法。</p>
 <p><code>[data-theme="dark"]</code>是一个属性选择器，它选择所有具有<code>data-theme="dark"</code>属性的元素。这种方法通常用于在同一个HTML文档中应用不同的主题样式，比如明亮模式和黑暗模式。通过改变根元素（或任何其他元素）的<code>data-theme</code>属性值，你可以切换这些元素及其子元素的样式。</p>
 <p>下面是一个简单的示例，展示如何实现基于<code>data-theme</code>属性切换明亮模式和黑暗模式的功能：</p>
-<h3 id="html">HTML</h3>
+<h4 id="html">HTML</h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -13193,7 +13205,7 @@
 <a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<h3 id="css-stylecss">CSS (style.css)</h3>
+<h4 id="css-stylecss">CSS (style.css)</h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nv">--background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ffffff</span><span class="p">;</span><span class="w"> </span><span class="c">/* 明亮模式背景色 */</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nv">--text-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#000000</span><span class="p">;</span><span class="w"> </span><span class="c">/* 明亮模式文本颜色 */</span>
@@ -13215,7 +13227,7 @@
 <a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--link-color</span><span class="p">);</span>
 <a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="javascript-scriptjs">JavaScript (script.js)</h3>
+<h4 id="javascript-scriptjs">JavaScript (script.js)</h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;theme-toggle&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">currentTheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;data-theme&#39;</span><span class="p">);</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">newTheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">currentTheme</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;dark&#39;</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;dark&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 如果当前是黑暗模式，则切换到明亮模式（移除属性），反之则切换到黑暗模式</span>

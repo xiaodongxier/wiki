@@ -18,3 +18,9 @@
   border: 4px solid #4051b54a;
   border-radius: 16px;
 }
+
+
+.md-content iframe {
+  width: 100%;
+  height: 60vh;
+}

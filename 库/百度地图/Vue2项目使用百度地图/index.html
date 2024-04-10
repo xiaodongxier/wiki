@@ -14439,6 +14439,38 @@
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
+<p>通过在组件中也引入 <code>script</code> 外链解决报错问题，或者不加外链，通过 <code>window</code> 的方式访问地图对象</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;template&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  &lt;div&gt;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    &lt;div id=&quot;allmap&quot;&gt;&lt;/div&gt;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  &lt;/div&gt;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>&lt;/template&gt;
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>&lt;!-- &lt;script src=&quot;https://api.map.baidu.com/api?type=webgl&amp;v=2.0&amp;ak=mEgbC3vGaaPnAxDeeHUollEZ&quot;&gt;&lt;/script&gt; --&gt;
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>&lt;script&gt;
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>export default {
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  name: &#39;test&#39;,
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  data() {
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    return {
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>      description: &#39;项目信息&#39;
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    }
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>  },
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>  mounted(){
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    // GL版命名空间为BMapGL
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    var map = new window.BMapGL.Map(&quot;allmap&quot;);    // 创建Map实例
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    map.centerAndZoom(new window.BMapGL.Point(118.5, 27.5), 5);  // 初始化地图,设置中心点坐标和地图级别
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    map.setMapType(window.BMAP_EARTH_MAP);      // 设置地图类型为地球模式
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>  }
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>}
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>&lt;/script&gt;
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>&lt;style scoped&gt;
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>#allmap {
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>  width: 100vw;
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>  height: 100vh;
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>}
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>&lt;/style&gt;
+</code></pre></div>
 
 
 

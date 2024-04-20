@@ -11753,6 +11753,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    本地仓库关联远程仓库
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -11762,6 +11773,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      本地一个git仓库更换远程关联地址
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      如果仓库有很多分支，怎么把分支也同步到新的远程地址上呢
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -14608,6 +14656,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      本地一个git仓库更换远程关联地址
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      如果仓库有很多分支，怎么把分支也同步到新的远程地址上呢
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -14638,6 +14712,58 @@
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/xiaodongxier/vue3-vite-demo.git
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
 </code></pre></div>
+<h2 id="git">本地一个git仓库更换远程关联地址</h2>
+<p>更换远程关联地址的过程如下：</p>
+<ol>
+<li>
+<p>打开终端或命令提示符窗口，并进入你的Git仓库目录。</p>
+</li>
+<li>
+<p>输入以下命令查看当前远程关联的仓库地址：</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git remote -v
+</code></pre></div>
+<p>这将列出当前配置的所有远程仓库。默认的远程仓库通常名为origin。</p>
+<ol>
+<li>输入以下命令移除当前的远程仓库：</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git remote remove origin
+</code></pre></div>
+<ol>
+<li>输入以下命令添加新的远程仓库：</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git remote add origin new_repo_url
+</code></pre></div>
+<p>将<code>new_repo_url</code>替换为你的新仓库地址。</p>
+<ol>
+<li>最后，你可能还想要把你的变更推送到新的远程仓库。你可以使用以下命令来做到这一点：</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git push -u origin master
+</code></pre></div>
+<p>这将会把你的本地master分支的所有更改推送到新的远程仓库。</p>
+<p>完成以上步骤后，你的本地Git仓库的远程关联地址就已经更改为了新的地址。</p>
+<h2 id="_2">如果仓库有很多分支，怎么把分支也同步到新的远程地址上呢</h2>
+<!-- 1. 首先，使用`git remote -v`命令查看当前远程仓库的地址。
+
+2. 然后，使用`git remote set-url origin new_repo_url`命令将远程仓库的地址更改为新的地址。
+
+3. 接下来，使用`git branch -r`命令查看远程仓库的所有分支。
+
+4. 接下来，使用`git push origin --all`命令将所有分支推送到新的远程仓库。
+
+5. 最后，使用`git push origin --tags`命令将所有标签推送到新的远程仓库。
+
+完成以上步骤后，你的本地Git仓库的远程关联地址就已经更改为了新的地址，并且所有分支和标签都已经同步到新的远程仓库。 -->
+
+<p>如果你想要一次性推送所有分支到新的远程仓库，可以尝试以下命令：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git push --all origin
+</code></pre></div>
+<p>这条命令将会把所有的本地分支推送到origin这个远程仓库。</p>
+<p>如果你还有标签想要一起推送，可以使用以下命令：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git push --tags origin
+</code></pre></div>
+<p>这条命令将会把所有的标签推送到origin这个远程仓库。</p>
 
 
 

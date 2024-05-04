@@ -14254,11 +14254,11 @@
         <li class="md-nav__item">
   <a href="#input-focus" class="md-nav__link">
     <span class="md-ellipsis">
-      input 不支持进行 focus 选择样式的修改
+      input 不支持进行 focus 选中样式的修改
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="input 不支持进行 focus 选择样式的修改">
+    <nav class="md-nav" aria-label="input 不支持进行 focus 选中样式的修改">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -14281,6 +14281,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;textarea&gt; 组件的文本长度
+    </span>
+  </a>
   
 </li>
       
@@ -15352,11 +15361,11 @@
         <li class="md-nav__item">
   <a href="#input-focus" class="md-nav__link">
     <span class="md-ellipsis">
-      input 不支持进行 focus 选择样式的修改
+      input 不支持进行 focus 选中样式的修改
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="input 不支持进行 focus 选择样式的修改">
+    <nav class="md-nav" aria-label="input 不支持进行 focus 选中样式的修改">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -15382,6 +15391,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#textarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      &lt;textarea&gt; 组件的文本长度
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -15401,7 +15419,7 @@
 
 
 <h1 id="_1">主要事项</h1>
-<h2 id="input-focus">input 不支持进行 focus 选择样式的修改</h2>
+<h2 id="input-focus">input 不支持进行 focus 选中样式的修改</h2>
 <blockquote>
 <p>从微信的<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html">官方文档</a>可以看出，目前支持的CSS选择器很有限：</p>
 </blockquote>
@@ -15466,6 +15484,15 @@
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">},</span>
 </code></pre></div>
 <p>在这里，<code>[mykey]</code>使用方括号语法，它允许你将变量<code>mykey</code>的值用作属性名。这样，你就可以动态地设置不同输入框的焦点状态了。</p>
+<h2 id="textarea"><code>&lt;textarea&gt;</code> 组件的文本长度</h2>
+<p>在微信小程序中，<code>&lt;textarea&gt;</code> 组件的文本长度受 <code>maxlength</code> 属性控制，默认情况下，<code>maxlength</code> 的值为 140。开发者可以根据需要设置这个属性的值以增加或减少可输入的字符长度。</p>
+<p>如果你希望用户能够输入更长的文本，可以将 <code>maxlength</code> 设置为一个更大的值，例如：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;1000&quot;</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p>这样，用户就可以在文本区域内输入最多1000个字符。如果你不希望限制用户输入的字符数，可以将 <code>maxlength</code> 设置为 -1：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">maxlength</span><span class="o">=</span><span class="s">&quot;-1&quot;</span> <span class="p">/&gt;</span>
+</code></pre></div>
+<p>设置为 <code>-1</code> 时，表示不限制输入长度。但请注意，对用户输入进行适当的限制通常是个好主意，以避免潜在的性能问题或恶意的大量数据输入。</p>
 
 
 

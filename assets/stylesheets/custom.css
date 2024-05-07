@@ -23,4 +23,10 @@
 .md-content iframe {
   width: 100%;
   height: 60vh;
+  /* background-image: url(https://cdn.jsdelivr.net/gh/xiaodongxier/gitcdn@master/wiki/2024/05/1715087989483.gif); */
+  background-image: url(https://gitcdn.xiaodongxier.com/other/2024/05/1715087965830.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 4px solid #4051b54a;
+  border-radius: 16px;
 }

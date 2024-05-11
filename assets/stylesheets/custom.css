@@ -20,7 +20,7 @@
 }
 
 
-.md-content iframe {
+.md-content iframe:not(.giscus-frame) {
   width: 100%;
   height: 60vh;
   /* background-image: url(https://cdn.jsdelivr.net/gh/xiaodongxier/gitcdn@master/wiki/2024/05/1715087989483.gif); */

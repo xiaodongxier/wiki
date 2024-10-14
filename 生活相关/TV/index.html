@@ -26,7 +26,7 @@
     
     
       
-        <title>相关 - 好记性不如烂笔头</title>
+        <title>电视相关 - 好记性不如烂笔头</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              相关
+              电视相关
             
           </span>
         </div>
@@ -15407,7 +15407,7 @@
           
   
   <span class="md-ellipsis">
-    相关
+    电视相关
   </span>
   
 
@@ -15418,7 +15418,7 @@
         
   
   <span class="md-ellipsis">
-    相关
+    电视相关
   </span>
   
 
@@ -16260,7 +16260,7 @@
   
 
 
-<h1 id="_1">相关</h1>
+<h1 id="_1">电视相关</h1>
 <h2 id="_2">安装包</h2>
 <ul>
 <li><a href="https://github.com/o0HalfLife0o/TVBoxOSC/releases">o0HalfLife0o/TVBoxOSC</a></li>
@@ -16302,10 +16302,67 @@
 
 
 
+  
+  
 
 
 
 
+
+
+  <h2 id="__comments">评论</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+  data-repo="xiaodongxier/wiki"
+  data-repo-id="R_kgDOK9zkhA"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOK9zkhM4CcF50"
+  data-mapping="title"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="preferred_color_scheme"
+  data-lang="zh-CN"
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async>
+</script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
                 
               </article>

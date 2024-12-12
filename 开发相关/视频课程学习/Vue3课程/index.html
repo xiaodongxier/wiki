@@ -16425,6 +16425,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#toref-torefs" class="md-nav__link">
+    <span class="md-ellipsis">
+      toRef 和 toRefs
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -17526,6 +17535,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#toref-torefs" class="md-nav__link">
+    <span class="md-ellipsis">
+      toRef 和 toRefs
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -17728,6 +17746,40 @@
 <p><img alt="没有.value的时候" src="https://gitcdn.xiaodongxier.com/wiki/2024/12/1734012408143.png" /></p>
 <p>ref 能对对象类型的数据进行响应式处理的背后，其实背后也是 reactive 在进行处理</p>
 <h2 id="ref-reactive">ref 对比 reactive</h2>
+<p><img alt="对比" src="https://gitcdn.xiaodongxier.com/wiki/2024/12/1734012759585.png" /></p>
+<p>表单建议还是 reactive，  或者数据较多不方便使用ref的时候也是 reactive</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">box2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">reactive</span><span class="p">({</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;box2&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">220</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">})</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="kd">function</span><span class="w"> </span><span class="nx">box22</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span><span class="c1">// box2 = { name: &quot;box2&quot; + Math.random(), age: 220 } // 页面不更新, 可以通过 Object.assign 方法解决这个问题</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">  </span><span class="nx">box2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">box2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;box2&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">(),</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">220</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="toref-torefs">toRef 和 toRefs</h2>
+<p>把响应式数据解构出来，而且具备响应式数据的能力</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>&lt;template&gt;
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>  &lt;div&gt;{{ name }}&lt;/div&gt;
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>  &lt;div&gt;{{ age }}&lt;/div&gt;
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>  &lt;input type=&quot;text&quot; v-model=&quot;age&quot;&gt;
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>  &lt;input type=&quot;text&quot; v-model=&quot;name&quot;&gt;
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>&lt;/template&gt;
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>&lt;script setup lang=&quot;ts&quot;&gt;
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>import { reactive, ref, toRef, toRefs } from &#39;vue&#39;;
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>let box = reactive({
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>  name: &#39;wangyongjie&#39;,
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>  age: 18
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>})
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>let { name, age } = toRefs(box);
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>let newName = toRef(box, &#39;name&#39;)
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>&lt;/script&gt;
+</code></pre></div>
 
 
 

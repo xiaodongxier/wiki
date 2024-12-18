@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -16531,6 +16531,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#watch" class="md-nav__link">
+    <span class="md-ellipsis">
+      watch
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -17650,6 +17659,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#watch" class="md-nav__link">
+    <span class="md-ellipsis">
+      watch
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -17669,6 +17687,11 @@
 
 
 <h1 id="_1">说明</h1>
+<hr />
+<p>网络笔记
+https://github.com/shuhongfan/atguigu_vue3.git
+https://www.yuque.com/yuqueyonghuflbpew/ksnxf6/ep1owp6fi386?singleDoc# 《Vue3》</p>
+<hr />
 <blockquote>
 <p>尚硅谷Vue3入门到实战，最新版vue3+TypeScript前端开发教程 </p>
 <p>【尚硅谷Vue3入门到实战，最新版vue3+TypeScript前端开发教程】https://www.bilibili.com/video/BV1Za4y1r7KE?p=3&amp;vd_source=30dd7415f8803aeec3a108e0d178d1cf</p>
@@ -17933,6 +17956,48 @@
 <a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a>}
 <a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a>&lt;/script&gt;
 </code></pre></div>
+<h2 id="watch">watch</h2>
+<blockquote>
+<p>第一个参数监视的数据，第二个参数监视的回调，第三个参数配置对象</p>
+</blockquote>
+<p>watch 能监测四种数据</p>
+<ul>
+<li>ref 定义的基本类型</li>
+</ul>
+<p><template>
+<br />
+<div class="about">
+    <input type="number" v-model.number="count1" />
+    <br>
+    <input type="number" v-model.number="count2" />
+    <div>{{ count1 + count2 }}</div>
+
+  </div></p>
+<p></template></p>
+<script lang="ts" setup name="AboutView">
+import { ref, watch } from 'vue'
+
+const count1 = ref(0);
+const count2 = ref(0);
+
+const stopWatch = watch(count1, (newVal, oldVal) => {
+  console.log(newVal, oldVal)
+  if (newVal > 10) {
+    stopWatch();  // 停止监听
+  }
+}, {
+  // immediate: true, // 立即执行，下面的 once 也算是立即执行，再次修改就不会执行了
+  // once: true, // 只执行一次
+})
+</script>
+
+<ul>
+<li>ref 定义的对象类型<ul>
+<li>若修改的是ref定义的对象中的属性，newValue 和 oldValue 都是新值，因为它们是同一个对象。</li>
+<li>若修改整个ref定义的对象，newValue 是新值， oldValue 是旧值，因为不是同一个对象了。</li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -18041,7 +18106,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.tabs", "navigation.path", "navigation.footer", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
         <script src="../../../assets/javascripts/extra.js"></script>
       

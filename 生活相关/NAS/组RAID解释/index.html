@@ -16806,6 +16806,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../CMR%E5%92%8CSMR/" class="md-nav__link">
         
   
@@ -17965,42 +17986,50 @@
 <hr />
 <h3 id="raid-nas"><strong>RAID 方案的适用 NAS 场景</strong></h3>
 <ul>
-<li><strong>个人或家庭用户</strong>：</li>
+<li>
+<p><strong>个人或家庭用户</strong>：</p>
+<ul>
 <li><strong>RAID 1</strong>：优先保障数据安全，适合备份照片、文档等重要文件。</li>
 <li><strong>RAID 0</strong>（慎用）：适合需要高性能、不重视数据安全的场景。</li>
-<li>
-<p><strong>JBOD</strong>：低预算用户，可逐步扩展存储空间。</p>
+<li><strong>JBOD</strong>：低预算用户，可逐步扩展存储空间。</li>
+</ul>
 </li>
 <li>
 <p><strong>小型企业</strong>：</p>
-</li>
+<ul>
 <li><strong>RAID 5</strong>：在冗余和容量之间取得平衡，适合中小型文件服务器。</li>
-<li>
-<p><strong>RAID 6</strong>：需要更高数据安全性的环境。</p>
+<li><strong>RAID 6</strong>：需要更高数据安全性的环境。</li>
+</ul>
 </li>
 <li>
 <p><strong>企业级用户</strong>：</p>
-</li>
+<ul>
 <li><strong>RAID 10</strong>：对性能和冗余都有高要求的环境，如数据库存储。</li>
 <li><strong>RAID 6</strong>：关键数据存储，防止多盘同时故障。</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h3 id="raid_3"><strong>RAID 的注意事项</strong></h3>
 <ol>
-<li><strong>热备盘（Hot Spare）</strong>：</li>
 <li>
-<p>部分 RAID 阵列支持设置热备盘（备用硬盘）。当一块硬盘故障时，热备盘会自动接管并重建数据。</p>
+<p><strong>热备盘（Hot Spare）</strong>：</p>
+<ul>
+<li>部分 RAID 阵列支持设置热备盘（备用硬盘）。当一块硬盘故障时，热备盘会自动接管并重建数据。</li>
+</ul>
 </li>
 <li>
 <p><strong>RAID ≠ 备份</strong>：</p>
-</li>
-<li>
-<p>RAID 提供一定的数据冗余，但无法防止如病毒感染、误删除或多块硬盘同时故障的情况，因此定期 <strong>异地备份</strong> 仍然重要。</p>
+<ul>
+<li>RAID 提供一定的数据冗余，但无法防止如病毒感染、误删除或多块硬盘同时故障的情况，因此定期 <strong>异地备份</strong> 仍然重要。</li>
+</ul>
 </li>
 <li>
 <p><strong>NAS RAID 控制器支持</strong>：</p>
-</li>
+<ul>
 <li>使用 NAS 时，选择支持多种 RAID 模式的设备（如 Synology、QNAP 等）可更灵活地配置。</li>
+</ul>
+</li>
 </ol>
 <hr />
 <p><strong>总结</strong>：NAS 中组 RAID 可以根据你的预算、数据安全需求和性能需求选择合适的方案。如果重视性能和安全，推荐 <strong>RAID 5</strong> 或 <strong>RAID 10</strong>；预算有限但需高冗余，可选 <strong>RAID 1</strong>；不在意冗余时选择 <strong>RAID 0</strong> 或 JBOD。</p>

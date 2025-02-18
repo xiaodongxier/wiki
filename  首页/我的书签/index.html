@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -19028,6 +19028,7 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/?h=icon
 <li><a href="https://blog.xiaoz.org/">小Z博客 - 好的开源项目</a></li>
 <li><a href="https://web.archive.org/web/20220518032245/http://xiaoluobei.com/">小萝贝控机大师 - Mac&amp;Win控制安卓的软件-免费-免root</a> <img alt="简介" src="https://gitcdn.xiaodongxier.com/wiki/2024/09/1727408557254.png" /></li>
 <li><a href="https://www.7-zip.org/">Win解压缩工具-免费无广告</a></li>
+<li><a href="https://deepseek.flashai.com.cn">FlashAI - 部署deepseek</a></li>
 </ul>
 </div>
 <!-- 
@@ -19092,10 +19093,67 @@ https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/?h=icon
 
 
 
+  
+  
 
 
 
 
+
+
+  <h2 id="__comments">评论</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+  data-repo="xiaodongxier/wiki"
+  data-repo-id="R_kgDOK9zkhA"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOK9zkhM4CcF50"
+  data-mapping="title"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="preferred_color_scheme"
+  data-lang="zh-CN"
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async>
+</script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
                 
               </article>

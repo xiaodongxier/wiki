@@ -1197,6 +1197,42 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
+      📌 基本用途
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 实际场景示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bindtouchmove" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 与 bindtouchmove 的区别
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 典型应用场景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
       参考
     </span>
   </a>
@@ -20849,6 +20885,42 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
+      📌 基本用途
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 实际场景示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bindtouchmove" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 与 bindtouchmove 的区别
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ 典型应用场景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
       参考
     </span>
   </a>
@@ -20879,7 +20951,58 @@
 <p>https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html</p>
 </blockquote>
 <p>根元素加上catchtouchmove="return"就可以了（PS：对cover-view无效）。</p>
-<h2 id="_1">参考</h2>
+<p>在 <strong>uniapp 开发微信小程序</strong> 中，<code>catchtouchmove</code> 是一个用于 <strong>阻止触摸滑动事件向上冒泡</strong> 的事件修饰符，常用于实现“页面不能滚动”或“防止穿透滚动”的场景。</p>
+<hr />
+<h3 id="_1">📌 基本用途</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">view</span> <span class="na">catchtouchmove</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="cm">&lt;!-- 内容 --&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>这个写法的作用是：</p>
+<p>✅ <strong>阻止滑动穿透</strong>：当弹出一个弹窗（如遮罩层、弹出层）时，防止底层页面继续滚动。</p>
+<hr />
+<h3 id="_2">🎯 实际场景示例</h3>
+<p>假设你有一个弹窗组件，想在弹窗显示的时候防止用户滑动背后的页面：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mask&quot;</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;showModal&quot;</span> <span class="na">catchtouchmove</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;modal&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="p">&lt;</span><span class="nt">text</span><span class="p">&gt;</span>我是弹窗<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
+<li><code>catchtouchmove</code> 会拦截 <code>touchmove</code> 事件，<strong>防止事件向上冒泡</strong>；</li>
+<li>背后的页面不会再因为滑动事件滚动。</li>
+</ul>
+<hr />
+<h3 id="bindtouchmove">🔍 与 <code>bindtouchmove</code> 的区别</h3>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bindtouchmove</code></td>
+<td>监听触摸滑动事件，不阻止冒泡</td>
+</tr>
+<tr>
+<td><code>catchtouchmove</code></td>
+<td>监听并<strong>阻止事件继续向上冒泡</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_3">✅ 典型应用场景</h3>
+<ol>
+<li>遮罩层阻止背景滚动</li>
+<li>弹出层或模态框中的滑动操作只作用于当前区域</li>
+<li>移动端侧滑菜单弹出后防止主体页面滚动</li>
+</ol>
+<hr />
+<p>如果你在做弹窗、抽屉、遮罩等功能时，发现页面“滑穿了”——这时候就可以给容器加上 <code>catchtouchmove</code>。</p>
+<h2 id="_4">参考</h2>
 <ul>
 <li><a href="https://www.cnblogs.com/czhowe/p/17541701.html">小程序禁止苹果手机（IOS）下拉弹动</a></li>
 <li><a href="https://developers.weixin.qq.com/community/develop/doc/00004a25b9852045e33b7503956800">catchtouchmove这个具体是做什么的?开发文档找不到啊?</a></li>

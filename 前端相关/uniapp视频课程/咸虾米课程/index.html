@@ -1171,20 +1171,14 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#grid" class="md-nav__link">
     <span class="md-ellipsis">
       grid 布局
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="grid 布局">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#css" class="md-nav__link">
@@ -1235,6 +1229,15 @@
   <a href="#navigateback" class="md-nav__link">
     <span class="md-ellipsis">
       navigateBack 自定义导航返回问题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组去重new set()
     </span>
   </a>
   
@@ -21097,20 +21100,14 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#grid" class="md-nav__link">
     <span class="md-ellipsis">
       grid 布局
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="grid 布局">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#css" class="md-nav__link">
@@ -21161,6 +21158,15 @@
   <a href="#navigateback" class="md-nav__link">
     <span class="md-ellipsis">
       navigateBack 自定义导航返回问题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      数组去重new set()
     </span>
   </a>
   
@@ -21274,7 +21280,7 @@
 <blockquote>
 <p>父元素 使用flex，子元素使用 <code>flex:1</code> 的时候，防止内容过长挤压兄弟元素，可以添加一个 <code>width:0</code> 来处理</p>
 </blockquote>
-<h2 id="grid">grid 布局</h2>
+<h3 id="grid">grid 布局</h3>
 <blockquote>
 <p>适合一行多列的布局</p>
 <p>子元素宽度百分比，高度需要自定义 </p>
@@ -21394,6 +21400,10 @@
 <a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">handleClickPagesTo</span><span class="p">(</span><span class="s2">&quot;pages/index/inedx&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="s2">&quot;switchTab&quot;</span><span class="p">);</span>
 <a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="p">});</span>
+</code></pre></div>
+<h3 id="new-set">数组去重new set()</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">];</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">([...</span><span class="ow">new</span><span class="w"> </span><span class="nb">Set</span><span class="p">(</span><span class="nx">arr</span><span class="p">)]);</span>
 </code></pre></div>
 <h3 id="_9">待学习</h3>
 <ul>

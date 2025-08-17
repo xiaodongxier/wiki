@@ -1072,6 +1072,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    顶部导航的一些知识
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1083,6 +1096,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      状态栏高度
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      状态栏高度 + 状态栏与胶囊之间的高度
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      状态栏与胶囊之间的距离高度
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -20976,6 +21035,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      状态栏高度
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      状态栏高度 + 状态栏与胶囊之间的高度
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      状态栏与胶囊之间的距离高度
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -21024,6 +21118,22 @@
 <a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;胶囊菜单按钮的布局位置信息&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">menuButtonInfo</span><span class="p">);</span>
 <a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;---------&quot;</span><span class="p">);</span>
 </code></pre></div>
+<p><img alt="" src="https://gitcdn.xiaodongxier.com/wiki/2025/08/1755391837321.png" /></p>
+<h2 id="_2">状态栏高度</h2>
+<blockquote>
+<p>不包含胶囊区域，仅截图 pink 位置高度 , <code>systemInfo.statusBarHeight + 'px'</code></p>
+</blockquote>
+<p><img alt="" src="https://gitcdn.xiaodongxier.com/wiki/2025/08/1755392745048.png" /></p>
+<h2 id="_3">状态栏高度 + 状态栏与胶囊之间的高度</h2>
+<blockquote>
+<p>使用 <code>uni.getMenuButtonBoundingClientRect()</code> api 中的 <code>top</code>,获取， <code>menuButtonInfo.top</code></p>
+</blockquote>
+<p><img alt="" src="https://gitcdn.xiaodongxier.com/wiki/2025/08/1755393291751.png" /></p>
+<h2 id="_4">状态栏与胶囊之间的距离高度</h2>
+<blockquote>
+<p>使用上面中 <code>menuButtonInfo.top</code> 到胶囊顶部的距离 减去 <code>systemInfo.statusBarHeight</code> 状态栏的高度，即可得出之间的距离高度</p>
+</blockquote>
+<p><img alt="" src="https://gitcdn.xiaodongxier.com/wiki/2025/08/1755393556635.png" /></p>
 
 
 

@@ -1148,6 +1148,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      胶囊左侧/本身/右侧宽度
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="胶囊左侧/本身/右侧宽度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      左侧
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      本身
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      右侧
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -21086,6 +21128,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      胶囊左侧/本身/右侧宽度
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="胶囊左侧/本身/右侧宽度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      左侧
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      本身
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      右侧
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -21157,6 +21241,21 @@
 <p>使用上面中 <code>menuButtonInfo.height</code> 可以得到胶囊的高度</p>
 </blockquote>
 <p><img alt="" src="https://gitcdn.xiaodongxier.com/wiki/2025/08/1755394029404.png" /></p>
+<h2 id="_6">胶囊左侧/本身/右侧宽度</h2>
+<h3 id="_7">左侧</h3>
+<blockquote>
+<p>使用 <code>uni.getMenuButtonBoundingClientRect()</code> api 中的 <code>left</code>,获取， <code>menuButtonInfo.left</code></p>
+</blockquote>
+<h3 id="_8">本身</h3>
+<blockquote>
+<p>使用 <code>uni.getMenuButtonBoundingClientRect()</code> api 中的 <code>width</code>,获取， <code>menuButtonInfo.width</code></p>
+</blockquote>
+<h3 id="_9">右侧</h3>
+<blockquote>
+<p>使用 <code>uni.getMenuButtonBoundingClientRect()</code> api 中的 <code>right</code>,获取右侧的 x 轴坐标</p>
+<p>然后通过 <code>systemInfo.windowWidth</code> 获取屏幕宽度减去 <code>menuButtonInfo.right</code>(也就是屏幕总宽度-胶囊左侧宽度-胶囊本身宽度) 就得到了右侧的宽度</p>
+</blockquote>
+<p><img alt="" src="https://gitcdn.xiaodongxier.com/wiki/2025/08/1755395877982.png" /></p>
 
 
 

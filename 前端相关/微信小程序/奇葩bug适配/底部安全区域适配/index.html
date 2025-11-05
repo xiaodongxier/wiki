@@ -21590,8 +21590,11 @@
 <p><a href="https://developers.weixin.qq.com/community/develop/doc/0008a239aa09e8c2db005b9fc6b800">https://developers.weixin.qq.com/community/develop/doc/0008a239aa09e8c2db005b9fc6b800</a></p>
 </blockquote>
 <p>取最大值，例如inset-bottom为0，padding-botton即为40rpx</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>max<span class="o">(</span>env<span class="o">(</span>safe-area-inset-bottom,<span class="w"> </span>40rpx<span class="o">)</span>
-</code></pre></div>
+<p><code>```css
+max(env(safe-area-inset-bottom), 40rpx)</code></p>
+<p>报错的话Max 大写</p>
+<p><code>css
+padding-bottom: Max(env(safe-area-inset-bottom), 20rpx);</code></p>
 
 
 
